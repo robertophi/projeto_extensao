@@ -1,0 +1,110 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\projeto_extensao\teste_led\simulation\modelsim
+Earmazenawritedata
+Z1 w1470790714
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\altera\projeto_extensao\teste_led\simulation\modelsim
+Z5 8C:/altera/projeto_extensao/teste_led/armazenaWritedata.vhd
+Z6 FC:/altera/projeto_extensao/teste_led/armazenaWritedata.vhd
+l0
+L4
+VbgFd3OH79Ml=<5R8B8Z5b2
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1470790870.368000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/altera/projeto_extensao/teste_led/armazenaWritedata.vhd|
+Z10 !s107 C:/altera/projeto_extensao/teste_led/armazenaWritedata.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 kZ74Y?2]d@EEIE^3c1Kab3
+!i10b 1
+Aarmazenawritedata_arch
+R2
+R3
+DEx4 work 17 armazenawritedata 0 22 bgFd3OH79Ml=<5R8B8Z5b2
+l41
+L23
+VdG_AdA41WM6C<H_64R]JV2
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 [>_K]hZ=E2e@QRoZZZCN93
+!i10b 1
+Ereg
+Z13 w1467694427
+R2
+R3
+R4
+Z14 8C:/altera/projeto_extensao/teste_led/reg.vhd
+Z15 FC:/altera/projeto_extensao/teste_led/reg.vhd
+l0
+L4
+V>J?zAmZ]6gZZ;Ih`8:gZP0
+!s100 H;5F:LBlm01^Y_>z5Q?Y<1
+R7
+31
+!i10b 1
+Z16 !s108 1470790871.356000
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/altera/projeto_extensao/teste_led/reg.vhd|
+Z18 !s107 C:/altera/projeto_extensao/teste_led/reg.vhd|
+R11
+R12
+Areg_arch
+R2
+R3
+DEx4 work 3 reg 0 22 >J?zAmZ]6gZZ;Ih`8:gZP0
+l17
+L16
+V1o=]MN:A?5_5VEV_ml@Eb0
+!s100 eC@0foNVLDA[QOSL:F^SU2
+R7
+31
+!i10b 1
+R16
+R17
+R18
+R11
+R12
+Esoc
+Z19 w1470790517
+R2
+R3
+R4
+Z20 8C:/altera/projeto_extensao/teste_led/SoC.vhd
+Z21 FC:/altera/projeto_extensao/teste_led/SoC.vhd
+l0
+L7
+VHZ:Fgn@YM=i1oKR<F?haF3
+R7
+31
+Z22 !s108 1470790871.056000
+Z23 !s90 -reportprogress|300|-93|-work|work|C:/altera/projeto_extensao/teste_led/SoC.vhd|
+Z24 !s107 C:/altera/projeto_extensao/teste_led/SoC.vhd|
+R11
+R12
+!s100 a^`Hjm19FlZZ8LZ_<YDdd2
+!i10b 1
+Asoc_arch
+R2
+R3
+DEx4 work 3 soc 0 22 HZ:Fgn@YM=i1oKR<F?haF3
+l64
+L32
+V91^Y9Xf?jL0z51>MdiSDl3
+R7
+31
+R22
+R23
+R24
+R11
+R12
+!s100 T5EB<UPfERgF=iWaBfH^g3
+!i10b 1
