@@ -1,0 +1,5 @@
+#ignorar as seguintes pastas:
+atual/db/
+atual/.qsys_edit/
+atual/incremental_db/
+atual/output_files/
