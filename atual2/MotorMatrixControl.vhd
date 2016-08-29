@@ -28,30 +28,37 @@ architecture structural of MotorMatrixControl is
     
     type motor_data_array is array (0 to rows*cols) of std_logic_vector(7 downto 0);        -- Vetor com as saídas para ligar os motores
     constant motor_data_width, row_col_width, command_width : natural := 8;                 -- Tamanho dos dados do motor, da linha e coluna e dos comandos
-    constant timer_width : natural := 20;                                                   -- Tamanho do contador do delay. Para teste utilizar := 9
-    
     signal reg_command_data_out, reg_status_in : std_logic_vector(dataWidth-1 downto 0);    -- Sinais internos dos registradores
     signal command : std_logic_vector(command_width-1 downto 0);                            -- Sinal para receber os comandos
     signal row, col : std_logic_vector(row_col_width-1 downto 0);                           -- Sinais para receber as linhas e colunas
     signal data : std_logic_vector(motor_data_width-1 downto 0);                            -- Sinal para receber os dados
     signal row_out, col_out : std_logic_vector(row_col_width-1 downto 0);                   -- Saída do controle com as linhas e colunas a serem modificadas
-    signal timer : std_logic_vector(timer_width-1 downto 0);                                -- Timer criado para fazer a contagem PWM de todos os motores e também para criar um atraso
+    signal timer : std_logic_vector(command_width-1 downto 0);                                -- Timer criado para fazer a contagem PWM de todos os motores e também para criar um atraso
     signal sel_data_registers, sel_input_data_registers : std_logic_vector(1 downto 0);     -- Seletores de qual registrador do motor deve ser escrito e de qual entrada pega o valor
     signal new_command, clock_timer : std_logic;                                            -- Sinal do controle que avisa que recebeu novo comando e sinal do clock que gera o delay
     signal motors_data : motor_data_array;                                                  -- Sinal de saída dos motores
 
     -- Timer que cria um contador compartilhado entre todos os motores para fazer o PWM e que gera um clock para o delay. O clock pode ser substituido por 1 externo.
-    component timer_N_bits
+    component timer_pwm
         generic (
-            N : natural := 20
+            N : natural := 8
         );
         port (
             clock : in std_logic;
-            timer : out std_logic_vector(N-1 downto 0);
-            clock_timer : out std_logic
+            timer : out std_logic_vector(N-1 downto 0)
         );
     end component;
-
+	
+	component temporizador
+		generic (
+			max_value_counter : natural:= 10000000      --50.000.000 = 1segundo / N = 50.000.000*tempo
+			);
+		port (
+			clock,reset : in std_logic;
+         clock_timer : out std_logic
+		);
+	end component;
+	
     -- Registrador geral de data_width bits com enable e reset assíncrono
     component register_data_width            
         generic (
@@ -121,16 +128,24 @@ begin
     data <= reg_command_data_out(dataWidth-25 downto dataWidth-32);     -- Valor de potência
     
     -- Timer de timer_width bits
-    timer_14_bits : timer_N_bits
+    timer_8_bits : timer_pwm
         generic map (
-            N => timer_width
+            N => 8
         )
         port map (
             clock => clock,
-            timer => timer,
+            timer => timer
+        );
+   gerador_delay : temporizador
+        generic map (
+            max_value_counter => 5000000 --5.000.000 -> 10 variations/decays every 1second
+        )
+        port map (
+            clock => clock,
+				reset => reset,
             clock_timer => clock_timer
         );
-
+		  
     -- Registrador de comandos, dados, linha e coluna
     reg_command_data : register_data_width
         generic map (

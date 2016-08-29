@@ -59,7 +59,7 @@ void WiFi::stopServer() {
 
 void WiFi::receive(unsigned char* data, unsigned int *size) {
 	char c;
-	do {
+	/*do {
 		c = getc(file);
 	} while (c != '+');
 
@@ -87,6 +87,7 @@ void WiFi::receive(unsigned char* data, unsigned int *size) {
 	}
 
 	data[i] = '\0';
+	*/
 }
 
 /* private */

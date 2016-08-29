@@ -22,13 +22,12 @@ end entity; -- motor_fsm
 
 architecture behavioral of motor_fsm is
 
-    type states is (test_shift_amount, be_equal_shift_amount, sum_shift_amount, sub_shift_amount, delay_shift_amount, set_acknowledge_shift_amount,
-                    test_decay, be_zero_power, sub_decay, delay_decay, set_acknowledge_decay, wait_new_command);
+    type states is (test_shift_amount, be_equal_shift_amount, sum_shift_amount, sub_shift_amount, delay_shift_amount,
+                    test_decay, be_zero_power, sub_decay, delay_decay, wait_new_command);
 
     signal current_state, next_state : states;
 
     signal current_power, next_power : std_logic_vector(motor_data_width-1 downto 0) := (others => '0');    -- Sinal para sincronizar a atualização da potência com o clock
-    signal current_acknowledge_delay, next_acknowledge_delay : std_logic;                                   -- Sinal para sincronizar o reconhecimento do delay com clock
 
 begin
 
@@ -59,17 +58,10 @@ begin
             end if;
         end process;
 
-    -- Elemento de memória para guardar o reconhecimento do delay para fazer uma lógica e identificar se o clock do delay antes era 0 (para identificar a borda de transição)
-    memory_element_counter :
-        process (clock, reset)
-        begin
-            if rising_edge(clock) then
-                current_acknowledge_delay <= next_acknowledge_delay;
-            end if;
-        end process;
+    
 
     next_state_logic : 
-        process (current_state, current_power, saved_power, power_shift_amount, power_decay, clock_timer, current_acknowledge_delay)
+        process (current_state, current_power, saved_power, power_shift_amount, power_decay, clock_timer)
         begin
             case current_state is
 
@@ -102,18 +94,13 @@ begin
                     next_state <= delay_shift_amount;
 
                 when delay_shift_amount =>              -- Espera o delay. Há um teste para verificar se o timer era 0 antes e fazer um teste de borda
-                    if (clock_timer = '1') then
-                        if (current_acknowledge_delay = '1') then
+                    if (clock_timer = '1') then                        
                             next_state <= test_shift_amount;
-                        else
+                    else  
                             next_state <= delay_shift_amount;
-                        end if;
-                    else
-                        next_state <= set_acknowledge_shift_amount;
                     end if;
 
-                when set_acknowledge_shift_amount =>    -- Atualiza o current_acknowledge_delay
-                    next_state <= delay_shift_amount;
+                
 
                 when test_decay =>                      -- Testa se há decaimento e vai para os estados adquados de subtração ou para zerar, se não espera novo comando
                     if ((unsigned(power_decay) = 0) or (unsigned(current_power) = 0)) then
@@ -132,18 +119,10 @@ begin
 
                 when delay_decay =>                     -- Espera o delay. Há um teste para verificar se o timer era 0 antes e fazer um teste de borda
                     if (clock_timer = '1') then
-                        if (current_acknowledge_delay = '1') then
-                            next_state <= test_decay;
-                        else
-                            next_state <= delay_decay;
-                        end if;
+								next_state <= test_decay;
                     else
-                        next_state <= set_acknowledge_decay;
-                    end if;
-
-                when set_acknowledge_decay =>           -- Atualiza o current_acknowledge_delay
-                    next_state <= delay_decay;
-
+								next_state <= delay_decay;
+						  end if;
                 when wait_new_command =>                -- Último estado que somente espera novo comando
                     next_state <= wait_new_command;
 
@@ -151,15 +130,13 @@ begin
         end process;
 
     output_logic :
-        process (current_state, current_power, saved_power, power_shift_amount, power_decay, current_acknowledge_delay)
+        process (current_state, current_power, saved_power, power_shift_amount, power_decay)
         begin
             next_power <= current_power;
-            next_acknowledge_delay <= current_acknowledge_delay;
 
             case current_state is
 
                 when test_shift_amount =>
-                    next_acknowledge_delay <= '0';
 
                 when be_equal_shift_amount =>
                     next_power <= saved_power;
@@ -172,11 +149,9 @@ begin
 
                when delay_shift_amount =>
 
-                when set_acknowledge_shift_amount =>
-                    next_acknowledge_delay <= '1';
+               
 
                 when test_decay =>
-                    next_acknowledge_delay <= '0';
                 when be_zero_power => 
                     next_power <= (others => '0');
 
@@ -185,8 +160,7 @@ begin
 
                 when delay_decay =>
 
-                when set_acknowledge_decay =>
-                    next_acknowledge_delay <= '1';
+        
 
                 when wait_new_command => 
 

@@ -15,9 +15,9 @@ WiFi *WiFi::getSingleton() {
 }
 
 void WiFi::config(char* name, char* password) {
-	printf("Configuring AP!...\n");
-//	char rst[] = "AT+RST";
-//	sendInstruction(rst);
+	printf("Configuring AP, wait......\n");
+	//char rst[] = "AT+RST";
+	//sendInstruction(rst);
 
 	char modeConfig[] = "AT+CWMODE=2";
 	sendInstruction(modeConfig);
@@ -59,35 +59,52 @@ void WiFi::stopServer() {
 
 void WiFi::receive(unsigned char* data, unsigned int *size) {
 	char c;
-	do {
-		c = getc(file);
-	} while (c != '+');
+	unsigned int i;
+	i=0;
 
 	do {
 		c = getc(file);
-	} while (c != ',');
+		i=i+1;
+	} while (c != '+' and i<1024);
+	do {
+		c = getc(file);
+		i=i+1;
+	} while (c != ',' and i<1024);
 
 	do {
 		c = getc(file);
-	} while (c != ',');
+		i=1+i;
+	} while (c != ',' and i<1024);
 
 	*size = 0;
 
 	c = getc(file);
 
-	while (c != ':') {
+	while (c != ':' and i<1024) {
 		*size = *size * 10 + c - '0';
 		c = getc(file);
+		i=i+1;
 	}
-
-	unsigned int i;
-
-	for (i = 0; i < *size; i += 1) {
-		data[i] = getc(file);
+	unsigned int j,max;
+	j = 0;
+	max= *size;
+	if(max>2048){
+		max = 2048;
 	}
+	printf("Size final = %d\n",max);
+	for(j=0;j < max;j+=1){
+		//printf("Size: %d\n",*size);
+		data[j] = getc(file);
+		//printf("j= %d\n",j);
+	}
+	//Finalmente. Função getc(file) estava mudando o valor de *size durante o loop
+	//Alocar as condições de laço para j,max antes de iniciar resolveu
 
-	data[i] = '\0';
+	//Outro problema: transmissão do audio / imagem: As vezes o size explode por algum motivo
+	//Então coloquei um valor máximo para max (2048 ok? )
+	data[j] = '\0';
 }
+
 
 /* private */
 WiFi::WiFi() {
@@ -104,6 +121,7 @@ void WiFi::sendInstruction(char * instruction) {
 	char k;
 	do {
 		k = getc(file);
+		printf("%c",k);
 	} while (k != 'K');
 }
 

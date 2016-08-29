@@ -1,7 +1,8 @@
 #include "app.h"
 
-#define SSID "Hunger"
+#define SSID "ColeteWifi"
 #define PASSWORD "12345678"
+//Senha não pode ter menos de 8 caracteres
 
 /*Static*/
 Motors	*App::motors = Motors::getSingleton();
@@ -19,7 +20,8 @@ App::~App() {
 void App::setup() {
 	wifi->config(SSID, PASSWORD);
 	wifi->startServer();
-	fft->setInterruptHandler(App::fftHandler);
+	printf("Setup done\n");
+	//fft->setInterruptHandler(App::fftHandler);
 }
 
 void App::fftHandler(unsigned int output) {
@@ -57,30 +59,39 @@ void App::writeGyroscope(int xAngle, int yAngle) {
 }
 
 void App::run() {
-	unsigned char *data = new unsigned char[MAX_SIZE];
+	unsigned char *data;
 	unsigned int *size;
 
+
+	motors->write((1<<24)|(255<<16)|(255<<8)|(10));
+	motors->write((2<<24)|(255<<16)|(255<<8)|(15));
+	motors->write((0<<24)|(255<<16)|(255<<8)|(255));
+
 	while (1) {
+		printf("Waiting for data...\n");
+
 		wifi->receive(data, size);
 		char type = data[0];
-
 		switch (type) {
 		case 'm': { /* motors */
+			int cmd = (int)(data[1]);
+			int linha = (int)(data[2]);
+			int coluna = (int)(data[3]);
+			int valor = (int)(data[4]);
 			printf("Motors received. Sending it to the motors...\n");
-			int command = (data[1] << 24) || (data[2] << 16) || (data[3] << 8)
-					|| data[4];
-			printf("%d\n", data[4]);
+			int command = (  (cmd << 24) | (linha << 16) | (coluna << 8) | (valor) );
+			printf("Comando: %d %d %d %d = %d\n" ,cmd, linha, coluna, valor, command );
 			motors->write(command);
 		}
 			break;
 		case 'a': { /*audio*/
 			printf("Audio received. Sending it to the FFT...\n");
 			printf("%s\n", data);
-			buffer.push(data);
+			//buffer.push(data);
 
-			if(!fft->isProcessing()) {
-				fft->write(buffer.pop());
-			}
+			//if(!fft->isProcessing()) {
+			//	fft->write(buffer.pop());
+			//}
 		}
 			break;
 		case 'c': { /*compass*/

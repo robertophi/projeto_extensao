@@ -6,8 +6,8 @@ int main()
 	App app;
 
 	app.setup();
-
 	while(1){
+
 		app.run();
 	}
 

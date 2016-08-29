@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP2C35F672) Path("/home/roberto/Desktop/atual/output_files/") File("SoC.sof") MfrSpec(OpMask(1));
+		Device PartName(EP2C35F672) Path("/home/roberto/Desktop/projeto_extensao/atual2/output_files/") File("SoC.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

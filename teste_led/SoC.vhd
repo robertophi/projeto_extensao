@@ -93,10 +93,12 @@ begin
 		);
 	
 	-- testes
-	ledr(7 downto 0) <=  pwms(7 downto 0) when sw = "00" else
-                        pwms(15 downto 8) when sw = "01" else
-                        pwms(23 downto 16) when sw = "10" else
-                        pwms(31 downto 24);
+	ledr(7 downto 0) <=  pwms(7 downto 0) when sw(2 downto 0) = "000" else
+                        pwms(15 downto 8) when sw(2 downto 0) = "001" else
+                        pwms(23 downto 16) when sw(2 downto 0) = "010" else
+                        pwms(31 downto 24) when sw(2 downto 0) = "011" else
+								(others => '1') when sw(2) = '1' else
+								(others => '0');
 
 
 	

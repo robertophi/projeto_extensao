@@ -2,9 +2,9 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Jul 5, 2016 1:16:15 AM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1467692175677</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>/home/nakayama/Dev/Estudo/ine5412-niosiisoc/src/quartus_project/software/application_bsp</BspGeneratedLocation>
+        <BspGeneratedTimeStamp>Aug 19, 2016 9:15:25 AM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1471608925318</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>/home/roberto/Desktop/teste_led/software/application_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>../../qsys_system.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
