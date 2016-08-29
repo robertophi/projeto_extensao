@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="SoC">
+		<CBX_INST_ENTRY INSTANCE_NAME="|SoC|qsys_system:system|qsys_system_jtag_uart_0:jtag_uart_0|qsys_system_jtag_uart_0_scfifo_w:the_qsys_system_jtag_uart_0_scfifo_w|scfifo:wfifo" CBX_FILE_NAME="scfifo_1n21.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SoC|qsys_system:system|qsys_system_nios2:nios2|qsys_system_nios2_nios2_oci:the_qsys_system_nios2_nios2_oci|qsys_system_nios2_nios2_ocimem:the_qsys_system_nios2_nios2_ocimem|qsys_system_nios2_ociram_sp_ram_module:qsys_system_nios2_ociram_sp_ram|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_a281.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SoC|qsys_system:system|qsys_system_nios2:nios2|qsys_system_nios2_register_bank_a_module:qsys_system_nios2_register_bank_a|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_6lg1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SoC|qsys_system:system|qsys_system_nios2:nios2|qsys_system_nios2_register_bank_b_module:qsys_system_nios2_register_bank_b|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_7lg1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SoC|qsys_system:system|qsys_system_esp8266:esp8266|qsys_system_esp8266_regs:the_qsys_system_esp8266_regs|qsys_system_esp8266_rxfifo:the_qsys_system_esp8266_rxfifo|scfifo:rxfifo" CBX_FILE_NAME="scfifo_vjt.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SoC|qsys_system:system|qsys_system_esp8266:esp8266|qsys_system_esp8266_regs:the_qsys_system_esp8266_regs|qsys_system_esp8266_txfifo:the_qsys_system_esp8266_txfifo|scfifo:txfifo" CBX_FILE_NAME="scfifo_vjt.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SoC|qsys_system:system|qsys_system_jtag_uart_0:jtag_uart_0|qsys_system_jtag_uart_0_scfifo_r:the_qsys_system_jtag_uart_0_scfifo_r|scfifo:rfifo" CBX_FILE_NAME="scfifo_1n21.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SoC|qsys_system:system|qsys_system_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_2dd1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
