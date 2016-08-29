@@ -1,0 +1,1432 @@
+!SESSION 2016-08-16 18:36:16.828 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-08-16 18:38:25.865
+!MESSAGE Indexed 'application_bsp' (87 sources, 65 headers) in 2,48 sec: 1.176 declarations; 3.179 references; 125 unresolved inclusions; 5 syntax errors; 240 unresolved names (5,22%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-08-16 18:39:43.256
+!MESSAGE Indexed 'application' (5 sources, 17 headers) in 0,85 sec: 178 declarations; 289 references; 23 unresolved inclusions; 0 syntax errors; 53 unresolved names (10,19%)
+
+!ENTRY org.eclipse.cdt.launch 4 150 2016-08-16 18:46:53.272
+!MESSAGE Error starting process.
+!STACK 0
+java.io.IOException: Cannot run program "C:\altera\projeto_extensao\teste_led\software\application\application.elf": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:347)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:89)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:89)
+	at org.eclipse.cdt.launch.internal.LocalCDILaunchDelegate.exec(LocalCDILaunchDelegate.java:370)
+	at org.eclipse.cdt.launch.internal.LocalCDILaunchDelegate.runLocalApplication(LocalCDILaunchDelegate.java:96)
+	at org.eclipse.cdt.launch.internal.LocalCDILaunchDelegate.launch(LocalCDILaunchDelegate.java:70)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:854)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:937)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1141)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.cdt.launch 4 150 2016-08-16 18:46:53.273
+!MESSAGE Cannot run program "C:\altera\projeto_extensao\teste_led\software\application\application.elf": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "C:\altera\projeto_extensao\teste_led\software\application\application.elf": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:347)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:89)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:89)
+	at org.eclipse.cdt.launch.internal.LocalCDILaunchDelegate.exec(LocalCDILaunchDelegate.java:370)
+	at org.eclipse.cdt.launch.internal.LocalCDILaunchDelegate.runLocalApplication(LocalCDILaunchDelegate.java:96)
+	at org.eclipse.cdt.launch.internal.LocalCDILaunchDelegate.launch(LocalCDILaunchDelegate.java:70)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:854)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:937)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1141)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.cdt.launch 4 150 2016-08-16 18:47:18.027
+!MESSAGE Error starting process.
+!STACK 0
+java.io.IOException: Cannot run program "C:\altera\projeto_extensao\teste_led\software\application\application.elf": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:347)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:89)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:89)
+	at org.eclipse.cdt.launch.internal.LocalCDILaunchDelegate.exec(LocalCDILaunchDelegate.java:370)
+	at org.eclipse.cdt.launch.internal.LocalCDILaunchDelegate.runLocalApplication(LocalCDILaunchDelegate.java:96)
+	at org.eclipse.cdt.launch.internal.LocalCDILaunchDelegate.launch(LocalCDILaunchDelegate.java:70)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:854)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:937)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1141)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.cdt.launch 4 150 2016-08-16 18:47:18.028
+!MESSAGE Cannot run program "C:\altera\projeto_extensao\teste_led\software\application\application.elf": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "C:\altera\projeto_extensao\teste_led\software\application\application.elf": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:347)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:89)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:89)
+	at org.eclipse.cdt.launch.internal.LocalCDILaunchDelegate.exec(LocalCDILaunchDelegate.java:370)
+	at org.eclipse.cdt.launch.internal.LocalCDILaunchDelegate.runLocalApplication(LocalCDILaunchDelegate.java:96)
+	at org.eclipse.cdt.launch.internal.LocalCDILaunchDelegate.launch(LocalCDILaunchDelegate.java:70)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:854)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:937)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1141)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.cdt.launch 4 150 2016-08-16 18:56:31.860
+!MESSAGE Error starting process.
+!STACK 0
+java.io.IOException: Cannot run program "C:\altera\projeto_extensao\teste_led\software\application\application.elf": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:347)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:89)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:89)
+	at org.eclipse.cdt.launch.internal.LocalCDILaunchDelegate.exec(LocalCDILaunchDelegate.java:370)
+	at org.eclipse.cdt.launch.internal.LocalCDILaunchDelegate.runLocalApplication(LocalCDILaunchDelegate.java:96)
+	at org.eclipse.cdt.launch.internal.LocalCDILaunchDelegate.launch(LocalCDILaunchDelegate.java:70)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:854)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:937)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1141)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.cdt.launch 4 150 2016-08-16 18:56:31.860
+!MESSAGE Cannot run program "C:\altera\projeto_extensao\teste_led\software\application\application.elf": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "C:\altera\projeto_extensao\teste_led\software\application\application.elf": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:347)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:89)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:89)
+	at org.eclipse.cdt.launch.internal.LocalCDILaunchDelegate.exec(LocalCDILaunchDelegate.java:370)
+	at org.eclipse.cdt.launch.internal.LocalCDILaunchDelegate.runLocalApplication(LocalCDILaunchDelegate.java:96)
+	at org.eclipse.cdt.launch.internal.LocalCDILaunchDelegate.launch(LocalCDILaunchDelegate.java:70)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:854)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:937)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1141)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2016-08-17 15:25:39.433 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.ui 4 4 2016-08-17 15:26:07.912
+!MESSAGE Could not create view: 'org.eclipse.ui.internal.introview'.
+
+!ENTRY org.eclipse.ui 4 0 2016-08-17 15:26:10.211
+!MESSAGE Problems occurred restoring workbench.
+!SUBENTRY 1 unknown 0 0 2016-08-17 15:26:10.211
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2016-08-17 15:26:10.211
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2016-08-17 15:26:10.211
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2016-08-17 15:26:10.211
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.ui 4 0 2016-08-17 15:26:10.211
+!MESSAGE Unable to restore perspective: Workspace - C/C++.
+!SUBENTRY 2 org.eclipse.ui 0 0 2016-08-17 15:26:10.211
+!MESSAGE Problems occurred restoring perspective.
+!SUBENTRY 3 org.eclipse.ui 0 0 2016-08-17 15:26:10.211
+!MESSAGE 
+!SUBENTRY 2 unknown 0 0 2016-08-17 15:26:10.211
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2016-08-17 15:26:10.211
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2016-08-17 15:26:10.211
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2016-08-17 15:26:10.211
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2016-08-17 15:26:10.211
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2016-08-17 15:26:10.211
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2016-08-17 15:26:10.211
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2016-08-17 15:26:10.211
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.ui 4 0 2016-08-17 15:26:10.211
+!MESSAGE Could not find view: org.eclipse.ui.internal.introview
+!SUBENTRY 1 unknown 0 0 2016-08-17 15:26:10.211
+!MESSAGE OK
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-08-17 15:32:54.127
+!MESSAGE Indexed 'application_bsp' (87 sources, 90 headers) in 1.80 sec: 1,513 declarations; 3,882 references; 119 unresolved inclusions; 5 syntax errors; 235 unresolved names (4.17%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-08-17 15:33:13.936
+!MESSAGE Indexed 'application' (6 sources, 17 headers) in 0.29 sec: 204 declarations; 386 references; 25 unresolved inclusions; 2 syntax errors; 90 unresolved names (13.24%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-17 15:35:33.585
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-17 15:35:35.120
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-17 15:44:38.497
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-17 15:44:38.569
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-17 15:44:39.988
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-17 15:46:11.155
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-17 15:46:11.230
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-17 15:46:12.660
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-17 15:49:39.990
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-17 15:49:40.067
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-17 15:49:41.493
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-17 15:52:03.055
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-17 15:52:03.111
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-17 15:52:04.527
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-17 15:52:48.890
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-17 15:52:48.947
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-17 15:52:52.582
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --tcpport=auto]
+
+!ENTRY org.eclipse.ui 4 4 2016-08-17 15:52:59.230
+!MESSAGE Exception in org.eclipse.ui.internal.PageLayout.stackView: org.eclipse.ui.PartInitException: Could not create view: org.eclipse.cdt.debug.ui.DisassemblyView
+
+!ENTRY org.eclipse.ui 4 4 2016-08-17 15:52:59.231
+!MESSAGE Exception in org.eclipse.ui.internal.PageLayout.stackView: org.eclipse.ui.PartInitException: Could not create view: org.eclipse.cdt.debug.ui.DisassemblyView
+!STACK 1
+org.eclipse.ui.PartInitException: Could not create view: org.eclipse.cdt.debug.ui.DisassemblyView
+	at org.eclipse.ui.internal.ViewFactory.createView(ViewFactory.java:158)
+	at org.eclipse.ui.internal.LayoutHelper.createView(LayoutHelper.java:162)
+	at org.eclipse.ui.internal.PageLayout.createView(PageLayout.java:554)
+	at org.eclipse.ui.internal.PageLayout.stackView(PageLayout.java:863)
+	at org.eclipse.ui.internal.registry.PerspectiveExtensionReader.processView(PerspectiveExtensionReader.java:270)
+	at org.eclipse.ui.internal.registry.PerspectiveExtensionReader.processExtension(PerspectiveExtensionReader.java:118)
+	at org.eclipse.ui.internal.registry.PerspectiveExtensionReader.readElement(PerspectiveExtensionReader.java:355)
+	at org.eclipse.ui.internal.registry.RegistryReader.readElements(RegistryReader.java:144)
+	at org.eclipse.ui.internal.registry.RegistryReader.readExtension(RegistryReader.java:155)
+	at org.eclipse.ui.internal.registry.RegistryReader.readRegistry(RegistryReader.java:176)
+	at org.eclipse.ui.internal.registry.PerspectiveExtensionReader.extendLayout(PerspectiveExtensionReader.java:82)
+	at org.eclipse.ui.internal.Perspective.loadPredefinedPersp(Perspective.java:818)
+	at org.eclipse.ui.internal.Perspective.createPresentation(Perspective.java:270)
+	at org.eclipse.ui.internal.Perspective.<init>(Perspective.java:156)
+	at org.eclipse.ui.internal.tweaklets.Workbench3xImplementation.createPerspective(Workbench3xImplementation.java:55)
+	at org.eclipse.ui.internal.WorkbenchPage.createPerspective(WorkbenchPage.java:1748)
+	at org.eclipse.ui.internal.WorkbenchPage.busySetPerspective(WorkbenchPage.java:1108)
+	at org.eclipse.ui.internal.WorkbenchPage.access$16(WorkbenchPage.java:1099)
+	at org.eclipse.ui.internal.WorkbenchPage$19.run(WorkbenchPage.java:3814)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchPage.setPerspective(WorkbenchPage.java:3812)
+	at org.eclipse.ui.internal.Workbench.showPerspective(Workbench.java:2875)
+	at org.eclipse.debug.internal.ui.launchConfigurations.PerspectiveManager.switchToPerspective(PerspectiveManager.java:316)
+	at org.eclipse.debug.internal.ui.launchConfigurations.PerspectiveManager$4.runInUIThread(PerspectiveManager.java:395)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:95)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3563)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3212)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1386)
+!SUBENTRY 1 org.eclipse.ui 4 0 2016-08-17 15:52:59.233
+!MESSAGE Could not create view: org.eclipse.cdt.debug.ui.DisassemblyView
+
+!ENTRY org.eclipse.cdt.debug.mi.core 4 42 2016-08-17 15:58:10.134
+!MESSAGE Internal Error
+!STACK 0
+org.eclipse.cdt.debug.mi.core.cdi.MI2CDIException: Inferior terminated[]
+	at org.eclipse.cdt.debug.mi.core.cdi.SharedLibraryManager.getMIShareds(SharedLibraryManager.java:123)
+	at org.eclipse.cdt.debug.mi.core.cdi.SharedLibraryManager.updateState(SharedLibraryManager.java:188)
+	at org.eclipse.cdt.debug.mi.core.cdi.SharedLibraryManager.update(SharedLibraryManager.java:136)
+	at org.eclipse.cdt.debug.mi.core.cdi.EventManager.processSuspendedEvent(EventManager.java:326)
+	at org.eclipse.cdt.debug.mi.core.cdi.EventManager.update(EventManager.java:100)
+	at java.util.Observable.notifyObservers(Unknown Source)
+	at org.eclipse.cdt.debug.mi.core.MISession.notifyObservers(MISession.java:791)
+	at org.eclipse.cdt.debug.mi.core.EventThread.run(EventThread.java:46)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-17 15:58:39.583
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-17 15:58:43.179
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --tcpport=auto]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-17 16:05:51.013
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-17 16:05:52.429
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-17 16:07:06.680
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-17 16:07:06.759
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-17 16:07:08.180
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go /home/roberto/Desktop/teste_led/software/application/application.elf]
+!SESSION 2016-08-19 09:10:13.084 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.ui 4 4 2016-08-19 09:10:41.923
+!MESSAGE Could not create view: 'org.eclipse.ui.internal.introview'.
+
+!ENTRY org.eclipse.ui 4 0 2016-08-19 09:10:44.695
+!MESSAGE Problems occurred restoring workbench.
+!SUBENTRY 1 unknown 0 0 2016-08-19 09:10:44.695
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2016-08-19 09:10:44.695
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2016-08-19 09:10:44.695
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2016-08-19 09:10:44.695
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.ui 4 0 2016-08-19 09:10:44.695
+!MESSAGE Unable to restore perspective: Workspace - Nios II.
+!SUBENTRY 2 org.eclipse.ui 0 0 2016-08-19 09:10:44.695
+!MESSAGE Problems occurred restoring perspective.
+!SUBENTRY 3 org.eclipse.ui 0 0 2016-08-19 09:10:44.695
+!MESSAGE 
+!SUBENTRY 2 unknown 0 0 2016-08-19 09:10:44.695
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2016-08-19 09:10:44.695
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2016-08-19 09:10:44.695
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2016-08-19 09:10:44.695
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2016-08-19 09:10:44.695
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2016-08-19 09:10:44.695
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2016-08-19 09:10:44.695
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2016-08-19 09:10:44.695
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2016-08-19 09:10:44.695
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.ui 4 0 2016-08-19 09:10:44.695
+!MESSAGE Could not find view: org.eclipse.ui.internal.introview
+!SUBENTRY 1 unknown 0 0 2016-08-19 09:10:44.695
+!MESSAGE OK
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:11:25.830
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 09:11:27.076
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:11:27.123
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:13:28.130
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:13:28.411
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 09:13:29.494
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:13:29.735
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:16:12.508
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 09:16:13.583
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:16:13.851
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:19:44.987
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 09:19:46.085
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:19:46.291
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:22:10.972
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 09:22:12.037
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:22:12.161
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:24:30.074
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:24:30.189
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 09:24:31.250
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:24:31.355
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:25:31.409
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 09:25:32.481
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:25:32.579
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:26:56.734
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 09:26:57.812
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:26:57.926
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:32:57.029
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 09:32:58.097
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:32:58.196
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:34:05.615
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 09:34:06.692
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:34:06.783
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:36:19.469
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:36:19.561
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 09:36:20.628
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:36:20.819
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:36:42.035
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 09:36:43.115
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:36:43.292
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:38:35.179
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 09:38:36.259
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:38:36.371
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:46:04.085
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 09:46:05.143
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:46:05.243
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:47:59.037
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 09:48:00.132
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:48:00.636
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:48:38.060
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 09:48:39.139
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:48:39.192
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:48:58.648
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 09:48:59.718
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 09:48:59.830
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+!SESSION 2016-08-19 15:04:55.657 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:05:49.388
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 15:05:50.665
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:05:50.709
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:09:17.608
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 15:09:18.671
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:09:18.712
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:10:33.923
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:10:33.977
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 15:10:35.034
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:10:35.075
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:15:48.368
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 15:15:49.459
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:15:49.501
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:17:23.355
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 15:17:24.443
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:17:24.480
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:19:41.532
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 15:19:42.610
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:19:42.647
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:20:20.774
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 15:20:21.845
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:20:22.090
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:21:01.436
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 15:21:02.493
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:21:02.721
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:22:06.871
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 15:22:07.937
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:22:07.981
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:31:03.217
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 15:31:04.311
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:31:04.578
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:31:36.896
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:31:36.962
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 15:31:38.021
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:31:38.062
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:33:26.737
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 15:33:27.851
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:33:27.887
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:35:54.834
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 15:35:55.910
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:35:55.952
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:36:30.440
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:36:30.500
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 15:36:31.558
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:36:31.735
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:37:11.151
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:37:11.215
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 15:37:12.276
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:37:12.433
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:38:05.109
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:38:05.167
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 15:38:06.464
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:38:06.645
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:39:04.964
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:39:05.015
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 15:39:06.070
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:39:06.111
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:40:26.633
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:40:26.696
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 15:40:27.750
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:40:27.790
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:42:23.520
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:42:23.579
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 15:42:24.644
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:42:24.796
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:48:18.292
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 15:48:19.364
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:48:19.407
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:49:35.932
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:49:35.998
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-19 15:49:37.071
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-19 15:49:37.113
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+!SESSION 2016-08-23 20:25:25.281 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -data /home/roberto/Desktop/projeto_extensao/atual2/software/ -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.core.resources 4 567 2016-08-23 20:25:26.948
+!MESSAGE Workspace restored, but some problems occurred.
+!SUBENTRY 1 org.eclipse.core.resources 4 567 2016-08-23 20:25:26.948
+!MESSAGE Could not read metadata for 'application_bsp'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: The project description file (.project) for 'application_bsp' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:851)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:874)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:854)
+	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:703)
+	at org.eclipse.core.internal.resources.SaveManager.startup(SaveManager.java:1528)
+	at org.eclipse.core.internal.resources.Workspace.startup(Workspace.java:2503)
+	at org.eclipse.core.internal.resources.Workspace.open(Workspace.java:2251)
+	at org.eclipse.core.resources.ResourcesPlugin.start(ResourcesPlugin.java:439)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:711)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:702)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:683)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:381)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:299)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:268)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:463)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:400)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:35)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:473)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:429)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:417)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1386)
+!SUBENTRY 2 org.eclipse.core.resources 4 567 2016-08-23 20:25:26.949
+!MESSAGE The project description file (.project) for 'application_bsp' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+
+!ENTRY org.eclipse.ui 4 0 2016-08-23 20:25:35.610
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (org.eclipse.swt.SWTError: No more handles [Unknown Mozilla path (MOZILLA_FIVE_HOME not set)])
+	at org.eclipse.swt.SWT.error(SWT.java:4282)
+	at org.eclipse.swt.SWT.error(SWT.java:4197)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3563)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3212)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1386)
+Caused by: org.eclipse.swt.SWTError: No more handles [Unknown Mozilla path (MOZILLA_FIVE_HOME not set)]
+	at org.eclipse.swt.SWT.error(SWT.java:4308)
+	at org.eclipse.swt.browser.Mozilla.initMozilla(Mozilla.java:1826)
+	at org.eclipse.swt.browser.Mozilla.create(Mozilla.java:687)
+	at org.eclipse.swt.browser.Browser.<init>(Browser.java:99)
+	at org.eclipse.epp.usagedata.internal.ui.wizards.TermsOfUseWizardPage.createControl(TermsOfUseWizardPage.java:48)
+	at org.eclipse.jface.wizard.Wizard.createPageControls(Wizard.java:174)
+	at org.eclipse.jface.wizard.WizardDialog.createPageControls(WizardDialog.java:736)
+	at org.eclipse.jface.wizard.WizardDialog.createContents(WizardDialog.java:608)
+	at org.eclipse.jface.window.Window.create(Window.java:431)
+	at org.eclipse.jface.dialogs.Dialog.create(Dialog.java:1089)
+	at org.eclipse.jface.window.Window.open(Window.java:790)
+	at org.eclipse.epp.usagedata.internal.ui.uploaders.AskUserUploader$1.run(AskUserUploader.java:65)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:164)
+	at org.eclipse.ui.internal.UISynchronizer$3.run(UISynchronizer.java:158)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 23 more
+
+!ENTRY org.eclipse.ui 4 0 2016-08-23 20:26:31.652
+!MESSAGE Unable to create editor ID org.eclipse.cdt.ui.editor.CEditor: The file does not exist.
+!STACK 1
+org.eclipse.core.runtime.CoreException: The file does not exist.
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer.create(ResourceFileBuffer.java:237)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.connect(TextFileBufferManager.java:112)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.createFileInfo(TextFileDocumentProvider.java:559)
+	at org.eclipse.cdt.internal.ui.editor.CDocumentProvider.createFileInfo(CDocumentProvider.java:857)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.connect(TextFileDocumentProvider.java:478)
+	at org.eclipse.cdt.internal.ui.editor.CDocumentProvider.connect(CDocumentProvider.java:779)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.doSetInput(AbstractTextEditor.java:4213)
+	at org.eclipse.ui.texteditor.StatusTextEditor.doSetInput(StatusTextEditor.java:237)
+	at org.eclipse.ui.texteditor.AbstractDecoratedTextEditor.doSetInput(AbstractDecoratedTextEditor.java:1451)
+	at org.eclipse.ui.editors.text.TextEditor.doSetInput(TextEditor.java:169)
+	at org.eclipse.cdt.internal.ui.editor.CEditor.internalDoSetInput(CEditor.java:1495)
+	at org.eclipse.cdt.internal.ui.editor.CEditor.doSetInput(CEditor.java:1458)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$19.run(AbstractTextEditor.java:3200)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:464)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:372)
+	at org.eclipse.jface.window.ApplicationWindow$1.run(ApplicationWindow.java:759)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.window.ApplicationWindow.run(ApplicationWindow.java:756)
+	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:2649)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.internalInit(AbstractTextEditor.java:3218)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.init(AbstractTextEditor.java:3245)
+	at org.eclipse.ui.internal.EditorManager.createSite(EditorManager.java:828)
+	at org.eclipse.ui.internal.EditorReference.createPartHelper(EditorReference.java:647)
+	at org.eclipse.ui.internal.EditorReference.createPart(EditorReference.java:465)
+	at org.eclipse.ui.internal.WorkbenchPartReference.getPart(WorkbenchPartReference.java:595)
+	at org.eclipse.ui.internal.PartPane.setVisible(PartPane.java:313)
+	at org.eclipse.ui.internal.presentations.PresentablePart.setVisible(PresentablePart.java:180)
+	at org.eclipse.ui.internal.presentations.util.PresentablePartFolder.select(PresentablePartFolder.java:270)
+	at org.eclipse.ui.internal.presentations.util.LeftToRightTabOrder.select(LeftToRightTabOrder.java:65)
+	at org.eclipse.ui.internal.presentations.util.TabbedStackPresentation.selectPart(TabbedStackPresentation.java:473)
+	at org.eclipse.ui.internal.PartStack.refreshPresentationSelection(PartStack.java:1245)
+	at org.eclipse.ui.internal.PartStack.handleDeferredEvents(PartStack.java:1213)
+	at org.eclipse.ui.internal.LayoutPart.deferUpdates(LayoutPart.java:400)
+	at org.eclipse.ui.internal.PartSashContainer.handleDeferredEvents(PartSashContainer.java:1409)
+	at org.eclipse.ui.internal.LayoutPart.deferUpdates(LayoutPart.java:400)
+	at org.eclipse.ui.internal.WorkbenchPage.handleDeferredEvents(WorkbenchPage.java:1495)
+	at org.eclipse.ui.internal.WorkbenchPage.deferUpdates(WorkbenchPage.java:1485)
+	at org.eclipse.ui.internal.WorkbenchPage.closeEditors(WorkbenchPage.java:1459)
+	at org.eclipse.ui.internal.WorkbenchPage.closeEditor(WorkbenchPage.java:1523)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$23.run(AbstractTextEditor.java:4313)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3563)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3212)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.block(ModalContext.java:173)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:388)
+	at org.eclipse.ltk.internal.ui.refactoring.RefactoringWizardDialog2.run(RefactoringWizardDialog2.java:331)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizard.internalPerformFinish(RefactoringWizard.java:605)
+	at org.eclipse.ltk.ui.refactoring.UserInputWizardPage.performFinish(UserInputWizardPage.java:153)
+	at org.eclipse.ltk.ui.refactoring.resource.DeleteResourcesWizard$DeleteResourcesRefactoringConfigurationPage.performFinish(DeleteResourcesWizard.java:151)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizard.performFinish(RefactoringWizard.java:678)
+	at org.eclipse.ltk.internal.ui.refactoring.RefactoringWizardDialog2.okPressed(RefactoringWizardDialog2.java:455)
+	at org.eclipse.jface.dialogs.Dialog.buttonPressed(Dialog.java:472)
+	at org.eclipse.jface.dialogs.Dialog$2.widgetSelected(Dialog.java:624)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:240)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1258)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3588)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3209)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizardOpenOperation$1.run(RefactoringWizardOpenOperation.java:181)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizardOpenOperation.run(RefactoringWizardOpenOperation.java:193)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizardOpenOperation.run(RefactoringWizardOpenOperation.java:116)
+	at org.eclipse.ltk.internal.ui.refactoring.actions.DeleteResourcesHandler.execute(DeleteResourcesHandler.java:40)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:293)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:476)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:508)
+	at org.eclipse.ui.internal.handlers.HandlerService.executeCommandInContext(HandlerService.java:270)
+	at org.eclipse.ui.internal.ide.actions.LTKLauncher.runCommand(LTKLauncher.java:95)
+	at org.eclipse.ui.internal.ide.actions.LTKLauncher.openDeleteWizard(LTKLauncher.java:47)
+	at org.eclipse.ui.actions.DeleteResourceAction.run(DeleteResourceAction.java:474)
+	at org.eclipse.ui.actions.BaseSelectionListenerAction.runWithEvent(BaseSelectionListenerAction.java:168)
+	at org.eclipse.ui.actions.TextActionHandler$DeleteActionHandler.runWithEvent(TextActionHandler.java:164)
+	at org.eclipse.jface.commands.ActionHandler.execute(ActionHandler.java:119)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:476)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:508)
+	at org.eclipse.ui.internal.handlers.HandlerService.executeCommand(HandlerService.java:169)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.executeCommand(WorkbenchKeyboard.java:468)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.press(WorkbenchKeyboard.java:786)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.processKeyEvent(WorkbenchKeyboard.java:885)
+	at org.eclipse.ui.internal.keys.OutOfOrderListener.handleEvent(OutOfOrderListener.java:76)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1258)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1282)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1267)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1294)
+	at org.eclipse.swt.widgets.Widget.gtk_key_press_event(Widget.java:730)
+	at org.eclipse.swt.widgets.Control.gtk_key_press_event(Control.java:3019)
+	at org.eclipse.swt.widgets.Composite.gtk_key_press_event(Composite.java:734)
+	at org.eclipse.swt.widgets.Tree.gtk_key_press_event(Tree.java:2002)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1743)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:5016)
+	at org.eclipse.swt.widgets.Tree.windowProc(Tree.java:3530)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4408)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:8422)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1245)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:2276)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3207)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1386)
+!SUBENTRY 1 org.eclipse.core.filebuffers 4 0 2016-08-23 20:26:31.653
+!MESSAGE The file does not exist.
+
+!ENTRY org.eclipse.ui 2 2 2016-08-23 20:26:31.761
+!MESSAGE Ignored attempt to add saveable that was already registered
+!STACK 0
+org.eclipse.core.runtime.AssertionFailedException: unknown saveable: org.eclipse.ui.internal.DefaultSaveable@118efc0 from part: org.eclipse.ui.internal.ErrorEditorPart@118efc0
+	at org.eclipse.ui.internal.SaveablesList.logWarning(SaveablesList.java:187)
+	at org.eclipse.ui.internal.SaveablesList.addModel(SaveablesList.java:117)
+	at org.eclipse.ui.internal.SaveablesList.addModels(SaveablesList.java:289)
+	at org.eclipse.ui.internal.SaveablesList.postOpen(SaveablesList.java:695)
+	at org.eclipse.ui.internal.PartList.partOpened(PartList.java:234)
+	at org.eclipse.ui.internal.PartList.access$0(PartList.java:210)
+	at org.eclipse.ui.internal.PartList$1.propertyChanged(PartList.java:40)
+	at org.eclipse.ui.internal.WorkbenchPartReference.fireInternalPropertyChange(WorkbenchPartReference.java:375)
+	at org.eclipse.ui.internal.WorkbenchPartReference.getPart(WorkbenchPartReference.java:610)
+	at org.eclipse.ui.internal.PartPane.setVisible(PartPane.java:313)
+	at org.eclipse.ui.internal.presentations.PresentablePart.setVisible(PresentablePart.java:180)
+	at org.eclipse.ui.internal.presentations.util.PresentablePartFolder.select(PresentablePartFolder.java:270)
+	at org.eclipse.ui.internal.presentations.util.LeftToRightTabOrder.select(LeftToRightTabOrder.java:65)
+	at org.eclipse.ui.internal.presentations.util.TabbedStackPresentation.selectPart(TabbedStackPresentation.java:473)
+	at org.eclipse.ui.internal.PartStack.refreshPresentationSelection(PartStack.java:1245)
+	at org.eclipse.ui.internal.PartStack.handleDeferredEvents(PartStack.java:1213)
+	at org.eclipse.ui.internal.LayoutPart.deferUpdates(LayoutPart.java:400)
+	at org.eclipse.ui.internal.PartSashContainer.handleDeferredEvents(PartSashContainer.java:1409)
+	at org.eclipse.ui.internal.LayoutPart.deferUpdates(LayoutPart.java:400)
+	at org.eclipse.ui.internal.WorkbenchPage.handleDeferredEvents(WorkbenchPage.java:1495)
+	at org.eclipse.ui.internal.WorkbenchPage.deferUpdates(WorkbenchPage.java:1485)
+	at org.eclipse.ui.internal.WorkbenchPage.closeEditors(WorkbenchPage.java:1459)
+	at org.eclipse.ui.internal.WorkbenchPage.closeEditor(WorkbenchPage.java:1523)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$23.run(AbstractTextEditor.java:4313)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3563)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3212)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.block(ModalContext.java:173)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:388)
+	at org.eclipse.ltk.internal.ui.refactoring.RefactoringWizardDialog2.run(RefactoringWizardDialog2.java:331)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizard.internalPerformFinish(RefactoringWizard.java:605)
+	at org.eclipse.ltk.ui.refactoring.UserInputWizardPage.performFinish(UserInputWizardPage.java:153)
+	at org.eclipse.ltk.ui.refactoring.resource.DeleteResourcesWizard$DeleteResourcesRefactoringConfigurationPage.performFinish(DeleteResourcesWizard.java:151)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizard.performFinish(RefactoringWizard.java:678)
+	at org.eclipse.ltk.internal.ui.refactoring.RefactoringWizardDialog2.okPressed(RefactoringWizardDialog2.java:455)
+	at org.eclipse.jface.dialogs.Dialog.buttonPressed(Dialog.java:472)
+	at org.eclipse.jface.dialogs.Dialog$2.widgetSelected(Dialog.java:624)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:240)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1258)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3588)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3209)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizardOpenOperation$1.run(RefactoringWizardOpenOperation.java:181)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizardOpenOperation.run(RefactoringWizardOpenOperation.java:193)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizardOpenOperation.run(RefactoringWizardOpenOperation.java:116)
+	at org.eclipse.ltk.internal.ui.refactoring.actions.DeleteResourcesHandler.execute(DeleteResourcesHandler.java:40)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:293)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:476)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:508)
+	at org.eclipse.ui.internal.handlers.HandlerService.executeCommandInContext(HandlerService.java:270)
+	at org.eclipse.ui.internal.ide.actions.LTKLauncher.runCommand(LTKLauncher.java:95)
+	at org.eclipse.ui.internal.ide.actions.LTKLauncher.openDeleteWizard(LTKLauncher.java:47)
+	at org.eclipse.ui.actions.DeleteResourceAction.run(DeleteResourceAction.java:474)
+	at org.eclipse.ui.actions.BaseSelectionListenerAction.runWithEvent(BaseSelectionListenerAction.java:168)
+	at org.eclipse.ui.actions.TextActionHandler$DeleteActionHandler.runWithEvent(TextActionHandler.java:164)
+	at org.eclipse.jface.commands.ActionHandler.execute(ActionHandler.java:119)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:476)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:508)
+	at org.eclipse.ui.internal.handlers.HandlerService.executeCommand(HandlerService.java:169)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.executeCommand(WorkbenchKeyboard.java:468)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.press(WorkbenchKeyboard.java:786)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.processKeyEvent(WorkbenchKeyboard.java:885)
+	at org.eclipse.ui.internal.keys.OutOfOrderListener.handleEvent(OutOfOrderListener.java:76)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1258)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1282)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1267)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1294)
+	at org.eclipse.swt.widgets.Widget.gtk_key_press_event(Widget.java:730)
+	at org.eclipse.swt.widgets.Control.gtk_key_press_event(Control.java:3019)
+	at org.eclipse.swt.widgets.Composite.gtk_key_press_event(Composite.java:734)
+	at org.eclipse.swt.widgets.Tree.gtk_key_press_event(Tree.java:2002)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1743)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:5016)
+	at org.eclipse.swt.widgets.Tree.windowProc(Tree.java:3530)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4408)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:8422)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1245)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:2276)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3207)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1386)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-08-23 20:27:07.412
+!MESSAGE Indexed 'application_bsp' (89 sources, 155 headers) in 2.96 sec: 3,415 declarations; 5,946 references; 74 unresolved inclusions; 2 syntax errors; 184 unresolved names (1.93%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-08-23 20:27:28.361
+!MESSAGE Indexed 'application' (5 sources, 17 headers) in 0.35 sec: 178 declarations; 264 references; 24 unresolved inclusions; 0 syntax errors; 47 unresolved names (9.61%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-23 20:28:20.831
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-23 20:28:22.082
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-23 20:28:22.135
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-23 20:36:45.053
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-23 20:36:46.132
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-23 20:36:46.284
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-23 20:38:12.759
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-23 20:38:13.821
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-23 20:38:13.863
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-23 20:42:22.011
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-23 20:42:23.086
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-23 20:42:23.129
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-23 20:43:03.850
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-23 20:43:08.002
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --tcpport=auto --accept-bad-sysid]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-23 20:46:09.458
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-23 20:46:10.522
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-23 20:46:10.561
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-23 20:47:03.884
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-23 20:47:04.956
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-23 20:47:04.998
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+!SESSION 2016-08-23 20:48:58.428 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-23 20:49:31.328
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-23 20:49:32.449
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-23 20:49:32.504
+!MESSAGE ELF file not specified for download for application Nios II Hardware configuration
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-23 20:49:45.696
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-23 20:49:45.817
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-23 20:49:46.932
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-23 20:49:46.983
+!MESSAGE ELF file not specified for download for application Nios II Hardware configuration
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-23 20:50:29.383
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-23 20:50:30.454
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-23 20:50:30.601
+!MESSAGE ELF file not specified for download for application Nios II Hardware configuration
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-23 20:51:20.950
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-23 20:51:22.027
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-23 20:51:22.066
+!MESSAGE ELF file not specified for download for application Nios II Hardware configuration
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-08-23 20:51:55.588
+!MESSAGE Indexed 'application' (5 sources, 17 headers) in 0.41 sec: 181 declarations; 269 references; 23 unresolved inclusions; 0 syntax errors; 47 unresolved names (9.46%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-08-23 20:52:24.539
+!MESSAGE Indexed 'application_bsp' (89 sources, 153 headers) in 2.57 sec: 4,531 declarations; 6,814 references; 27 unresolved inclusions; 5 syntax errors; 130 unresolved names (1.13%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-23 20:52:43.545
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-23 20:52:43.621
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-23 20:52:44.690
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-23 20:52:44.731
+!MESSAGE ELF file not specified for download for application Nios II Hardware configuration
+!SESSION 2016-08-24 15:14:47.332 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-08-24 15:17:02.652
+!MESSAGE Indexed 'application_bsp' (89 sources, 147 headers) in 4.65 sec: 4,458 declarations; 6,726 references; 27 unresolved inclusions; 5 syntax errors; 127 unresolved names (1.12%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-08-24 15:17:46.735
+!MESSAGE Indexed 'application' (5 sources, 17 headers) in 0.49 sec: 182 declarations; 297 references; 23 unresolved inclusions; 0 syntax errors; 54 unresolved names (10.13%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-24 15:18:59.042
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-24 15:19:00.318
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-24 15:19:00.400
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-24 15:28:38.099
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-24 15:28:38.725
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-24 15:28:40.278
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-24 15:28:40.318
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-24 15:29:41.940
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-24 15:29:43.004
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-24 15:29:43.044
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-24 15:31:08.194
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-24 15:31:08.250
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-24 15:31:09.316
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-24 15:31:09.357
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-24 15:31:39.714
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-24 15:31:40.790
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-24 15:31:40.833
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-24 15:33:42.379
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-24 15:33:44.252
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-24 15:33:44.344
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-24 15:35:39.155
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-24 15:35:39.216
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-24 15:35:40.279
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-24 15:35:40.320
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+!SESSION 2016-08-24 15:40:21.051 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -data /home/roberto/Desktop/projeto_extensao/atual2/software/ -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.ui 4 4 2016-08-24 15:40:32.915
+!MESSAGE Could not create view: 'org.eclipse.ui.internal.introview'.
+
+!ENTRY org.eclipse.ui 4 0 2016-08-24 15:40:40.845
+!MESSAGE Problems occurred restoring workbench.
+!SUBENTRY 1 unknown 0 0 2016-08-24 15:40:40.845
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2016-08-24 15:40:40.845
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2016-08-24 15:40:40.845
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2016-08-24 15:40:40.845
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.ui 4 0 2016-08-24 15:40:40.845
+!MESSAGE Unable to restore perspective: Workspace - Nios II.
+!SUBENTRY 2 org.eclipse.ui 0 0 2016-08-24 15:40:40.846
+!MESSAGE Problems occurred restoring perspective.
+!SUBENTRY 3 org.eclipse.ui 0 0 2016-08-24 15:40:40.846
+!MESSAGE 
+!SUBENTRY 2 unknown 0 0 2016-08-24 15:40:40.846
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2016-08-24 15:40:40.846
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2016-08-24 15:40:40.846
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2016-08-24 15:40:40.846
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2016-08-24 15:40:40.846
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2016-08-24 15:40:40.846
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2016-08-24 15:40:40.846
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2016-08-24 15:40:40.846
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2016-08-24 15:40:40.846
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2016-08-24 15:40:40.846
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.ui 4 0 2016-08-24 15:40:40.846
+!MESSAGE Could not find view: org.eclipse.ui.internal.introview
+!SUBENTRY 1 unknown 0 0 2016-08-24 15:40:40.846
+!MESSAGE OK
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-24 15:41:49.024
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-24 15:41:50.087
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-24 15:41:50.130
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-24 15:48:24.176
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-24 15:48:26.084
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-24 15:48:28.618
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-24 15:48:29.054
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
+!SESSION 2016-08-24 15:50:24.436 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.ui 4 4 2016-08-24 15:50:48.193
+!MESSAGE Could not create view: 'org.eclipse.ui.internal.introview'.
+
+!ENTRY org.eclipse.ui 4 0 2016-08-24 15:50:50.609
+!MESSAGE Problems occurred restoring workbench.
+!SUBENTRY 1 unknown 0 0 2016-08-24 15:50:50.609
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2016-08-24 15:50:50.609
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2016-08-24 15:50:50.609
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2016-08-24 15:50:50.609
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.ui 4 0 2016-08-24 15:50:50.609
+!MESSAGE Unable to restore perspective: Workspace - Nios II.
+!SUBENTRY 2 org.eclipse.ui 0 0 2016-08-24 15:50:50.609
+!MESSAGE Problems occurred restoring perspective.
+!SUBENTRY 3 org.eclipse.ui 0 0 2016-08-24 15:50:50.609
+!MESSAGE 
+!SUBENTRY 2 unknown 0 0 2016-08-24 15:50:50.609
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2016-08-24 15:50:50.609
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2016-08-24 15:50:50.609
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2016-08-24 15:50:50.609
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2016-08-24 15:50:50.609
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2016-08-24 15:50:50.610
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2016-08-24 15:50:50.610
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2016-08-24 15:50:50.610
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2016-08-24 15:50:50.610
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2016-08-24 15:50:50.610
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.ui 4 0 2016-08-24 15:50:50.610
+!MESSAGE Could not find view: org.eclipse.ui.internal.introview
+!SUBENTRY 1 unknown 0 0 2016-08-24 15:50:50.610
+!MESSAGE OK
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-24 15:51:38.176
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-08-24 15:51:39.784
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-08-24 15:51:39.839
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/Desktop/teste_led/software/application/application.elf]
