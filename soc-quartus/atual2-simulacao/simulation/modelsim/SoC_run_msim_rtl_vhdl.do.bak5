@@ -1,0 +1,17 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {F:/projeto_extensao/atual2/temporizador.vhd}
+vcom -93 -work work {F:/projeto_extensao/atual2/timer_pwm.vhd}
+vcom -93 -work work {F:/projeto_extensao/atual2/register_data_width.vhd}
+vcom -93 -work work {F:/projeto_extensao/atual2/MotorMatrixControl.vhd}
+vcom -93 -work work {F:/projeto_extensao/atual2/motor_fsm.vhd}
+vcom -93 -work work {F:/projeto_extensao/atual2/motor.vhd}
+vcom -93 -work work {F:/projeto_extensao/atual2/fsm_commands.vhd}
+vlib altera_reserved_qsys_qsys_system
+vmap altera_reserved_qsys_qsys_system altera_reserved_qsys_qsys_system
+

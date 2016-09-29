@@ -1,0 +1,97 @@
+
+**** Build of configuration Nios II for project application ****
+
+make all 
+Info: Building ../application_bsp/
+make --no-print-directory -C ../application_bsp/
+[BSP build complete]
+[application build complete]
+
+**** Build Finished ****
+
+**** Build of configuration Nios II for project application ****
+
+make all 
+Info: Building ../application_bsp/
+make --no-print-directory -C ../application_bsp/
+[BSP build complete]
+[application build complete]
+
+**** Build Finished ****
+
+**** Build of configuration Nios II for project application ****
+
+make all 
+Info: Building ../application_bsp/
+make --no-print-directory -C ../application_bsp/
+[BSP build complete]
+Info: Compiling libs/src/app.cpp to obj/default/libs/src/app.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../application_bsp//HAL/inc -I../application_bsp/ -I../application_bsp//drivers/inc -Ilibs -Ilibs/include -Ilibs/include/hal  -DSYSTEM_BUS_WIDTH=32 -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -EL -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o obj/default/libs/src/app.o libs/src/app.cpp
+libs/src/app.cpp: In member function 'void App::run()':
+libs/src/app.cpp:81: error: expected `;' before 'controle'
+libs/src/app.cpp:62: warning: unused variable 'size'
+make: *** [obj/default/libs/src/app.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Nios II for project application ****
+
+make all 
+Info: Building ../application_bsp/
+make --no-print-directory -C ../application_bsp/
+[BSP build complete]
+Info: Compiling libs/src/app.cpp to obj/default/libs/src/app.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../application_bsp//HAL/inc -I../application_bsp/ -I../application_bsp//drivers/inc -Ilibs -Ilibs/include -Ilibs/include/hal  -DSYSTEM_BUS_WIDTH=32 -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -EL -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o obj/default/libs/src/app.o libs/src/app.cpp
+libs/src/app.cpp: In member function 'void App::run()':
+libs/src/app.cpp:62: warning: unused variable 'size'
+Info: Linking application.elf
+nios2-elf-g++  -T'../application_bsp//linker.x' -msys-crt0='../application_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../application_bsp/   -Wl,-Map=application.map   -O0 -g -Wall   -EL -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o application.elf obj/default/libs/src/app.o obj/default/libs/src/hal/fft.o obj/default/libs/src/hal/motors.o obj/default/libs/src/hal/wifi.o obj/default/test.o -lm 
+nios2-elf-insert application.elf --thread_model hal --cpu_name nios2 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name qsys_system --quartus_project_dir "/home/roberto/Desktop/teste_led" --sopcinfo /home/roberto/Desktop/teste_led/software/application_bsp/../../qsys_system.sopcinfo
+Info: (application.elf) 370 KBytes program size (code + initialized data).
+Info:                   7814 KBytes free for stack + heap.
+Info: Creating application.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source application.elf >application.objdump
+[application build complete]
+
+**** Build Finished ****
+
+**** Build of configuration Nios II for project application ****
+
+make all 
+Info: Building ../application_bsp/
+make --no-print-directory -C ../application_bsp/
+[BSP build complete]
+[application build complete]
+
+**** Build Finished ****
+
+**** Build of configuration Nios II for project application ****
+
+make all 
+Info: Building ../application_bsp/
+make --no-print-directory -C ../application_bsp/
+[BSP build complete]
+Info: Compiling libs/src/app.cpp to obj/default/libs/src/app.o
+nios2-elf-gcc -xc++ -MP -MMD -c -I../application_bsp//HAL/inc -I../application_bsp/ -I../application_bsp//drivers/inc -Ilibs -Ilibs/include -Ilibs/include/hal  -DSYSTEM_BUS_WIDTH=32 -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED      -O0 -g -Wall   -EL -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o obj/default/libs/src/app.o libs/src/app.cpp
+libs/src/app.cpp: In member function 'void App::run()':
+libs/src/app.cpp:62: warning: unused variable 'size'
+Info: Linking application.elf
+nios2-elf-g++  -T'../application_bsp//linker.x' -msys-crt0='../application_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../application_bsp/   -Wl,-Map=application.map   -O0 -g -Wall   -EL -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o application.elf obj/default/libs/src/app.o obj/default/libs/src/hal/fft.o obj/default/libs/src/hal/motors.o obj/default/libs/src/hal/wifi.o obj/default/test.o -lm 
+nios2-elf-insert application.elf --thread_model hal --cpu_name nios2 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name qsys_system --quartus_project_dir "/home/roberto/Desktop/teste_led" --sopcinfo /home/roberto/Desktop/teste_led/software/application_bsp/../../qsys_system.sopcinfo
+Info: (application.elf) 370 KBytes program size (code + initialized data).
+Info:                   7814 KBytes free for stack + heap.
+Info: Creating application.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source application.elf >application.objdump
+[application build complete]
+
+**** Build Finished ****
+
+**** Build of configuration Nios II for project application ****
+
+make all 
+Info: Building ../application_bsp/
+make --no-print-directory -C ../application_bsp/
+[BSP build complete]
+[application build complete]
+
+**** Build Finished ****
