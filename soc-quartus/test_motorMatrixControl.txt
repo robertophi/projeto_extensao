@@ -1,0 +1,66 @@
+add wave -position insertpoint  \
+sim:/motormatrixcontrol/motors0/saved_power \
+sim:/motormatrixcontrol/motors0/power_shift_amount \
+sim:/motormatrixcontrol/motors0/power_decay \
+sim:/motormatrixcontrol/motors0/motor_data_selected \
+sim:/motormatrixcontrol/motors0/motor_data_out \
+sim:/motormatrixcontrol/motors1(1)/n_motors1/saved_power \
+sim:/motormatrixcontrol/motors1(1)/n_motors1/power_shift_amount \
+sim:/motormatrixcontrol/motors1(1)/n_motors1/power_decay \
+sim:/motormatrixcontrol/motors1(1)/n_motors1/motor_data_selected \
+sim:/motormatrixcontrol/motors1(1)/n_motors1/motor_data_out \
+sim:/motormatrixcontrol/motors2(1)/n_motors2/saved_power \
+sim:/motormatrixcontrol/motors2(1)/n_motors2/power_shift_amount \
+sim:/motormatrixcontrol/motors2(1)/n_motors2/power_decay \
+sim:/motormatrixcontrol/motors2(1)/n_motors2/motor_data_selected \
+sim:/motormatrixcontrol/motors2(1)/n_motors2/motor_data_out
+
+# Abre o work
+vsim work.motormatrixcontrol
+
+# Adiciona as ondas
+add wave -position insertpoint  \
+sim:/motormatrixcontrol/clock \
+sim:/motormatrixcontrol/reset \
+sim:/motormatrixcontrol/enable \
+sim:/motormatrixcontrol/acknowledge \
+sim:/motormatrixcontrol/new_command \
+sim:/motormatrixcontrol/interrupt \
+sim:/motormatrixcontrol/readwrite \
+sim:/motormatrixcontrol/command \
+sim:/motormatrixcontrol/row \
+sim:/motormatrixcontrol/col \
+sim:/motormatrixcontrol/data \
+sim:/motormatrixcontrol/sel_data_registers \
+sim:/motormatrixcontrol/sel_input_data_registers \
+sim:/motormatrixcontrol/row_out \
+sim:/motormatrixcontrol/col_out \
+sim:/motormatrixcontrol/motors_data \
+sim:/motormatrixcontrol/clock_timer \
+sim:/motormatrixcontrol/motors_out \
+sim:/motormatrixcontrol/timer \
+sim:/motormatrixcontrol/rows \
+sim:/motormatrixcontrol/cols \
+sim:/motormatrixcontrol/dataWidth \
+sim:/motormatrixcontrol/motor_data_width \
+sim:/motormatrixcontrol/row_col_width \
+sim:/motormatrixcontrol/command_width \
+sim:/motormatrixcontrol/timer_width \
+sim:/motormatrixcontrol/writedata \
+sim:/motormatrixcontrol/reg_command_data_out
+
+
+# Cria o clock, reset 1 e variáveis iniciais
+force clock 1 0, 0 {50 ps} -r 100
+force reset 1
+force enable 0
+force acknowledge 0
+force test 0
+force bistIn 0
+force readwrite 00
+force writedata 00000000000000000000000000000000
+run 10 ns
+
+# Retira o reset
+force reset 0
+run 10 ns

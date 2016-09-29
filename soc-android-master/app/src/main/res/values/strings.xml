@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Aplicativo para substituição sensorial</string>
+    <string name="action_settings">Settings</string>
+    <string name="titulo_camera">Câmera</string>
+    <string name="titulo_bussola">Bussola</string>
+    <string name="status_transmitindo">Transmitindo</string>
+    <string name="status_nao_transmitindo">Clique para iniciar transmissão</string>
+    <string name="compass">Bussola</string>
+    <string name="audio">Audio</string>
+    <string name="gyroscope">Giroscópio</string>
+    <string name="dialog_message">Configure os parâmetros de conexão</string>
+    <string name="dialog_title">Conexão</string>
+    <string name="ok">Confirmar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="action_motors">Motores</string>
+    <string name="title_activity_motors">MotorsActivity</string>
+    <string name="connection_saved">Detalhes da conexão salvos..</string>
+    <string name="connection_failed">Conexão com o colete falhou</string>
+    <string name="camera">Camera</string>
+    <string name="motor">Motor</string>
+    <string name="Start">Iniciar</string>
+    <string name="Stop">Parar</string>
+    <string name="Send">Enviar</string>
+    <string name="motors">Motores</string>
+    <string name="motors_dialog_message">Escolha um motor para adicionar ou remover</string>
+    <string name="exit">Sair</string>
+</resources>

@@ -1,0 +1,44 @@
+|MiniBoardLed
+clock => current_timer[0].CLK
+clock => current_timer[1].CLK
+clock => current_timer[2].CLK
+clock => current_timer[3].CLK
+clock => current_timer[4].CLK
+clock => current_timer[5].CLK
+clock => current_timer[6].CLK
+clock => current_timer[7].CLK
+clock => current_timer[8].CLK
+clock => current_timer[9].CLK
+clock => current_timer[10].CLK
+clock => current_timer[11].CLK
+clock => current_timer[12].CLK
+clock => current_timer[13].CLK
+clock => current_timer[14].CLK
+clock => current_timer[15].CLK
+clock => current_timer[16].CLK
+clock => current_timer[17].CLK
+clock => current_timer[18].CLK
+clock => current_timer[19].CLK
+clock => current_timer[20].CLK
+clock => current_timer[21].CLK
+clock => current_timer[22].CLK
+clock => current_timer[23].CLK
+clock => current_timer[24].CLK
+clock => current_timer[25].CLK
+clock => current_timer[26].CLK
+clock => current_timer[27].CLK
+clock => current_timer[28].CLK
+clock => current_timer[29].CLK
+clock => current_timer[30].CLK
+clock => current_timer[31].CLK
+reset => output[0].DATAIN
+output[0] <= reset.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= LessThan2.DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= LessThan2.DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= LessThan2.DB_MAX_OUTPUT_PORT_TYPE
+output[4] <= LessThan2.DB_MAX_OUTPUT_PORT_TYPE
+output[5] <= LessThan2.DB_MAX_OUTPUT_PORT_TYPE
+output[6] <= LessThan2.DB_MAX_OUTPUT_PORT_TYPE
+output[7] <= LessThan2.DB_MAX_OUTPUT_PORT_TYPE
+
+
