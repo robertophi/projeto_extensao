@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="testeWifi">
+		<CBX_INST_ENTRY INSTANCE_NAME="|testeWifi|wifiSystem:u0|wifiSystem_jtag_uart_0:jtag_uart_0|wifiSystem_jtag_uart_0_scfifo_r:the_wifiSystem_jtag_uart_0_scfifo_r|scfifo:rfifo" CBX_FILE_NAME="scfifo_1n21.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|testeWifi|wifiSystem:u0|wifiSystem_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_49d1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|testeWifi|wifiSystem:u0|wifiSystem_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_49d1:auto_generated|altsyncram:ram_block1a0" CBX_FILE_NAME="altsyncram_jg23.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|testeWifi|wifiSystem:u0|wifiSystem_jtag_uart_0:jtag_uart_0|wifiSystem_jtag_uart_0_scfifo_w:the_wifiSystem_jtag_uart_0_scfifo_w|scfifo:wfifo" CBX_FILE_NAME="scfifo_1n21.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|testeWifi|wifiSystem:u0|wifiSystem_nios2_qsys_0:nios2_qsys_0|wifiSystem_nios2_qsys_0_nios2_oci:the_wifiSystem_nios2_qsys_0_nios2_oci|wifiSystem_nios2_qsys_0_nios2_ocimem:the_wifiSystem_nios2_qsys_0_nios2_ocimem|wifiSystem_nios2_qsys_0_ociram_sp_ram_module:wifiSystem_nios2_qsys_0_ociram_sp_ram|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_8k81.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|testeWifi|wifiSystem:u0|wifiSystem_nios2_qsys_0:nios2_qsys_0|wifiSystem_nios2_qsys_0_register_bank_a_module:wifiSystem_nios2_qsys_0_register_bank_a|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_47h1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|testeWifi|wifiSystem:u0|wifiSystem_nios2_qsys_0:nios2_qsys_0|wifiSystem_nios2_qsys_0_register_bank_b_module:wifiSystem_nios2_qsys_0_register_bank_b|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_57h1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

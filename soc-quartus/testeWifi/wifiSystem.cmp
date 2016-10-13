@@ -1,0 +1,10 @@
+	component wifiSystem is
+		port (
+			clk_clk           : in  std_logic                     := 'X'; -- clk
+			reset_reset_n     : in  std_logic                     := 'X'; -- reset_n
+			output_pio_export : out std_logic_vector(31 downto 0);        -- export
+			output_uart_rxd   : in  std_logic                     := 'X'; -- rxd
+			output_uart_txd   : out std_logic                             -- txd
+		);
+	end component wifiSystem;
+
