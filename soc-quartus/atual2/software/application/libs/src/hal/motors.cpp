@@ -10,14 +10,14 @@
  */
 
 /* static */
-Motors *Motors::motors = NULL;
+Motors *Motors::motors = 0;
 
 /* public */
 Motors::~Motors() {
 }
 
 Motors *Motors::getSingleton() {
-	if (motors == NULL)
+	if (motors == 0)
 		motors = new Motors();
 	return motors;
 }
@@ -50,7 +50,7 @@ void Motors::write_to_next_line() {
 	write(8, 0, 0, 0);
 }
 
-void Motors::write_to_next_collumm() {
+void Motors::write_to_next_collumn() {
 	write(16, 0, 0, 0);
 }
 

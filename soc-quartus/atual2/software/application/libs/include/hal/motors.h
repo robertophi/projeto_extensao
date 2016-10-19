@@ -1,8 +1,6 @@
 #ifndef MOTORS_H
 #define MOTORS_H
 
-#include <stdio.h>
-
 #define MATRIX_ADDRESS 0x00002068
 
 class Motors {
@@ -19,7 +17,7 @@ public:
 			unsigned int valor);
 	void write(unsigned int v);
 	void write_to_next_line();
-	void write_to_next_collumm();
+	void write_to_next_collumn();
 
 private:
 	Motors();

@@ -20,15 +20,15 @@ App::~App() {
 void App::setup() {
 	wifi->config(SSID, PASSWORD);
 	wifi->startServer();
-	printf("Setup done\n");
+	alt_putstr("Setup done\n");
 	//fft->setInterruptHandler(App::fftHandler);
 }
 
 void App::fftHandler(unsigned int output) {
-	printf("Got FFT output %d\n", output);
+	alt_printf("Got FFT output %d\n", output);
 
 	//	motors->write(output);
-	printf("%i\n", buffer.length());
+	alt_printf("%i\n", buffer.length());
 	fft->read();
 
 	if(buffer.length() > 0)
@@ -38,24 +38,24 @@ void App::fftHandler(unsigned int output) {
 void App::writeCompass(unsigned char direction) {
 	switch(direction) {
 		case 'N':
-			printf("Sending direction as North.\n");
+			alt_putstr("Sending direction as North.\n");
 			break;
 		case 'W':
-			printf("Sending direction as West.\n");
+			alt_putstr("Sending direction as West.\n");
 			break;
 		case 'E':
-			printf("Sending direction as East.\n");
+			alt_putstr("Sending direction as East.\n");
 			break;
 		case 'S':
-			printf("Sending direction as South.\n");
+			alt_putstr("Sending direction as South.\n");
 			break;
 	}
 }
 
 void App::writeGyroscope(int xAngle, int yAngle) {
-	printf("Sending angle to vest.\n");
-	printf("%i\n", xAngle);
-	printf("%i\n", yAngle);
+	alt_putstr("Sending angle to vest.\n");
+	alt_printf("%i\n", xAngle);
+	alt_printf("%i\n", yAngle);
 }
 
 void App::run() {
@@ -68,7 +68,7 @@ void App::run() {
 	motors->write((0<<24)|(255<<16)|(255<<8)|(255));
 
 	while (1) {
-		printf("Waiting for data...\n");
+		alt_putstr("Waiting for data...\n");
 
 		wifi->receive(data, size);
 		char type = data[0];
@@ -78,15 +78,15 @@ void App::run() {
 			int linha = (int)(data[2]);
 			int coluna = (int)(data[3]);
 			int valor = (int)(data[4]);
-			printf("Motors received. Sending it to the motors...\n");
+			alt_putstr("Motors received. Sending it to the motors...\n");
 			int command = (  (cmd << 24) | (linha << 16) | (coluna << 8) | (valor) );
-			printf("Comando: %d %d %d %d = %d\n" ,cmd, linha, coluna, valor, command );
+			alt_printf("Comando: %d %d %d %d = %d\n" ,cmd, linha, coluna, valor, command );
 			motors->write(command);
 		}
 			break;
 		case 'a': { /*audio*/
-			printf("Audio received. Sending it to the FFT...\n");
-			printf("%s\n", data);
+			alt_putstr("Audio received. Sending it to the FFT...\n");
+			alt_printf("%s\n", data);
 			//buffer.push(data);
 
 			//if(!fft->isProcessing()) {
@@ -95,20 +95,20 @@ void App::run() {
 		}
 			break;
 		case 'c': { /*compass*/
-			printf("Compass received. Sending to the motors...\n");
-			printf("%s\n", data);
+			alt_putstr("Compass received. Sending to the motors...\n");
+			alt_printf("%s\n", data);
 			writeCompass(data[1]);
 		}
 			break;
 		case 'g': { /*gyroscope*/
-			printf("Gyroscope received. Sending to the motors...\n");
-			printf("%s\n", data);
+			alt_putstr("Gyroscope received. Sending to the motors...\n");
+			alt_printf("%s\n", data);
 			writeGyroscope(int(data[1]), int(data[2]));
 		}
 			break;
 		default: {
-			printf("Some data received. Don't know what to do...\n");
-			printf("%s\n", data);
+			alt_putstr("Some data received. Don't know what to do...\n");
+			alt_printf("%s\n", data);
 		}
 			break;
 		}

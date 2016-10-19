@@ -1,7 +1,7 @@
 #include "wifi.h"
 
 /* static */
-WiFi *WiFi::wifi = NULL;
+WiFi *WiFi::wifi = 0;
 
 /* public */
 WiFi::~WiFi() {
@@ -9,15 +9,13 @@ WiFi::~WiFi() {
 }
 
 WiFi *WiFi::getSingleton() {
-	if (wifi == NULL)
+	if (wifi == 0)
 		wifi = new WiFi();
 	return wifi;
 }
 
 void WiFi::config(char* name, char* password) {
-	printf("Configuring AP, wait......\n");
-	//char rst[] = "AT+RST";
-	//sendInstruction(rst);
+	alt_putstr("Configuring AP, wait......\n");
 
 	char modeConfig[] = "AT+CWMODE=2";
 	sendInstruction(modeConfig);
@@ -38,16 +36,16 @@ void WiFi::config(char* name, char* password) {
 	char ip[] = "AT+CIPAP=\"192.168.4.1\"";
 	sendInstruction(ip);
 
-	printf("Done!\n");
+	alt_putstr("Done!\n");
 }
 
 void WiFi::startServer() {
-	printf("Starting Server...\n");
+	alt_putstr("Starting Server...\n");
 
 	char server[] = "AT+CIPSERVER=1,80";
 	sendInstruction(server);
 
-	printf("Done!\n");
+	alt_putstr("Done!\n");
 }
 
 void WiFi::stopServer() {
@@ -91,11 +89,9 @@ void WiFi::receive(unsigned char* data, unsigned int *size) {
 	if(max>2048){
 		max = 2048;
 	}
-	printf("Size final = %d\n",max);
+	alt_printf("Size final = %d\n",max);
 	for(j=0;j < max;j+=1){
-		//printf("Size: %d\n",*size);
 		data[j] = getc(file);
-		//printf("j= %d\n",j);
 	}
 	//Finalmente. Função getc(file) estava mudando o valor de *size durante o loop
 	//Alocar as condições de laço para j,max antes de iniciar resolveu
@@ -110,7 +106,7 @@ void WiFi::receive(unsigned char* data, unsigned int *size) {
 WiFi::WiFi() {
 	file = fopen("/dev/esp8266", "r+");
 	if (!file) {
-		printf("Error opening UART.\n");
+		alt_putstr("Error opening UART.\n");
 	}
 }
 
@@ -121,7 +117,7 @@ void WiFi::sendInstruction(char * instruction) {
 	char k;
 	do {
 		k = getc(file);
-		printf("%c",k);
+		alt_printf("%c",k);
 	} while (k != 'K');
 }
 

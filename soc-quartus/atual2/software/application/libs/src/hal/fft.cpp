@@ -1,7 +1,7 @@
 #include "fft.h"
 
 /* static */
-FFT *FFT::fft = NULL;
+FFT *FFT::fft = 0;
 
 /* public */
 FFT::FFT() {
@@ -12,7 +12,7 @@ FFT::~FFT() {
 }
 
 FFT *FFT::getSingleton() {
-	if (fft == NULL)
+	if (fft == 0)
 		fft = new FFT();
 	return fft;
 }
@@ -22,7 +22,7 @@ void FFT::setInterruptHandler(handler h) {
 }
 
 void FFT::write(unsigned char *input) {
-	printf("%s\n", input);
+	alt_printf("%s\n", input);
 
 	processing = true;
 	int_handler(3);
