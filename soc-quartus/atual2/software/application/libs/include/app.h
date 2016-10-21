@@ -1,8 +1,7 @@
 #ifndef APP_H
 #define APP_H
 
-#include <stdio.h>
-#include <string.h>
+#include "sys/alt_stdio.h"
 #include "motors.h"
 #include "fft.h"
 #include "wifi.h"

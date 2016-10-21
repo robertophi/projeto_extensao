@@ -1,9 +1,8 @@
 #ifndef FFT_H
 #define FFT_H
 
-#include <stdio.h>
-#include <stddef.h>
-#include "sys/alt_alarm.h"
+#include "sys/alt_stdio.h"
+//#include "sys/alt_alarm.h"
 
 typedef void ( *handler )(unsigned int);
 
