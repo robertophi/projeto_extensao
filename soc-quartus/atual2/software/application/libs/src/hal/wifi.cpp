@@ -5,7 +5,7 @@ WiFi *WiFi::wifi = 0;
 
 /* public */
 WiFi::~WiFi() {
-	fclose(file);
+	//fclose(file);
 }
 
 WiFi *WiFi::getSingleton() {
@@ -61,28 +61,34 @@ void WiFi::receive(unsigned char* data, unsigned int *size) {
 	i=0;
 
 	do {
-		c = getc(file);
+		//c = getc(file);
+		c = alt_getchar();
 		i=i+1;
 	} while (c != '+' and i<1024);
 	do {
-		c = getc(file);
+		//c = getc(file);
+		c = alt_getchar();
 		i=i+1;
 	} while (c != ',' and i<1024);
 
 	do {
-		c = getc(file);
+		//c = getc(file);
+		c = alt_getchar();
 		i=1+i;
 	} while (c != ',' and i<1024);
 
 	*size = 0;
 
-	c = getc(file);
+	//c = getc(file);
+	c = alt_getchar();
 
 	while (c != ':' and i<1024) {
 		*size = *size * 10 + c - '0';
-		c = getc(file);
+		//c = getc(file);
+		c = alt_getchar();
 		i=i+1;
 	}
+
 	unsigned int j,max;
 	j = 0;
 	max= *size;
@@ -90,8 +96,10 @@ void WiFi::receive(unsigned char* data, unsigned int *size) {
 		max = 2048;
 	}
 	alt_printf("Size final = %d\n",max);
+
 	for(j=0;j < max;j+=1){
-		data[j] = getc(file);
+		//data[j] = getc(file);
+		data[j] = alt_getchar();
 	}
 	//Finalmente. Função getc(file) estava mudando o valor de *size durante o loop
 	//Alocar as condições de laço para j,max antes de iniciar resolveu
@@ -104,10 +112,10 @@ void WiFi::receive(unsigned char* data, unsigned int *size) {
 
 /* private */
 WiFi::WiFi() {
-	file = fopen("/dev/esp8266", "r+");
-	if (!file) {
-		alt_putstr("Error opening UART.\n");
-	}
+	//file = fopen("/dev/esp8266", "r+");
+	//if (!file) {
+	//	alt_putstr("Error opening UART.\n");
+	//}
 }
 
 void WiFi::sendInstruction(char * instruction) {
@@ -116,11 +124,15 @@ void WiFi::sendInstruction(char * instruction) {
 
 	char k;
 	do {
-		k = getc(file);
+		//k = getc(file);
+		k = alt_getchar();
 		alt_printf("%c",k);
 	} while (k != 'K');
 }
 
 void WiFi::write(char * msg, int size = -1) {
-	fwrite(msg, 1, size, file);
+	//fwrite(msg, 1, size, file);
+	for (int i = 0; i < size; i++) {
+		alt_putchar(msg[i]);
+	}
 }

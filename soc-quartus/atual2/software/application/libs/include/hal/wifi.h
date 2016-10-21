@@ -1,7 +1,7 @@
 #ifndef WIFI_H
 #define WIFI_H
 
-#include <stdio.h>
+//#include <stdio.h>
 #include "sys/alt_stdio.h"
 #include <string.h>
 
@@ -19,7 +19,7 @@ private:
 	void sendInstruction(char* instruction);
 	void write(char* buffer, int size);
 
-	FILE *file;
+	//FILE *file;
 	static WiFi *wifi;
 };
 
