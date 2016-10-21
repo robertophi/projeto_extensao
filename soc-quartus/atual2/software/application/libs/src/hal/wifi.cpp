@@ -14,8 +14,6 @@ WiFi *WiFi::getSingleton() {
 }
 
 void WiFi::config(char* name, char* password) {
-	alt_putstr("Configuring AP, wait......\n");
-
 	char modeConfig[] = "AT+CWMODE=2";
 	sendInstruction(modeConfig);
 
@@ -34,17 +32,11 @@ void WiFi::config(char* name, char* password) {
 
 	char ip[] = "AT+CIPAP=\"192.168.4.1\"";
 	sendInstruction(ip);
-
-	alt_putstr("Done!\n");
 }
 
 void WiFi::startServer() {
-	alt_putstr("Starting Server...\n");
-
 	char server[] = "AT+CIPSERVER=1,80";
 	sendInstruction(server);
-
-	alt_putstr("Done!\n");
 }
 
 void WiFi::stopServer() {
