@@ -41,19 +41,15 @@ void App::writeCompass(unsigned char direction) {
 	int column;
 	switch(direction) {
 		case 'N':
-//			alt_putstr("Sending direction as North.\n");
 			column = half;
 			break;
 		case 'W':
-//			alt_putstr("Sending direction as West.\n");
 			column = quarter;
 			break;
 		case 'E':
-//			alt_putstr("Sending direction as East.\n");
 			column = quarter + half;
 			break;
 		case 'S':
-//			alt_putstr("Sending direction as South.\n");
 			column = COLUMNS-1;
 			break;
 		default:
@@ -69,14 +65,61 @@ void App::writeCompass(unsigned char direction) {
 	compass = column;
 }
 
-//      -135 -90 -45 0 45 90 135 180
-//       SW   W   NW N NE E  SE  S
+void App::writeGyroscope(int xAngle, int yAngle, int zAngle) {
+	int x = defineIndex(xAngle);
+	int y = defineIndex(yAngle);
+	int command = (  (1 << 24) | (x << 16) | (y << 8) | (zAngle % 100) );
+	motors->write(command);
 
+}
 
-void App::writeGyroscope(int xAngle, int yAngle) {
-//	alt_putstr("Sending angle to vest.\n");
-//	alt_printf("%i\n", xAngle);
-//	alt_printf("%i\n", yAngle);
+int App::defineIndex(int value) {
+	float line_int = 200/LINES-2;
+	// each motor has an interval defined by this size
+	int half_mot = (LINES - 1)%2 == 0 ? LINES/2 : ((int)(LINES - 1)/2) + 1;
+	// the motor in the middle of the line/column
+	float half_int_end = line_int*(half_mot-1);
+	// the point in the end of the middle motor interval
+	if((-1)*half_int_end/2 < value && value < half_int_end/2) {
+		return half_mot;
+		// if the value is in the middle interval, return the middle identifier
+	}
+	float mot_int_b = half_int_end/2;
+	// the begin of the interval that will be tested
+	int x = -1;
+	if(value >= 0) { // if is in the positive part
+		for(int i = 1; 2*i < LINES-2 && x == -1; i++) {
+			// for each motor in the positive part but the last
+			if(mot_int_b <= value && value < mot_int_b + line_int) {
+				x = i + half_mot;
+				// if the value is in the interval of the motor being tested,
+				// return it's identifier
+			} else {
+				mot_int_b += line_int; // else, just set to test the next motor
+			}
+		}
+		if (x == -1) {
+			x = LINES-1; // if it is in the positive part and the responsible
+			// motor was not found, then the signal is bigger than 100
+		}
+		return x;
+	}
+	mot_int_b *= -1; // set to test in the negative part
+	line_int *= -1;
+	for(int i = 1; 2*i < LINES-2 && x == -1; i++) {
+		//for each motor in the negative part
+		if(mot_int_b >= value && value > mot_int_b + line_int) {
+			x = i + half_mot; // if the value is in the interval of the motor
+			// being tested, return it's identifier
+		} else {
+			mot_int_b += line_int; // else, just set to test the next motor
+		}
+	}
+	if (x == -1) {
+		x = LINES-1; // if it is in the negative part and the responsible
+		// motor was not found, then the signal is smaller than -100
+	}
+	return x;
 }
 
 void App::run() {
@@ -89,8 +132,6 @@ void App::run() {
 	motors->write((0<<24)|(255<<16)|(255<<8)|(255));
 
 	while (1) {
-//		alt_putstr("Waiting for data...\n");
-
 		wifi->receive(data, size);
 		char type = data[0];
 		switch (type) {
@@ -135,7 +176,7 @@ void App::run() {
 		case 'g': { /*gyroscope*/
 //			alt_putstr("Gyroscope received. Sending to the motors...\n");
 //			alt_printf("%s\n", data);
-			writeGyroscope(int(data[1]), int(data[2]));
+			writeGyroscope(int(data[1]), int(data[2]), int(data[3]));
 		}
 			break;
 		default: {

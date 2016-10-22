@@ -81,7 +81,8 @@ private:
 
 	void vibrate(void *arg);
 	void writeCompass(unsigned char direction);
-	void writeGyroscope(int xAngle, int yAngle);
+	void writeGyroscope(int xAngle, int yAngle, int zAngle);
+	int defineIndex(int value);
 
 	static void fftHandler(unsigned int output);
 	static Motors *motors;
