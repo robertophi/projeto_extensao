@@ -1,5 +1,6 @@
 #ifndef APP_H
 #define APP_H
+#define NULL 0
 
 #include "sys/alt_stdio.h"
 #include "motors.h"
@@ -17,6 +18,8 @@ public:
 	void run();
 
 private:
+	short compass;
+
 	class Buffer {
 		public:
 			Buffer(){

@@ -81,7 +81,6 @@ void WiFi::receive(unsigned char* data, unsigned int *size) {
 	if(max>2048){
 		max = 2048;
 	}
-	alt_printf("Size final = %d\n",max);
 
 	for(j=0;j < max;j+=1){
 		data[j] = alt_getchar();
