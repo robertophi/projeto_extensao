@@ -1,0 +1,814 @@
+ (routes 
+  (resolution mm 100000)
+  (parser
+  )
+  (parser
+  )
+  (structure_out
+   (layer TOP (type signal)
+   )
+   (layer I1 (type signal)
+   )
+   (layer I2 (type signal)
+   )
+   (layer I3 (type signal)
+   )
+   (layer I4 (type signal)
+   )
+   (layer I5 (type signal)
+   )
+   (layer I6 (type signal)
+   )
+   (layer I7 (type signal)
+   )
+   (layer I8 (type signal)
+   )
+   (layer I9 (type signal)
+   )
+   (layer I10 (type signal)
+   )
+   (layer I11 (type signal)
+   )
+   (layer I12 (type signal)
+   )
+   (layer I13 (type signal)
+   )
+   (layer I14 (type signal)
+   )
+   (layer BOT (type signal)
+   )
+  )
+  (library_out
+  (padstack $VIA_POWER
+   (shape (circ TOP 76200 0 0))
+   (shape (circ I1 76200 0 0))
+   (shape (circ I2 76200 0 0))
+   (shape (circ I3 76200 0 0))
+   (shape (circ I4 76200 0 0))
+   (shape (circ I5 76200 0 0))
+   (shape (circ I6 76200 0 0))
+   (shape (circ I7 76200 0 0))
+   (shape (circ I8 76200 0 0))
+   (shape (circ I9 76200 0 0))
+   (shape (circ I10 76200 0 0))
+   (shape (circ I11 76200 0 0))
+   (shape (circ I12 76200 0 0))
+   (shape (circ I13 76200 0 0))
+   (shape (circ I14 76200 0 0))
+   (shape (circ BOT 76200 0 0))
+  )
+  (padstack $VIA_GND
+   (shape (circ TOP 76200 0 0))
+   (shape (circ I1 76200 0 0))
+   (shape (circ I2 76200 0 0))
+   (shape (circ I3 76200 0 0))
+   (shape (circ I4 76200 0 0))
+   (shape (circ I5 76200 0 0))
+   (shape (circ I6 76200 0 0))
+   (shape (circ I7 76200 0 0))
+   (shape (circ I8 76200 0 0))
+   (shape (circ I9 76200 0 0))
+   (shape (circ I10 76200 0 0))
+   (shape (circ I11 76200 0 0))
+   (shape (circ I12 76200 0 0))
+   (shape (circ I13 76200 0 0))
+   (shape (circ I14 76200 0 0))
+   (shape (circ BOT 76200 0 0))
+  )
+  (padstack $VIA_SIGNAL
+   (shape (circ TOP 76200 0 0))
+   (shape (circ I1 76200 0 0))
+   (shape (circ I2 76200 0 0))
+   (shape (circ I3 76200 0 0))
+   (shape (circ I4 76200 0 0))
+   (shape (circ I5 76200 0 0))
+   (shape (circ I6 76200 0 0))
+   (shape (circ I7 76200 0 0))
+   (shape (circ I8 76200 0 0))
+   (shape (circ I9 76200 0 0))
+   (shape (circ I10 76200 0 0))
+   (shape (circ I11 76200 0 0))
+   (shape (circ I12 76200 0 0))
+   (shape (circ I13 76200 0 0))
+   (shape (circ I14 76200 0 0))
+   (shape (circ BOT 76200 0 0))
+  )
+  (padstack $VIA_VCC
+   (shape (circ TOP 76200 0 0))
+   (shape (circ I1 76200 0 0))
+   (shape (circ I2 76200 0 0))
+   (shape (circ I3 76200 0 0))
+   (shape (circ I4 76200 0 0))
+   (shape (circ I5 76200 0 0))
+   (shape (circ I6 76200 0 0))
+   (shape (circ I7 76200 0 0))
+   (shape (circ I8 76200 0 0))
+   (shape (circ I9 76200 0 0))
+   (shape (circ I10 76200 0 0))
+   (shape (circ I11 76200 0 0))
+   (shape (circ I12 76200 0 0))
+   (shape (circ I13 76200 0 0))
+   (shape (circ I14 76200 0 0))
+   (shape (circ BOT 76200 0 0))
+  )
+  )
+  (network_out
+   (Net #00008 
+   (rule
+   )
+   (wire (path TOP 25399  8930000 -5390000 9194800 -5390000 9194800 -7456000
+     8082000 -7456000)
+    (connect (terminal pin J2-21) (terminal pin ULN1-17))
+   )
+   )
+   (Net #00009 
+   (rule
+   )
+   (wire (path TOP 25399  8930000 -5590000 9093200 -5590000 9093200 -7202000
+     8082000 -7202000)
+    (connect (terminal pin J2-23) (terminal pin ULN1-16))
+   )
+   )
+   (Net #00010 
+   (rule
+   )
+   (wire (path TOP 25399  8082000 -6948000 9042400 -6948000 9042400 -5790000
+     8930000 -5790000)
+    (connect (terminal pin ULN1-15) (terminal pin J2-25))
+   )
+   )
+   (Net #00011 
+   (rule
+   )
+   (wire (path TOP 25399  8082000 -6694000 8930000 -6694000 8930000 -5990000)
+    (connect (terminal pin ULN1-14) (terminal pin J2-27))
+   )
+   )
+   (Net #00012 
+   (rule
+   )
+   (wire (path TOP 25399  8082000 -6440000 8559800 -6440000 8559800 -5190000
+     8730000 -5190000)
+    (connect (terminal pin ULN1-13) (terminal pin J2-18))
+   )
+   )
+   (Net #00013 
+   (rule
+   )
+   (wire (path TOP 25399  8082000 -6186000 8407400 -6186000 8407400 -4990000
+     8730000 -4990000)
+    (connect (terminal pin ULN1-12) (terminal pin J2-16))
+   )
+   )
+   (Net #00014 
+   (rule
+   )
+   (wire (path TOP 25399  8082000 -5932000 8350900 -5932000 8350900 -4790000
+     8730000 -4790000)
+    (connect (terminal pin ULN1-11) (terminal pin J2-14))
+   )
+   )
+   (Net #00015 
+   (rule
+   )
+   (wire (path TOP 25399  8082000 -5678000 8204200 -5678000 8204200 -4590000
+     8730000 -4590000)
+    (connect (terminal pin ULN1-10) (terminal pin J2-12))
+   )
+   )
+   (Net #00023 
+   (rule
+   )
+   (wire (path TOP 25399  5252000 -6660000 5230000 -6660000 5230000 -6350000)
+    (connect (terminal pin B2-10) (terminal pin ULN2-0))
+   )
+   )
+   (Net #00024 
+   (rule
+   )
+   (wire (path TOP 25399  4998000 -6660000 4976000 -6660000 4976000 -6350000)
+    (connect (terminal pin B2-9) (terminal pin ULN2-1))
+   )
+   )
+   (Net #00025 
+   (rule
+   )
+   (wire (path TOP 25399  4744000 -6660000 4722000 -6660000 4722000 -6350000)
+    (connect (terminal pin B2-8) (terminal pin ULN2-2))
+   )
+   )
+   (Net #00026 
+   (rule
+   )
+   (wire (path TOP 25399  4490000 -6660000 4468000 -6660000 4468000 -6350000)
+    (connect (terminal pin B2-7) (terminal pin ULN2-3))
+   )
+   )
+   (Net #00030 
+   (rule
+   )
+   (wire (path TOP 25399  4214000 -6660000 4214000 -6350000)
+    (connect (terminal pin B1-13) (terminal pin ULN2-4))
+   )
+   )
+   (Net #00031 
+   (rule
+   )
+   (wire (path TOP 25399  3960000 -6660000 3960000 -6350000)
+    (connect (terminal pin B1-12) (terminal pin ULN2-5))
+   )
+   )
+   (Net #00032 
+   (rule
+   )
+   (wire (path TOP 25399  3706000 -6660000 3706000 -6350000)
+    (connect (terminal pin B1-11) (terminal pin ULN2-6))
+   )
+   )
+   (Net #00033 
+   (rule
+   )
+   (wire (path TOP 25399  3452000 -6660000 3452000 -6350000)
+    (connect (terminal pin B1-10) (terminal pin ULN2-7))
+   )
+   )
+   (Net #00037 
+   (rule
+   )
+   (wire (path TOP 25399  2944000 -6660000 2944000 -4800600 2438400 -4800600
+     2438400 -5180000 2560000 -5180000)
+    (connect (terminal pin B1-8) (terminal pin ULN3-0))
+   )
+   )
+   (Net #00039 
+   (rule
+   )
+   (wire (path TOP 25399  2560000 -4926000 2690000 -4926000 2690000 -6660000)
+    (connect (terminal pin ULN3-1) (terminal pin B1-7))
+   )
+   )
+   (Net #00068 
+   (rule
+   )
+   (wire (path TOP 25399  6466000 -4416000 6344000 -4416000 5892000 -3964000)
+    (connect (terminal pin R1-0) (terminal pin ULN5-4))
+    (type protect)
+   )
+   )
+   (Net #00069 
+   (rule
+   )
+   (wire (path TOP 25399  6466000 -4162000 6372000 -4162000 6259751 -4049751
+     6253171 -4049751 5955500 -3752080 5892000 -3710000)
+    (connect (terminal pin R1-1) (terminal pin ULN5-3))
+    (type protect)
+   )
+   )
+   (Net #00070 
+   (rule
+   )
+   (wire (path TOP 25399  6466000 -3908000 6369100 -3908000 5955500 -3494400
+     5892000 -3456000)
+    (connect (terminal pin R1-2) (terminal pin ULN5-2))
+    (type protect)
+   )
+   )
+   (Net #00071 
+   (rule
+   )
+   (wire (path TOP 25399  6466000 -3654000 6462000 -3650000 6340000 -3650000
+     5892000 -3202000)
+    (connect (terminal pin R1-3) (terminal pin ULN5-1))
+    (type protect)
+   )
+   )
+   (Net #00076 
+   (rule
+   )
+   (wire (path TOP 25399  6466000 -3400000 6344000 -3400000 5892000 -2948000)
+    (connect (terminal pin R1-4) (terminal pin ULN5-0))
+    (type protect)
+   )
+   )
+   (Net #00083 
+   (rule
+   )
+   (wire (path TOP 25399  6466000 -5962000 6350383 -5846383 6337783 -5846383
+     6110000 -5618600 6110000 -4790000 6046000 -4726000 5892000 -4726000)
+    (connect (terminal pin R2-1) (terminal pin ULN5-7))
+    (type protect)
+   )
+   )
+   (Net #00085 
+   (rule
+   )
+   (wire (path TOP 25399  6466000 -5454000 6274340 -5454000 6210000 -5389660
+     6210000 -4660000 6022000 -4472000 5892000 -4472000)
+    (connect (terminal pin R2-3) (terminal pin ULN5-6))
+    (type protect)
+   )
+   )
+   (Net #00088 
+   (rule
+   )
+   (wire (path TOP 25399  6466000 -5200000 6375270 -5109270 6290000 -5109270
+     6290000 -4563882 5944118 -4218000 5892000 -4218000)
+    (connect (terminal pin R2-4) (terminal pin ULN5-5))
+    (type protect)
+   )
+   )
+   (Net #00130 
+   (rule
+   )
+   (wire (path TOP 25399  5230000 -5588000 5230000 -5207000 4622800 -5207000
+     4622800 -2203029 5050000 -2203029 5050000 -1730000)
+    (connect (terminal pin ULN2-17) (terminal pin J1-26))
+   )
+   )
+   (Net #00131 
+   (rule
+   )
+   (wire (path TOP 25399  4976000 -5588000 4976000 -5435600 4572000 -5435600
+     4572000 -2006600 4850000 -2006600 4850000 -1730000)
+    (connect (terminal pin ULN2-16) (terminal pin J1-24))
+   )
+   )
+   (Net #00132 
+   (rule
+   )
+   (wire (path TOP 25399  4650000 -1730000 4650000 -1905000 4521200 -1905000
+     4521200 -5486400 4722000 -5486400 4722000 -5588000)
+    (connect (terminal pin J1-22) (terminal pin ULN2-15))
+   )
+   )
+   (Net #00133 
+   (rule
+   )
+   (wire (path TOP 25399  4450000 -1730000 4450000 -2260600 4468000 -2260600
+     4468000 -5588000)
+    (connect (terminal pin J1-20) (terminal pin ULN2-14))
+   )
+   )
+   (Net #00134 
+   (rule
+   )
+   (wire (path TOP 25399  4214000 -5588000 4214000 -4446491 4250000 -4446491
+     4250000 -1730000)
+    (connect (terminal pin ULN2-13) (terminal pin J1-18))
+   )
+   )
+   (Net #00135 
+   (rule
+   )
+   (wire (path TOP 25399  3960000 -5588000 3960000 -2295799 4050000 -2295799
+     4050000 -1730000)
+    (connect (terminal pin ULN2-12) (terminal pin J1-16))
+   )
+   )
+   (Net #00136 
+   (rule
+   )
+   (wire (path TOP 25399  3850000 -1730000 3850000 -5588000 3706000 -5588000)
+    (connect (terminal pin J1-14) (terminal pin ULN2-11))
+   )
+   )
+   (Net #00137 
+   (rule
+   )
+   (wire (path TOP 25399  3452000 -5588000 3452000 -5486400 3733800 -5486400
+     3733800 -1905000 3650000 -1905000 3650000 -1730000)
+    (connect (terminal pin ULN2-10) (terminal pin J1-12))
+   )
+   )
+   (Net #00140 
+   (rule
+   )
+   (wire (path TOP 25399  3212837 -5070837 3149600 -5070837 3149600 -5334000
+     3683000 -5334000 3683000 -2081509 3450000 -2081509 3450000 -1730000)
+    (connect (terminal wire) (terminal pin J1-10))
+   )
+   (wire (path TOP 25399  3322000 -5180000 3212837 -5070837)
+    (connect (terminal pin ULN3-17) (terminal wire))
+    (type protect)
+    (attr fanout)
+   )
+   )
+   (Net #00141 
+   (rule
+   )
+   (wire (path TOP 25399  3250000 -1730000 3250000 -2209800 3632200 -2209800
+     3632200 -4926000 3322000 -4926000)
+    (connect (terminal pin J1-8) (terminal pin ULN3-16))
+   )
+   )
+   (Net #00142 
+   (rule
+   )
+   (wire (path TOP 25399  3050000 -1730000 3050000 -2315612 3581400 -2315612
+     3581400 -4672000 3322000 -4672000)
+    (connect (terminal pin J1-6) (terminal pin ULN3-15))
+   )
+   )
+   (Net #00143 
+   (rule
+   )
+   (wire (path TOP 25399  2850000 -1730000 2850000 -2438400 3530600 -2438400
+     3530600 -4418000 3322000 -4418000)
+    (connect (terminal pin J1-4) (terminal pin ULN3-14))
+   )
+   )
+   (Net #00144 
+   (rule
+   )
+   (wire (path TOP 25399  2650000 -1730000 2650000 -2652488 3479800 -2652488
+     3479800 -4164000 3321999 -4164000)
+    (connect (terminal pin J1-2) (terminal pin ULN3-13))
+   )
+   )
+   (Net #00145 
+   (rule
+   )
+   (wire (path TOP 25399  2450000 -1730000 2450000 -2844800 3429000 -2844800
+     3429000 -3910000 3321999 -3910000)
+    (connect (terminal pin J1-0) (terminal pin ULN3-12))
+   )
+   )
+   (Net #00146 
+   (rule
+   )
+   (wire (path TOP 25399  3322000 -3656000 2620586 -2954586 2278920 -2954586
+     1806364 -2482030 1806364 -1662927 2284511 -1184780 2495278 -1184780
+     2650000 -1339502 2650000 -1530000)
+    (connect (terminal pin ULN3-11) (terminal pin J1-3))
+    (type protect)
+   )
+   )
+   (Net #00147 
+   (rule
+   )
+   (wire (path TOP 25399  2450000 -1530000 2336800 -1530000 2336800 -2895600
+     3200400 -2895600 3200400 -3402000 3321999 -3402000)
+    (connect (terminal pin J1-1) (terminal pin ULN3-10))
+   )
+   )
+   (Net #00150 
+   (rule
+   )
+   (wire (path TOP 25399  8080000 -4282000 8305800 -4282000 8305800 -4390000
+     8730000 -4390000)
+    (connect (terminal pin ULN4-17) (terminal pin J2-10))
+   )
+   )
+   (Net #00151 
+   (rule
+   )
+   (wire (path TOP 25399  8080000 -4028000 8204200 -4028000 8204200 -4190000
+     8730000 -4190000)
+    (connect (terminal pin ULN4-16) (terminal pin J2-8))
+   )
+   )
+   (Net #00152 
+   (rule
+   )
+   (wire (path TOP 25399  8080000 -3774000 8255000 -3774000 8255000 -3990000
+     8730000 -3990000)
+    (connect (terminal pin ULN4-15) (terminal pin J2-6))
+   )
+   )
+   (Net #00153 
+   (rule
+   )
+   (wire (path TOP 25399  8080000 -3520000 8260000 -3520000 8550000 -3810000
+     8710000 -3810000 8730000 -3790000)
+    (connect (terminal pin ULN4-14) (terminal pin J2-4))
+    (type protect)
+   )
+   )
+   (Net #00154 
+   (rule
+   )
+   (wire (path TOP 25399  8080000 -3266000 8261952 -3266000 8581571 -3585619
+     8725619 -3585619 8730000 -3590000)
+    (connect (terminal pin ULN4-13) (terminal pin J2-2))
+    (type protect)
+   )
+   )
+   (Net #00155 
+   (rule
+   )
+   (wire (path TOP 25399  8080000 -3012000 8730000 -3012000 8730000 -3390000)
+    (connect (terminal pin ULN4-12) (terminal pin J2-0))
+   )
+   )
+   (Net #00156 
+   (rule
+   )
+   (wire (path TOP 25399  8080000 -2758000 8929999 -2758000 8929999 -3390000)
+    (connect (terminal pin ULN4-11) (terminal pin J2-1))
+   )
+   )
+   (Net #00157 
+   (rule
+   )
+   (wire (path TOP 25399  8080000 -2504000 9093200 -2504000 9093200 -3590000
+     8929999 -3590000)
+    (connect (terminal pin ULN4-10) (terminal pin J2-3))
+   )
+   )
+   (Net #00160 
+   (rule
+   )
+   (wire (path TOP 25399  5130000 -2948000 5529234 -2948000 5681986 -2795248
+     5826100 -2651134 6762837 -2651134 6762837 -2083688 7033050 -1813475
+     7033050 -930781 7006028 -903759 6924964 -822695 4007305 -822695
+     3690000 -1140000 3690000 -1490000 3650000 -1530000)
+    (connect (terminal pin ULN5-17) (terminal pin J1-13))
+    (type protect)
+   )
+   )
+   (Net #00161 
+   (rule
+   )
+   (wire (path TOP 25399  5130000 -3202000 4978400 -3202000 4978400 -2844800
+     5486400 -2844800 5486400 -1143000 3850000 -1143000 3850000 -1530000)
+    (connect (terminal pin ULN5-16) (terminal pin J1-15))
+   )
+   )
+   (Net #00162 
+   (rule
+   )
+   (wire (path TOP 25399  4050000 -1530000 4050000 -1193800 5435600 -1193800
+     5435600 -2794000 4927600 -2794000 4927600 -3456000 5130000 -3456000)
+    (connect (terminal pin J1-17) (terminal pin ULN5-15))
+   )
+   )
+   (Net #00163 
+   (rule
+   )
+   (wire (path TOP 25399  4250000 -1530000 4250000 -1244600 5384800 -1244600
+     5384800 -2743200 4876800 -2743200 4876800 -3710000 5130000 -3710000)
+    (connect (terminal pin J1-19) (terminal pin ULN5-14))
+   )
+   )
+   (Net #00164 
+   (rule
+   )
+   (wire (path TOP 25399  5130000 -3964000 4826000 -3964000 4826000 -2692400
+     5334000 -2692400 5334000 -1295400 4450000 -1295400 4450000 -1530000)
+    (connect (terminal pin ULN5-13) (terminal pin J1-21))
+   )
+   )
+   (Net #00165 
+   (rule
+   )
+   (wire (path TOP 25399  4650000 -1530000 4650000 -1346200 5283200 -1346200
+     5283200 -2641600 4775200 -2641600 4775200 -4218000 5130000 -4218000)
+    (connect (terminal pin J1-23) (terminal pin ULN5-12))
+   )
+   )
+   (Net #00166 
+   (rule
+   )
+   (wire (path TOP 25399  5130000 -4472000 5232400 -4472000 5232400 -4876800
+     4724400 -4876800 4724400 -2463800 5232400 -2463800 5232400 -1397000
+     4850000 -1397000 4850000 -1530000)
+    (connect (terminal pin ULN5-11) (terminal pin J1-25))
+   )
+   )
+   (Net #00167 
+   (rule
+   )
+   (wire (path TOP 25399  5130000 -4726000 4953000 -4726000 4953000 -4368800
+     5334000 -4368800 5334000 -5105400 4673600 -5105400 4673600 -2353487
+     5181600 -2353487 5181600 -1530000 5050000 -1530000)
+    (connect (terminal pin ULN5-10) (terminal pin J1-27))
+   )
+   )
+   (Net 101 
+   (rule
+   )
+   (wire (path TOP 25399  7318000 -2758000 6934200 -2758000 6934200 -3400000
+     6719999 -3400000)
+    (connect (terminal pin ULN4-6) (terminal pin R1-9))
+   )
+   )
+   (Net 104 
+   (rule
+   )
+   (wire (path TOP 25399  7318000 -2504000 6883400 -2504000 6883400 -3146000
+     6719999 -3146000)
+    (connect (terminal pin ULN4-7) (terminal pin R1-8))
+   )
+   )
+   (Net 24 
+   (rule
+   )
+   (wire (path TOP 25399  2224000 -4692000 2224000 -4418000 2560000 -4418000)
+    (connect (terminal pin L2-7) (terminal pin ULN3-3))
+   )
+   )
+   (Net 25 
+   (rule
+   )
+   (wire (path TOP 25399  1970000 -4692000 1970000 -4164000 2560000 -4164000)
+    (connect (terminal pin L2-6) (terminal pin ULN3-4))
+   )
+   )
+   (Net 26 
+   (rule
+   )
+   (wire (path TOP 25399  2560000 -4672000 2387600 -4672000 2387600 -4946000
+     2224000 -4946000)
+    (connect (terminal pin ULN3-2) (terminal pin L2-8))
+   )
+   )
+   (Net 27 
+   (rule
+   )
+   (wire (path TOP 25399  1970000 -4946000 1828800 -4946000 1828800 -3910000
+     2560000 -3910000)
+    (connect (terminal pin L2-5) (terminal pin ULN3-5))
+   )
+   )
+   (Net 30 
+   (rule
+   )
+   (wire (path TOP 25399  2560000 -3656000 1778000 -3656000 1778000 -5454000
+     1970000 -5454000)
+    (connect (terminal pin ULN3-6) (terminal pin L2-3))
+   )
+   )
+   (Net 32 
+   (rule
+   )
+   (wire (path TOP 25399  2560000 -3402000 1676400 -3402000 1676400 -5708000
+     1970000 -5708000)
+    (connect (terminal pin ULN3-7) (terminal pin L2-2))
+   )
+   )
+   (Net 40 
+   (rule
+   )
+   )
+   (Net 42 
+   (rule
+   )
+   )
+   (Net 44 
+   (rule
+   )
+   )
+   (Net 47 
+   (rule
+   )
+   )
+   (Net 51 
+   (rule
+   )
+   )
+   (Net 53 
+   (rule
+   )
+   )
+   (Net 57 
+   (rule
+   )
+   (wire (path TOP 25399  4214000 -6914000 4214000 -7024000 4730779 -7540779
+     7235221 -7540779 7320000 -7456000)
+    (connect (terminal pin B1-0) (terminal pin ULN1-0))
+    (type protect)
+   )
+   )
+   (Net 59 
+   (rule
+   )
+   (wire (path TOP 25399  4490000 -6914000 4490000 -7112340 4801347 -7423687
+     7026098 -7423687 7215247 -7234538 7287462 -7234538 7320000 -7202000)
+    (connect (terminal pin B2-6) (terminal pin ULN1-1))
+    (type protect)
+   )
+   )
+   (Net 63 
+   (rule
+   )
+   (wire (path TOP 25399  4744000 -6914000 4744000 -7213600 7035800 -7213600
+     7035800 -6948000 7320000 -6948000)
+    (connect (terminal pin B2-5) (terminal pin ULN1-2))
+   )
+   )
+   (Net 65 
+   (rule
+   )
+   (wire (path TOP 25399  4998000 -6914000 4998000 -7162800 6985000 -7162800
+     6985000 -6694000 7320000 -6694000)
+    (connect (terminal pin B2-4) (terminal pin ULN1-3))
+   )
+   )
+   (Net 69 
+   (rule
+   )
+   (wire (path TOP 25399  5252000 -6914000 5252000 -7112000 6934200 -7112000
+     6934200 -6440000 7320000 -6440000)
+    (connect (terminal pin B2-3) (terminal pin ULN1-4))
+   )
+   )
+   (Net 71 
+   (rule
+   )
+   (wire (path TOP 25399  5506000 -6914000 5506000 -7061200 6883400 -7061200
+     6883400 -6186000 7320000 -6186000)
+    (connect (terminal pin B2-2) (terminal pin ULN1-5))
+   )
+   )
+   (Net 73 
+   (rule
+   )
+   (wire (path TOP 25399  7320000 -5932000 7108775 -5932000 7108775 -5962000
+     6719999 -5962000)
+    (connect (terminal pin ULN1-6) (terminal pin R2-12))
+   )
+   )
+   (Net 75 
+   (rule
+   )
+   (wire (path TOP 25399  7320000 -5678000 7112000 -5678000 7112000 -5708000
+     6719999 -5708000)
+    (connect (terminal pin ULN1-7) (terminal pin R2-11))
+   )
+   )
+   (Net 79 
+   (rule
+   )
+   (wire (path TOP 25399  7318000 -4282000 7318000 -5308600 7162800 -5308600
+     7162800 -5454000 6719999 -5454000)
+    (connect (terminal pin ULN4-0) (terminal pin R2-10))
+   )
+   )
+   (Net 81 
+   (rule
+   )
+   (wire (path TOP 25399  7318000 -4028000 7188200 -4028000 7188200 -5200000
+     6719999 -5200000)
+    (connect (terminal pin ULN4-1) (terminal pin R2-9))
+   )
+   )
+   (Net 87 
+   (rule
+   )
+   (wire (path TOP 25399  7318000 -3774000 7137400 -3774000 7137400 -4946000
+     6719999 -4946000)
+    (connect (terminal pin ULN4-2) (terminal pin R2-8))
+   )
+   )
+   (Net 93 
+   (rule
+   )
+   (wire (path TOP 25399  7318000 -3520000 7086600 -3520000 7086600 -4162000
+     6719999 -4162000)
+    (connect (terminal pin ULN4-3) (terminal pin R1-12))
+   )
+   )
+   (Net 96 
+   (rule
+   )
+   (wire (path TOP 25399  7318000 -3266000 7035800 -3266000 7035800 -3908000
+     6719999 -3908000)
+    (connect (terminal pin ULN4-4) (terminal pin R1-11))
+   )
+   )
+   (Net 99 
+   (rule
+   )
+   (wire (path TOP 25399  7318000 -3012000 6985000 -3012000 6985000 -3654000
+     6719999 -3654000)
+    (connect (terminal pin ULN4-5) (terminal pin R1-10))
+   )
+   )
+   (Net GND 
+   (rule
+   )
+   (wire (path BOT 101600  2717800 -5334000 2717800 -6350000 3198000 -6350000)
+    (connect (terminal wire) (terminal pin ULN2-8))
+   )
+   (wire (path BOT 101600  2560000 -3148000 2717800 -3148000 2717800 -5334000)
+    (connect (terminal pin ULN3-8) (terminal wire))
+   )
+   (wire (path BOT 101600  5867400 -5334000 5994400 -5334000 5994400 -6477000
+     6908800 -6477000 6908800 -5424000 7320000 -5424000)
+    (connect (terminal wire) (terminal pin ULN1-8))
+   )
+   (wire (path BOT 101600  5867400 -5334000 5867400 -5207000 5892000 -5207000
+     5892000 -4980000)
+    (connect (terminal wire) (terminal pin ULN5-8))
+   )
+   (wire (path BOT 101600  2717800 -5334000 5867400 -5334000)
+    (connect (terminal wire) (terminal wire))
+   )
+   (wire (path BOT 101600  7320000 -5424000 7614600 -5129400 7614600 -2526600
+     7338000 -2250000 7318000 -2250000)
+    (connect (terminal pin ULN1-8) (terminal pin ULN4-8))
+    (type protect)
+   )
+   )
+  )
+ )
