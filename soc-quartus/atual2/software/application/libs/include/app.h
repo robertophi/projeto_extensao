@@ -82,6 +82,7 @@ private:
 	void writeCompass(int direction);
 	void writeGyroscope(int xAngle, int yAngle, int zAngle);
 	int defineIndex(int value);
+	void writeAudio(int* freq, int samples);
 
 	static void fftHandler(unsigned int output);
 	static Motors *motors;

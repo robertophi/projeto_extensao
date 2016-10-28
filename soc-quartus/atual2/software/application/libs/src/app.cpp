@@ -40,14 +40,10 @@ void App::writeCompass(int direction) {
 	int responsible = 360/COLUMNS;
 	direction += 180;
 	int motor = direction/responsible;
-	int neighbor;
+	int neighbor = motor + 1;
 	float remainder = direction % responsible;
 	if(remainder > 0.5) {
 		remainder = 1-remainder;
-		neighbor = motor;
-		motor--;
-	} else {
-		neighbor = motor - 1;
 	}
 	int cmd = 1 << 24;
 	int line = (LINES-1) << 16;
@@ -57,19 +53,20 @@ void App::writeCompass(int direction) {
 
 	motors->write((int)( cmd | line |  column	|  2 ));
 	motors->write((int)( cmd | line | neighbor	|  2 ));
-	motors->write((int)(  0  | line |  column	| compass_vib_value ));
-	motors->write((int)(  0  | line | neighbor	| neighbor_remainder ));
 	cmd = 2 << 24;
 	motors->write((int)( cmd | line |  column	|  1 ));
 	motors->write((int)( cmd | line | neighbor	|  1 ));
+
+	motors->write((int)(  0  | line |  column	| compass_vib_value ));
+	motors->write((int)(  0  | line | neighbor%COLUMNS	| neighbor_remainder));
 }
 
 void App::writeGyroscope(int xAngle, int yAngle, int zAngle) {
 	int x = defineIndex(xAngle) << 16;
 	int y = defineIndex(yAngle) << 8;
 	motors->write(( (1 << 24) | x | y | 2 ));
-	motors->write((     0     | x | y | (zAngle > 100 ? 100 : zAngle)));
 	motors->write(( (2 << 24) | x | y | 1 ));
+	motors->write((     0     | x | y | (zAngle > 100 ? 100 : zAngle)));
 }
 
 int App::defineIndex(int value) {
@@ -119,6 +116,26 @@ int App::defineIndex(int value) {
 		// motor was not found, then the signal is smaller than -100
 	}
 	return x;
+}
+
+void App::writeAudio(int* freq, int samples) {
+	int commom = samples/COLUMNS;
+	int summation = 0;
+	int pos = 0;
+	motors->write_to_next_line();
+	motors->write( 0 | 0 | 255 | 0 );
+	motors->write( 2 << 24 | 0 | 255 | 1 );
+	for(int i = 0; i < samples; i++) {
+		summation += freq[i];
+		if(i%commom == commom - 1) {
+			motors->write((1<<24)| 0 | (pos << 8) |(5));
+			motors->write((  0   | 0 | (pos << 8) | summation/commom ));
+			pos++;
+			summation = 0;
+		}
+	}
+
+
 }
 
 void App::run() {
