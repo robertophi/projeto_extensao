@@ -13,7 +13,7 @@ App::Buffer	App::buffer;
 
 App::App() {
 	wifi = WiFi::getSingleton();
-	compass = -1;
+	compass_vib_value = 25;
 }
 
 App::~App() {
@@ -35,42 +35,41 @@ void App::fftHandler(unsigned int output) {
 		fft->write(buffer.pop());
 }
 
-void App::writeCompass(unsigned char direction) {
-	int half = (COLUMNS-1)/2;
-	int quarter = (COLUMNS-1)/4;
-	int column;
-	switch(direction) {
-		case 'N':
-			column = half;
-			break;
-		case 'W':
-			column = quarter;
-			break;
-		case 'E':
-			column = quarter + half;
-			break;
-		case 'S':
-			column = COLUMNS-1;
-			break;
-		default:
-			column = 0;
-			break;
+//If we have 5 motors in a column, each motor is responsible for 72° each; We receive a float in (-180°, 180°]. To simplify we add 180 to it.
+void App::writeCompass(int direction) {
+	int responsible = 360/COLUMNS;
+	direction += 180;
+	int motor = direction/responsible;
+	int neighbor;
+	float remainder = direction % responsible;
+	if(remainder > 0.5) {
+		remainder = 1-remainder;
+		neighbor = motor;
+		motor--;
+	} else {
+		neighbor = motor - 1;
 	}
-	int command = (  (1 << 24) | (LINES-1 << 16) | (column << 8) | (10) );
-	motors->write(command);
-	if(compass > -1) {
-		command = (  (1 << 24) | (LINES-1 << 16) | (compass << 8) | (0) );
-		motors->write(command);
-	}
-	compass = column;
+	int cmd = 1 << 24;
+	int line = (LINES-1) << 16;
+	int column = (motor-1) << 8;
+	neighbor = (neighbor-1) << 8;
+	int neighbor_remainder = compass_vib_value*remainder;
+
+	motors->write((int)( cmd | line |  column	|  2 ));
+	motors->write((int)( cmd | line | neighbor	|  2 ));
+	motors->write((int)(  0  | line |  column	| compass_vib_value ));
+	motors->write((int)(  0  | line | neighbor	| neighbor_remainder ));
+	cmd = 2 << 24;
+	motors->write((int)( cmd | line |  column	|  1 ));
+	motors->write((int)( cmd | line | neighbor	|  1 ));
 }
 
 void App::writeGyroscope(int xAngle, int yAngle, int zAngle) {
-	int x = defineIndex(xAngle);
-	int y = defineIndex(yAngle);
-	int command = (  (1 << 24) | (x << 16) | (y << 8) | (zAngle % 100) );
-	motors->write(command);
-
+	int x = defineIndex(xAngle) << 16;
+	int y = defineIndex(yAngle) << 8;
+	motors->write(( (1 << 24) | x | y | 2 ));
+	motors->write((     0     | x | y | (zAngle > 100 ? 100 : zAngle)));
+	motors->write(( (2 << 24) | x | y | 1 ));
 }
 
 int App::defineIndex(int value) {
@@ -116,7 +115,7 @@ int App::defineIndex(int value) {
 		}
 	}
 	if (x == -1) {
-		x = LINES-1; // if it is in the negative part and the responsible
+		x = 0; // if it is in the negative part and the responsible
 		// motor was not found, then the signal is smaller than -100
 	}
 	return x;
@@ -170,7 +169,7 @@ void App::run() {
 //			alt_putstr("Compass received. Sending to the motors...\n");
 //			alt_printf("%s\n", data);
 
-			writeCompass(data[1]);
+			writeCompass((int)data[1]);
 		}
 			break;
 		case 'g': { /*gyroscope*/
