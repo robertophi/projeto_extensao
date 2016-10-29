@@ -22,7 +22,7 @@ void FFT::setInterruptHandler(handler h) {
 }
 
 void FFT::write(unsigned char *input) {
-	alt_printf("%s\n", input);
+//	alt_printf("%s\n", input);
 
 	processing = true;
 	int_handler(3);

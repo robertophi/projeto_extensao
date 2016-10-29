@@ -1,5 +1,6 @@
 #ifndef APP_H
 #define APP_H
+#define NULL 0
 
 #include "sys/alt_stdio.h"
 #include "motors.h"
@@ -17,6 +18,7 @@ public:
 	void run();
 
 private:
+	int compass_vib_value;
 	class Buffer {
 		public:
 			Buffer(){
@@ -77,8 +79,10 @@ private:
 		};
 
 	void vibrate(void *arg);
-	void writeCompass(unsigned char direction);
-	void writeGyroscope(int xAngle, int yAngle);
+	void writeCompass(int direction);
+	void writeGyroscope(int xAngle, int yAngle, int zAngle);
+	int defineIndex(int value);
+	void writeAudio(int* freq, int samples);
 
 	static void fftHandler(unsigned int output);
 	static Motors *motors;

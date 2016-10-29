@@ -2,6 +2,8 @@
 
 #define SSID "ColeteWifi"
 #define PASSWORD "12345678"
+#define COLUMNS 5
+#define LINES 8
 //Senha nÃ£o pode ter menos de 8 caracteres
 
 /*Static*/
@@ -11,6 +13,7 @@ App::Buffer	App::buffer;
 
 App::App() {
 	wifi = WiFi::getSingleton();
+	compass_vib_value = 25;
 }
 
 App::~App() {
@@ -20,42 +23,119 @@ App::~App() {
 void App::setup() {
 	wifi->config(SSID, PASSWORD);
 	wifi->startServer();
-	alt_putstr("Setup done\n");
 	//fft->setInterruptHandler(App::fftHandler);
 }
 
 void App::fftHandler(unsigned int output) {
-	alt_printf("Got FFT output %d\n", output);
 
 	//	motors->write(output);
-	alt_printf("%i\n", buffer.length());
 	fft->read();
 
 	if(buffer.length() > 0)
 		fft->write(buffer.pop());
 }
 
-void App::writeCompass(unsigned char direction) {
-	switch(direction) {
-		case 'N':
-			alt_putstr("Sending direction as North.\n");
-			break;
-		case 'W':
-			alt_putstr("Sending direction as West.\n");
-			break;
-		case 'E':
-			alt_putstr("Sending direction as East.\n");
-			break;
-		case 'S':
-			alt_putstr("Sending direction as South.\n");
-			break;
+//If we have 5 motors in a column, each motor is responsible for 72° each; We receive a float in (-180°, 180°]. To simplify we add 180 to it.
+void App::writeCompass(int direction) {
+	int responsible = 360/COLUMNS;
+	direction += 180;
+	int motor = direction/responsible;
+	int neighbor = motor + 1;
+	float remainder = direction % responsible;
+	if(remainder > 0.5) {
+		remainder = 1-remainder;
 	}
+	int cmd = 1 << 24;
+	int line = (LINES-1) << 16;
+	int column = (motor-1) << 8;
+	neighbor = (neighbor-1) << 8;
+	int neighbor_remainder = compass_vib_value*remainder;
+
+	motors->write((int)( cmd | line |  column	|  2 ));
+	motors->write((int)( cmd | line | neighbor	|  2 ));
+	cmd = 2 << 24;
+	motors->write((int)( cmd | line |  column	|  1 ));
+	motors->write((int)( cmd | line | neighbor	|  1 ));
+
+	motors->write((int)(  0  | line |  column	| compass_vib_value ));
+	motors->write((int)(  0  | line | neighbor%COLUMNS	| neighbor_remainder));
 }
 
-void App::writeGyroscope(int xAngle, int yAngle) {
-	alt_putstr("Sending angle to vest.\n");
-	alt_printf("%i\n", xAngle);
-	alt_printf("%i\n", yAngle);
+void App::writeGyroscope(int xAngle, int yAngle, int zAngle) {
+	int x = defineIndex(xAngle) << 16;
+	int y = defineIndex(yAngle) << 8;
+	motors->write(( (1 << 24) | x | y | 2 ));
+	motors->write(( (2 << 24) | x | y | 1 ));
+	motors->write((     0     | x | y | (zAngle > 100 ? 100 : zAngle)));
+}
+
+int App::defineIndex(int value) {
+	float line_int = 200/LINES-2;
+	// each motor has an interval defined by this size
+	int half_mot = (LINES - 1)%2 == 0 ? LINES/2 : ((int)(LINES - 1)/2) + 1;
+	// the motor in the middle of the line/column
+	float half_int_end = line_int*(half_mot-1);
+	// the point in the end of the middle motor interval
+	if((-1)*half_int_end/2 < value && value < half_int_end/2) {
+		return half_mot;
+		// if the value is in the middle interval, return the middle identifier
+	}
+	float mot_int_b = half_int_end/2;
+	// the begin of the interval that will be tested
+	int x = -1;
+	if(value >= 0) { // if is in the positive part
+		for(int i = 1; 2*i < LINES-2 && x == -1; i++) {
+			// for each motor in the positive part but the last
+			if(mot_int_b <= value && value < mot_int_b + line_int) {
+				x = i + half_mot;
+				// if the value is in the interval of the motor being tested,
+				// return it's identifier
+			} else {
+				mot_int_b += line_int; // else, just set to test the next motor
+			}
+		}
+		if (x == -1) {
+			x = LINES-1; // if it is in the positive part and the responsible
+			// motor was not found, then the signal is bigger than 100
+		}
+		return x;
+	}
+	mot_int_b *= -1; // set to test in the negative part
+	line_int *= -1;
+	for(int i = 1; 2*i < LINES-2 && x == -1; i++) {
+		//for each motor in the negative part
+		if(mot_int_b >= value && value > mot_int_b + line_int) {
+			x = i + half_mot; // if the value is in the interval of the motor
+			// being tested, return it's identifier
+		} else {
+			mot_int_b += line_int; // else, just set to test the next motor
+		}
+	}
+	if (x == -1) {
+		x = 0; // if it is in the negative part and the responsible
+		// motor was not found, then the signal is smaller than -100
+	}
+	return x;
+}
+
+void App::writeAudio(int* freq, int samples) {
+	int commom = samples/COLUMNS;
+	int summation = 0;
+	int pos = 0;
+	motors->write_to_next_line();
+	motors->write( 0 | 0 | 255 | 0 );
+	motors->write( 2 << 24 | 0 | 255 | 1 );
+	for(int i = 0; i < samples; i++) {
+		summation += freq[i];
+		if(i%commom == commom - 1) {
+			motors->write((1<<24)| 0 | (pos << 8) |(5));
+			motors->write((  0   | 0 | (pos << 8) | summation/commom ));
+			pos++;
+			summation = 0;
+		}
+	}
+
+
 }
 
 void App::run() {
@@ -68,8 +148,6 @@ void App::run() {
 	motors->write((0<<24)|(255<<16)|(255<<8)|(255));
 
 	while (1) {
-		alt_putstr("Waiting for data...\n");
-
 		wifi->receive(data, size);
 		char type = data[0];
 		switch (type) {
@@ -78,37 +156,48 @@ void App::run() {
 			int linha = (int)(data[2]);
 			int coluna = (int)(data[3]);
 			int valor = (int)(data[4]);
-			alt_putstr("Motors received. Sending it to the motors...\n");
+//			alt_putstr("Motors received. Sending it to the motors...\n");
 			int command = (  (cmd << 24) | (linha << 16) | (coluna << 8) | (valor) );
-			alt_printf("Comando: %d %d %d %d = %d\n" ,cmd, linha, coluna, valor, command );
+//			alt_printf("Comando: %d %d %d %d = %d\n" ,cmd, linha, coluna, valor, command );
 			motors->write(command);
 		}
 			break;
 		case 'a': { /*audio*/
-			alt_putstr("Audio received. Sending it to the FFT...\n");
-			alt_printf("%s\n", data);
+//			alt_putstr("Audio received. Sending it to the FFT...\n");
+//			alt_printf("%s\n", data);
 			//buffer.push(data);
+			motors->write_to_next_line();
+
+
+//			|           _
+//			|    _     / \
+//		____|___/_\___/___\_____
+//			|\_/   \_/     \   /
+//			|               \_/
 
 			//if(!fft->isProcessing()) {
 			//	fft->write(buffer.pop());
 			//}
+
+
 		}
 			break;
 		case 'c': { /*compass*/
-			alt_putstr("Compass received. Sending to the motors...\n");
-			alt_printf("%s\n", data);
-			writeCompass(data[1]);
+//			alt_putstr("Compass received. Sending to the motors...\n");
+//			alt_printf("%s\n", data);
+
+			writeCompass((int)data[1]);
 		}
 			break;
 		case 'g': { /*gyroscope*/
-			alt_putstr("Gyroscope received. Sending to the motors...\n");
-			alt_printf("%s\n", data);
-			writeGyroscope(int(data[1]), int(data[2]));
+//			alt_putstr("Gyroscope received. Sending to the motors...\n");
+//			alt_printf("%s\n", data);
+			writeGyroscope(int(data[1]), int(data[2]), int(data[3]));
 		}
 			break;
 		default: {
-			alt_putstr("Some data received. Don't know what to do...\n");
-			alt_printf("%s\n", data);
+//			alt_putstr("Some data received. Don't know what to do...\n");
+//			alt_printf("%s\n", data);
 		}
 			break;
 		}
