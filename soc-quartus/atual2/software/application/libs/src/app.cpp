@@ -1,5 +1,4 @@
 #include "app.h"
-
 #define SSID "ColeteWifi"
 #define PASSWORD "12345678"
 #define COLUMNS 5
@@ -14,6 +13,7 @@ App::Buffer	App::buffer;
 App::App() {
 	wifi = WiFi::getSingleton();
 	compass_vib_value = 25;
+	running.init();
 }
 
 App::~App() {
@@ -134,8 +134,6 @@ void App::writeAudio(int* freq, int samples) {
 			summation = 0;
 		}
 	}
-
-
 }
 
 void App::run() {
@@ -147,9 +145,21 @@ void App::run() {
 	motors->write((2<<24)|(255<<16)|(255<<8)|(15));
 	motors->write((0<<24)|(255<<16)|(255<<8)|(255));
 
+	alt_timestamp_start();
+
 	while (1) {
+
 		wifi->receive(data, size);
 		char type = data[0];
+		if(alt_timestamp() >= 500) {
+			running.next();
+			motors->write( 1 | 255 << 16 | 255 << 8 | 0); // setting shift amount to instantaneous
+			motors->write( 0 | 255 << 16 | 255 << 8 | 0); // setting all motors to not vibrate
+			alt_timestamp_start();
+		}
+		if(running.current != type) {
+			continue;
+		}
 		switch (type) {
 		case 'm': { /* motors */
 			int cmd = (int)(data[1]);

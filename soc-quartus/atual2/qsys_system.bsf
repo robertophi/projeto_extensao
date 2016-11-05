@@ -96,7 +96,7 @@ applicable agreement for further details.
 	(port
 		(pt 320 72)
 		(output)
-		(text "sdram_clk_clk" (rect 0 0 59 12)(font "Arial" (font_size 8)))
+		(text "sdram_clk_clk" (rect 0 0 58 12)(font "Arial" (font_size 8)))
 		(text "sdram_clk_clk" (rect 248 61 326 72)(font "Arial" (font_size 8)))
 		(line (pt 320 72)(pt 192 72)(line_width 1))
 	)

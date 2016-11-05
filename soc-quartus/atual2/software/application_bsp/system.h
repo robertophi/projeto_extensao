@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2' in SOPC Builder design 'qsys_system'
  * SOPC Builder design path: ../../qsys_system.sopcinfo
  *
- * Generated: Fri Jul 01 17:05:34 BRT 2016
+ * Generated: Sat Nov 05 18:28:18 BRST 2016
  */
 
 /*
@@ -126,6 +126,7 @@
 #define __ALTERA_AVALON_JTAG_UART
 #define __ALTERA_AVALON_NEW_SDRAM_CONTROLLER
 #define __ALTERA_AVALON_ONCHIP_MEMORY2
+#define __ALTERA_AVALON_TIMER
 #define __ALTERA_NIOS2_QSYS
 #define __FIFOED_AVALON_UART
 #define __MATRIZ_AVALON_INTERFACE
@@ -219,8 +220,8 @@
  */
 
 #define ALT_MAX_FD 32
-#define ALT_SYS_CLK none
-#define ALT_TIMESTAMP_CLK none
+#define ALT_SYS_CLK SYS_CLK_TIMER
+#define ALT_TIMESTAMP_CLK SYS_CLK_TIMER
 
 
 /*
@@ -321,5 +322,31 @@
 #define SDRAM_T_RFC 70.0
 #define SDRAM_T_RP 20.0
 #define SDRAM_T_WR 14.0
+
+
+/*
+ * sys_clk_timer configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_sys_clk_timer altera_avalon_timer
+#define SYS_CLK_TIMER_ALWAYS_RUN 0
+#define SYS_CLK_TIMER_BASE 0x11000
+#define SYS_CLK_TIMER_COUNTER_SIZE 32
+#define SYS_CLK_TIMER_FIXED_PERIOD 0
+#define SYS_CLK_TIMER_FREQ 50000000
+#define SYS_CLK_TIMER_IRQ 1
+#define SYS_CLK_TIMER_IRQ_INTERRUPT_CONTROLLER_ID 0
+#define SYS_CLK_TIMER_LOAD_VALUE 49999
+#define SYS_CLK_TIMER_MULT 0.0010
+#define SYS_CLK_TIMER_NAME "/dev/sys_clk_timer"
+#define SYS_CLK_TIMER_PERIOD 1
+#define SYS_CLK_TIMER_PERIOD_UNITS "ms"
+#define SYS_CLK_TIMER_RESET_OUTPUT 0
+#define SYS_CLK_TIMER_SNAPSHOT 1
+#define SYS_CLK_TIMER_SPAN 32
+#define SYS_CLK_TIMER_TICKS_PER_SEC 1000.0
+#define SYS_CLK_TIMER_TIMEOUT_PULSE_OUTPUT 0
+#define SYS_CLK_TIMER_TYPE "altera_avalon_timer"
 
 #endif /* __SYSTEM_H_ */
