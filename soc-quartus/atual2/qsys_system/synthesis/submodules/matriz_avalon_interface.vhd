@@ -50,10 +50,11 @@ architecture matriz_avalon_interface_arch of matriz_avalon_interface is
 	signal readwrite : std_logic_vector(1 downto 0);
 	signal data : std_logic_vector(data_width-1 downto 0);
 	signal acknowledge, test, bistIn, interrupt, bistOut : std_logic;
-begin
+	signal enable : std_logic_vector(2 downto 0):=(others=>'0');
+	begin
 	
     
-    acknowledge <= '0';
+    acknowledge <= '1';
     bistIn <= '0';
     test <= '0';
 	-- matriz
@@ -65,8 +66,8 @@ begin
 		)
 		port map (
 				clock => csi_csink_clock, --ok
-				reset => rsi_rsink_resetn, --ok
-				enable => readwrite(0), --?????
+				reset => not(rsi_rsink_resetn), --ok
+				enable => enable(2), --?????
 				acknowledge => acknowledge,
             test => test,
             bistIn => bistIn,
@@ -80,5 +81,13 @@ begin
 	
 	-- logica
 	readwrite <= avs_aslave_read & avs_aslave_write;
-	
+	--Sinal enable que avisa para o motormatrixControl que ha um novo comando
+	--´E o sinal avs_aslave_write com um delay de alguns ciclos ( 2 )
+	enableProcess:
+	process(csi_csink_clock,avs_aslave_write)
+	begin
+		if rising_edge(csi_csink_clock) then
+			enable <= enable(1 downto 0) & avs_aslave_write;			
+		end if;
+	end process;
 end architecture matriz_avalon_interface_arch;

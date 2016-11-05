@@ -50,9 +50,9 @@ module qsys_system_addr_router_default_decode
                DEFAULT_DESTID = 5 
    )
   (output [87 - 85 : 0] default_destination_id,
-   output [6-1 : 0] default_wr_channel,
-   output [6-1 : 0] default_rd_channel,
-   output [6-1 : 0] default_src_channel
+   output [7-1 : 0] default_wr_channel,
+   output [7-1 : 0] default_rd_channel,
+   output [7-1 : 0] default_src_channel
   );
 
   assign default_destination_id = 
@@ -63,7 +63,7 @@ module qsys_system_addr_router_default_decode
       assign default_src_channel = '0;
     end
     else begin
-      assign default_src_channel = 6'b1 << DEFAULT_CHANNEL;
+      assign default_src_channel = 7'b1 << DEFAULT_CHANNEL;
     end
   end
   endgenerate
@@ -74,8 +74,8 @@ module qsys_system_addr_router_default_decode
       assign default_rd_channel = '0;
     end
     else begin
-      assign default_wr_channel = 6'b1 << DEFAULT_WR_CHANNEL;
-      assign default_rd_channel = 6'b1 << DEFAULT_RD_CHANNEL;
+      assign default_wr_channel = 7'b1 << DEFAULT_WR_CHANNEL;
+      assign default_rd_channel = 7'b1 << DEFAULT_RD_CHANNEL;
     end
   end
   endgenerate
@@ -105,7 +105,7 @@ module qsys_system_addr_router
     // -------------------
     output                          src_valid,
     output reg [98-1    : 0] src_data,
-    output reg [6-1 : 0] src_channel,
+    output reg [7-1 : 0] src_channel,
     output                          src_startofpacket,
     output                          src_endofpacket,
     input                           src_ready
@@ -121,7 +121,7 @@ module qsys_system_addr_router
     localparam PKT_PROTECTION_H = 91;
     localparam PKT_PROTECTION_L = 89;
     localparam ST_DATA_W = 98;
-    localparam ST_CHANNEL_W = 6;
+    localparam ST_CHANNEL_W = 7;
     localparam DECODER_TYPE = 0;
 
     localparam PKT_TRANS_WRITE = 63;
@@ -166,7 +166,7 @@ module qsys_system_addr_router
     assign src_endofpacket   = sink_endofpacket;
 
     wire [PKT_DEST_ID_W-1:0] default_destid;
-    wire [6-1 : 0] default_src_channel;
+    wire [7-1 : 0] default_src_channel;
 
 
 
@@ -191,31 +191,31 @@ module qsys_system_addr_router
 
     // ( 0x0 .. 0x1000 )
     if ( {address[RG:PAD0],{PAD0{1'b0}}} == 25'h0   ) begin
-            src_channel = 6'b00010;
+            src_channel = 7'b00010;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
     end
 
     // ( 0x1800 .. 0x2000 )
     if ( {address[RG:PAD1],{PAD1{1'b0}}} == 25'h1800   ) begin
-            src_channel = 6'b00001;
+            src_channel = 7'b00001;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
     end
 
     // ( 0x2068 .. 0x2070 )
     if ( {address[RG:PAD2],{PAD2{1'b0}}} == 25'h2068   ) begin
-            src_channel = 6'b01000;
+            src_channel = 7'b01000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 2;
     end
 
     // ( 0x2080 .. 0x20c0 )
     if ( {address[RG:PAD3],{PAD3{1'b0}}} == 25'h2080   ) begin
-            src_channel = 6'b10000;
+            src_channel = 7'b10000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;
     end
 
     // ( 0x1000000 .. 0x1800000 )
     if ( {address[RG:PAD4],{PAD4{1'b0}}} == 25'h1000000   ) begin
-            src_channel = 6'b00100;
+            src_channel = 7'b00100;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 5;
     end
 

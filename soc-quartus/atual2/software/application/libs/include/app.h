@@ -2,12 +2,28 @@
 #define APP_H
 #define NULL 0
 
+#include "sys/alt_timestamp.h"
 #include "sys/alt_stdio.h"
 #include "motors.h"
 #include "fft.h"
 #include "wifi.h"
 
 #define MAX_SIZE 1024
+
+struct run_param {
+	char* possible;
+	char current;
+	int iterator;
+
+	void init() {
+		possible = "macg";
+		current = possible[0];
+		iterator = 0;
+	}
+	void next() {
+		current = possible[iterator++];
+	}
+};
 
 class App {
 public:
@@ -88,6 +104,7 @@ private:
 	static Motors *motors;
 	static FFT *fft;
 	static Buffer buffer;
+	run_param running;
 
 	WiFi *wifi;};
 

@@ -1043,7 +1043,7 @@ endmodule
 //--num_control_reg_bits=16
 //--num_status_reg_bits=15
 //--parity=N
-//--project_info=HASH(0x3b526d8)
+//--project_info=HASH(0x991507c)
 //--relativepath=1
 //--rx_IRQ_Threshold=1
 //--rx_fifo_LE=0
