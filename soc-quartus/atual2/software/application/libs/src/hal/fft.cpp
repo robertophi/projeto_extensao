@@ -5,7 +5,9 @@ FFT *FFT::fft = 0;
 
 /* public */
 FFT::FFT() {
-	processing = false;
+	data = (volatile unsigned int*) matrixAddress;
+	writeFFT =(volatile unsigned int*) fftAddress;
+	readFFT = (volatile unsigned int*) fftAddress+4;
 }
 
 FFT::~FFT() {
@@ -17,24 +19,11 @@ FFT *FFT::getSingleton() {
 	return fft;
 }
 
-void FFT::setInterruptHandler(handler h) {
-	int_handler = h;
-}
-
 void FFT::write(unsigned char *input) {
-//	alt_printf("%s\n", input);
-
-	processing = true;
-	int_handler(3);
-
+	writeFFT = (unsigned int*)input;
 	delete input;
 }
 
-unsigned int FFT::read() {
-	processing = false;
-	return 0;
-}
-
-bool FFT::isProcessing() {
-	return processing;
+int* FFT::read() {
+	return (int*)readFFT;
 }
