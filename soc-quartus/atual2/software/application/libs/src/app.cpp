@@ -39,26 +39,16 @@ void App::fftHandler(unsigned int output) {
 void App::writeCompass(int direction) {
 	int responsible = 360/COLUMNS;
 	direction += 180;
-	int motor = direction/responsible;
-	int neighbor = motor + 1;
-	float remainder = direction % responsible;
-	if(remainder > 0.5) {
-		remainder = 1-remainder;
-	}
+	int motor = (direction/responsible)%COLUMNS;
 	int cmd = 1 << 24;
 	int line = (LINES-1) << 16;
-	int column = (motor-1) << 8;
-	neighbor = (neighbor-1) << 8;
-	int neighbor_remainder = compass_vib_value*remainder;
+	int column = (motor) << 8;
 
 	motors->write((int)( cmd | line |  column	|  2 ));
-	motors->write((int)( cmd | line | neighbor	|  2 ));
 	cmd = 2 << 24;
 	motors->write((int)( cmd | line |  column	|  1 ));
-	motors->write((int)( cmd | line | neighbor	|  1 ));
 
 	motors->write((int)(  0  | line |  column	| compass_vib_value ));
-	motors->write((int)(  0  | line | neighbor%COLUMNS	| neighbor_remainder));
 }
 
 void App::writeGyroscope(int xAngle, int yAngle, int zAngle) {
@@ -66,7 +56,9 @@ void App::writeGyroscope(int xAngle, int yAngle, int zAngle) {
 	int y = defineIndex(yAngle) << 8;
 	motors->write(( (1 << 24) | x | y | 2 ));
 	motors->write(( (2 << 24) | x | y | 1 ));
-	motors->write((     0     | x | y | (zAngle > 100 ? 100 : zAngle)));
+	zAngle = zAngle < 0 ? zAngle*(-1) : zAngle;
+	zAngle += 10;
+	motors->write((     0     | x | y | (zAngle > 240 ? 240 : zAngle)));
 }
 
 int App::defineIndex(int value) {
