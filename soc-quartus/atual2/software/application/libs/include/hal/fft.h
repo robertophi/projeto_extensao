@@ -1,26 +1,22 @@
 #ifndef FFT_H
 #define FFT_H
 
-#include "sys/alt_stdio.h"
-//#include "sys/alt_alarm.h"
-
-typedef void ( *handler )(unsigned int);
+#include "system.h"
+#define matrixAddress 0x9028
+#define fftAddress 0x9038
 
 class FFT {
-public:
+ public:
 	FFT();
 	~FFT();
 
 	static FFT *getSingleton();
-	void setInterruptHandler(handler h);
 	void write(unsigned char *input);
-	unsigned int read();
-	bool isProcessing();
+	int* read();
 
-private:
+ private:
 	static FFT *fft;
-	handler int_handler;
-	bool processing;
+	volatile unsigned int *data,*writeFFT,*readFFT;
 };
 
 #endif

@@ -35,7 +35,7 @@ void App::fftHandler(unsigned int output) {
 		fft->write(buffer.pop());
 }
 
-//If we have 5 motors in a column, each motor is responsible for 72° each; We receive a float in (-180°, 180°]. To simplify we add 180 to it.
+//If we have 5 motors in a column, each motor is responsible for 72ï¿½ each; We receive a float in (-180ï¿½, 180ï¿½]. To simplify we add 180 to it.
 void App::writeCompass(int direction) {
 	int responsible = 360/COLUMNS;
 	direction += 180;
@@ -177,7 +177,9 @@ void App::run() {
 //			alt_printf("%s\n", data);
 			//buffer.push(data);
 			motors->write_to_next_line();
-
+			fft->write(data);
+			int* freq = fft->read();
+			writeAudio(freq, 11);
 
 //			|           _
 //			|    _     / \
