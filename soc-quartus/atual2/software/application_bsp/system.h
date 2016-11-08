@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2' in SOPC Builder design 'qsys_system'
  * SOPC Builder design path: ../../qsys_system.sopcinfo
  *
- * Generated: Sat Nov 05 18:28:18 BRST 2016
+ * Generated: Tue Nov 08 14:18:45 BRT 2016
  */
 
 /*
@@ -62,16 +62,16 @@
 
 #define ALT_CPU_ARCHITECTURE "altera_nios2_qsys"
 #define ALT_CPU_BIG_ENDIAN 0
-#define ALT_CPU_BREAK_ADDR 0x1820
+#define ALT_CPU_BREAK_ADDR 0x820
 #define ALT_CPU_CPU_FREQ 50000000u
 #define ALT_CPU_CPU_ID_SIZE 1
 #define ALT_CPU_CPU_ID_VALUE 0x00000000
 #define ALT_CPU_CPU_IMPLEMENTATION "tiny"
-#define ALT_CPU_DATA_ADDR_WIDTH 0x19
+#define ALT_CPU_DATA_ADDR_WIDTH 0x13
 #define ALT_CPU_DCACHE_LINE_SIZE 0
 #define ALT_CPU_DCACHE_LINE_SIZE_LOG2 0
 #define ALT_CPU_DCACHE_SIZE 0
-#define ALT_CPU_EXCEPTION_ADDR 0x1000020
+#define ALT_CPU_EXCEPTION_ADDR 0x40020
 #define ALT_CPU_FLUSHDA_SUPPORTED
 #define ALT_CPU_FREQ 50000000
 #define ALT_CPU_HARDWARE_DIVIDE_PRESENT 0
@@ -83,9 +83,9 @@
 #define ALT_CPU_ICACHE_LINE_SIZE 0
 #define ALT_CPU_ICACHE_LINE_SIZE_LOG2 0
 #define ALT_CPU_ICACHE_SIZE 0
-#define ALT_CPU_INST_ADDR_WIDTH 0x19
+#define ALT_CPU_INST_ADDR_WIDTH 0x13
 #define ALT_CPU_NAME "nios2"
-#define ALT_CPU_RESET_ADDR 0x1000000
+#define ALT_CPU_RESET_ADDR 0x40000
 
 
 /*
@@ -94,16 +94,16 @@
  */
 
 #define NIOS2_BIG_ENDIAN 0
-#define NIOS2_BREAK_ADDR 0x1820
+#define NIOS2_BREAK_ADDR 0x820
 #define NIOS2_CPU_FREQ 50000000u
 #define NIOS2_CPU_ID_SIZE 1
 #define NIOS2_CPU_ID_VALUE 0x00000000
 #define NIOS2_CPU_IMPLEMENTATION "tiny"
-#define NIOS2_DATA_ADDR_WIDTH 0x19
+#define NIOS2_DATA_ADDR_WIDTH 0x13
 #define NIOS2_DCACHE_LINE_SIZE 0
 #define NIOS2_DCACHE_LINE_SIZE_LOG2 0
 #define NIOS2_DCACHE_SIZE 0
-#define NIOS2_EXCEPTION_ADDR 0x1000020
+#define NIOS2_EXCEPTION_ADDR 0x40020
 #define NIOS2_FLUSHDA_SUPPORTED
 #define NIOS2_HARDWARE_DIVIDE_PRESENT 0
 #define NIOS2_HARDWARE_MULTIPLY_PRESENT 0
@@ -114,8 +114,8 @@
 #define NIOS2_ICACHE_LINE_SIZE 0
 #define NIOS2_ICACHE_LINE_SIZE_LOG2 0
 #define NIOS2_ICACHE_SIZE 0
-#define NIOS2_INST_ADDR_WIDTH 0x19
-#define NIOS2_RESET_ADDR 0x1000000
+#define NIOS2_INST_ADDR_WIDTH 0x13
+#define NIOS2_RESET_ADDR 0x40000
 
 
 /*
@@ -124,12 +124,25 @@
  */
 
 #define __ALTERA_AVALON_JTAG_UART
-#define __ALTERA_AVALON_NEW_SDRAM_CONTROLLER
 #define __ALTERA_AVALON_ONCHIP_MEMORY2
 #define __ALTERA_AVALON_TIMER
 #define __ALTERA_NIOS2_QSYS
 #define __FIFOED_AVALON_UART
-#define __MATRIZ_AVALON_INTERFACE
+#define __MATRIZMOTORES
+
+
+/*
+ * MatrizMotores configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_MatrizMotores MatrizMotores
+#define MATRIZMOTORES_BASE 0x2068
+#define MATRIZMOTORES_IRQ -1
+#define MATRIZMOTORES_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define MATRIZMOTORES_NAME "/dev/MatrizMotores"
+#define MATRIZMOTORES_SPAN 8
+#define MATRIZMOTORES_TYPE "MatrizMotores"
 
 
 /*
@@ -137,7 +150,7 @@
  *
  */
 
-#define ALT_DEVICE_FAMILY "Cyclone II"
+#define ALT_DEVICE_FAMILY "Cyclone IV GX"
 #define ALT_ENHANCED_INTERRUPT_API_PRESENT
 #define ALT_IRQ_BASE NULL
 #define ALT_LOG_PORT "/dev/null"
@@ -148,19 +161,19 @@
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
 #define ALT_STDERR "/dev/jtag_uart_0"
-#define ALT_STDERR_BASE 0x2060
+#define ALT_STDERR_BASE 0x10a0
 #define ALT_STDERR_DEV jtag_uart_0
 #define ALT_STDERR_IS_JTAG_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDIN "/dev/jtag_uart_0"
-#define ALT_STDIN_BASE 0x2060
+#define ALT_STDIN_BASE 0x10a0
 #define ALT_STDIN_DEV jtag_uart_0
 #define ALT_STDIN_IS_JTAG_UART
 #define ALT_STDIN_PRESENT
 #define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDOUT "/dev/jtag_uart_0"
-#define ALT_STDOUT_BASE 0x2060
+#define ALT_STDOUT_BASE 0x10a0
 #define ALT_STDOUT_DEV jtag_uart_0
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT
@@ -175,14 +188,14 @@
 
 #define ALT_MODULE_CLASS_esp8266 fifoed_avalon_uart
 #define ESP8266_ADD_ERROR_BITS 0
-#define ESP8266_BASE 0x2080
+#define ESP8266_BASE 0x1040
 #define ESP8266_BAUD 115200
 #define ESP8266_DATA_BITS 8
 #define ESP8266_FIFO_EXPORT_USED 0
 #define ESP8266_FIXED_BAUD 1
 #define ESP8266_FREQ 50000000
 #define ESP8266_GAP_VALUE 4
-#define ESP8266_IRQ 2
+#define ESP8266_IRQ 1
 #define ESP8266_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define ESP8266_NAME "/dev/esp8266"
 #define ESP8266_PARITY 'N'
@@ -220,7 +233,7 @@
  */
 
 #define ALT_MAX_FD 32
-#define ALT_SYS_CLK SYS_CLK_TIMER
+#define ALT_SYS_CLK none
 #define ALT_TIMESTAMP_CLK SYS_CLK_TIMER
 
 
@@ -230,7 +243,7 @@
  */
 
 #define ALT_MODULE_CLASS_jtag_uart_0 altera_avalon_jtag_uart
-#define JTAG_UART_0_BASE 0x2060
+#define JTAG_UART_0_BASE 0x10a0
 #define JTAG_UART_0_IRQ 0
 #define JTAG_UART_0_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define JTAG_UART_0_NAME "/dev/jtag_uart_0"
@@ -243,20 +256,6 @@
 
 
 /*
- * matriz configuration
- *
- */
-
-#define ALT_MODULE_CLASS_matriz matriz_avalon_interface
-#define MATRIZ_BASE 0x2068
-#define MATRIZ_IRQ -1
-#define MATRIZ_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define MATRIZ_NAME "/dev/matriz"
-#define MATRIZ_SPAN 8
-#define MATRIZ_TYPE "matriz_avalon_interface"
-
-
-/*
  * onchip_memory2_0 configuration
  *
  */
@@ -264,7 +263,7 @@
 #define ALT_MODULE_CLASS_onchip_memory2_0 altera_avalon_onchip_memory2
 #define ONCHIP_MEMORY2_0_ALLOW_IN_SYSTEM_MEMORY_CONTENT_EDITOR 0
 #define ONCHIP_MEMORY2_0_ALLOW_MRAM_SIM_CONTENTS_ONLY_FILE 0
-#define ONCHIP_MEMORY2_0_BASE 0x0
+#define ONCHIP_MEMORY2_0_BASE 0x40000
 #define ONCHIP_MEMORY2_0_CONTENTS_INFO ""
 #define ONCHIP_MEMORY2_0_DUAL_PORT 0
 #define ONCHIP_MEMORY2_0_GUI_RAM_BLOCK_TYPE "AUTO"
@@ -279,49 +278,10 @@
 #define ONCHIP_MEMORY2_0_READ_DURING_WRITE_MODE "DONT_CARE"
 #define ONCHIP_MEMORY2_0_SINGLE_CLOCK_OP 0
 #define ONCHIP_MEMORY2_0_SIZE_MULTIPLE 1
-#define ONCHIP_MEMORY2_0_SIZE_VALUE 4096
-#define ONCHIP_MEMORY2_0_SPAN 4096
+#define ONCHIP_MEMORY2_0_SIZE_VALUE 100000
+#define ONCHIP_MEMORY2_0_SPAN 100000
 #define ONCHIP_MEMORY2_0_TYPE "altera_avalon_onchip_memory2"
 #define ONCHIP_MEMORY2_0_WRITABLE 1
-
-
-/*
- * sdram configuration
- *
- */
-
-#define ALT_MODULE_CLASS_sdram altera_avalon_new_sdram_controller
-#define SDRAM_BASE 0x1000000
-#define SDRAM_CAS_LATENCY 3
-#define SDRAM_CONTENTS_INFO
-#define SDRAM_INIT_NOP_DELAY 0.0
-#define SDRAM_INIT_REFRESH_COMMANDS 2
-#define SDRAM_IRQ -1
-#define SDRAM_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define SDRAM_IS_INITIALIZED 1
-#define SDRAM_NAME "/dev/sdram"
-#define SDRAM_POWERUP_DELAY 100.0
-#define SDRAM_REFRESH_PERIOD 15.625
-#define SDRAM_REGISTER_DATA_IN 1
-#define SDRAM_SDRAM_ADDR_WIDTH 0x16
-#define SDRAM_SDRAM_BANK_WIDTH 2
-#define SDRAM_SDRAM_COL_WIDTH 8
-#define SDRAM_SDRAM_DATA_WIDTH 16
-#define SDRAM_SDRAM_NUM_BANKS 4
-#define SDRAM_SDRAM_NUM_CHIPSELECTS 1
-#define SDRAM_SDRAM_ROW_WIDTH 12
-#define SDRAM_SHARED_DATA 0
-#define SDRAM_SIM_MODEL_BASE 0
-#define SDRAM_SPAN 8388608
-#define SDRAM_STARVATION_INDICATOR 0
-#define SDRAM_TRISTATE_BRIDGE_SLAVE ""
-#define SDRAM_TYPE "altera_avalon_new_sdram_controller"
-#define SDRAM_T_AC 5.5
-#define SDRAM_T_MRD 3
-#define SDRAM_T_RCD 20.0
-#define SDRAM_T_RFC 70.0
-#define SDRAM_T_RP 20.0
-#define SDRAM_T_WR 14.0
 
 
 /*
@@ -331,11 +291,11 @@
 
 #define ALT_MODULE_CLASS_sys_clk_timer altera_avalon_timer
 #define SYS_CLK_TIMER_ALWAYS_RUN 0
-#define SYS_CLK_TIMER_BASE 0x11000
+#define SYS_CLK_TIMER_BASE 0x1080
 #define SYS_CLK_TIMER_COUNTER_SIZE 32
 #define SYS_CLK_TIMER_FIXED_PERIOD 0
 #define SYS_CLK_TIMER_FREQ 50000000
-#define SYS_CLK_TIMER_IRQ 1
+#define SYS_CLK_TIMER_IRQ 2
 #define SYS_CLK_TIMER_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define SYS_CLK_TIMER_LOAD_VALUE 49999
 #define SYS_CLK_TIMER_MULT 0.0010

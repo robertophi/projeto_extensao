@@ -1,9 +1,9 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="51519f36b7ded86f800e"/>
+    <hash md5_digest_80b="0147e3172f168f91dcc0"/>
   </project>
   <file_info>
-    <file device="EP2C35F672C6" path="SoC.sof" usercode="0xFFFFFFFF"/>
+    <file device="EP4CGX150DF31C7" path="SoC.sof" usercode="0xFFFFFFFF"/>
   </file_info>
   <hub_info hub_ir_width="5" ir_width="2" node_addr_width="2" node_count="2"/>
   <node_info>

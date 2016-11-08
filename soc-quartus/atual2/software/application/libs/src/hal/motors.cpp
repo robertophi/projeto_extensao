@@ -24,17 +24,17 @@ Motors *Motors::getSingleton() {
 
 void Motors::write_power(unsigned int line, unsigned int column,
 		unsigned int valor) {
-	write(1, line, column, valor);
+	write(0, line, column, valor);
 }
 
 void Motors::write_variation(unsigned int line, unsigned int column,
 		unsigned int valor) {
-	write(2, line, column, valor);
+	write(1, line, column, valor);
 }
 
 void Motors::write_delay(unsigned int line, unsigned int column,
 		unsigned int valor) {
-	write(4, line, column, valor);
+	write(2, line, column, valor);
 }
 
 void Motors::write(unsigned int op, unsigned int line, unsigned int column,
@@ -47,11 +47,11 @@ void Motors::write(unsigned int valor) {
 }
 
 void Motors::write_to_next_line() {
-	write(8, 0, 0, 0);
+	write(3, 255, 255, 0);
 }
 
 void Motors::write_to_next_collumn() {
-	write(16, 0, 0, 0);
+	write(4, 255, 255, 0);
 }
 
 /* private */
