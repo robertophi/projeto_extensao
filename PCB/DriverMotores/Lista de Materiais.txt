@@ -1,0 +1,23 @@
+Capacitores:
+    1x 10uF
+    1x 100uF
+    1x 10uF
+    1x 1uF
+    Ou valores próximos
+    
+Circuitos integrados:
+    4x ULN2803
+    1x LM1117 3.3V
+    
+Conectores:
+    1x Conector Macho para cabo flat 40 pinos 2.54mm
+    1x Conector Fêmea para cabo flat 40 pinos 2.54mm
+    1x Conector Fêmea para Wifi (2*4 = 8 pinos) 2.54mm
+    1x Conector Macho 3 pinos para selecionar tensão 2.54mm
+    1x Conector Macho 2 pinos para entrada bateria externa 2.54mm
+    
+   
+Outros:
+    1x Led 5mm
+    1x Resistor 2.4k
+    
