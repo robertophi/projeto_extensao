@@ -5,6 +5,7 @@ class MotorMatrix {
  public:
 	MotorMatrix();
 	virtual ~MotorMatrix();
+	void writecommand(col, row, command, data);
 };
 
 #endif

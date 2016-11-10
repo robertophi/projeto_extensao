@@ -15,6 +15,7 @@ class AppManager : public Observer {
  private:
 	ConnectManager* connect;
 	DataHandler* message;
+	TimeMultiplexer* timeMultiplexer;
 };
 
 #endif
