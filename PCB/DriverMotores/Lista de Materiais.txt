@@ -7,12 +7,12 @@ Capacitores:
     
 Circuitos integrados:
     4x ULN2803                        - JÁ EXISTE NO LISHA
-    1x LM1117 3.3V T0-220 (Não SMD)   -A COMPRAR  
+    1x LM1117 3.3V T0-220 (Não SMD)   - Disponível um LM350 ou um LD33CV
     
 Conectores:
-    1x Conector Macho para cabo flat 40 pinos 2.54mm   -A COMPRAR
-    1x Conector Fêmea para cabo flat 40 pinos 2.54mm   -A COMPRAR
-    1x Conector Fêmea para Wifi (2*4 = 8 pinos) 2.54mm -A COMPRAR            
+    1x Conector Macho para cabo flat 40 pinos 2.54mm   - Disponível no lisha
+    1x Conector Fêmea para cabo flat 40 pinos 2.54mm   - Substituido por um conector macho, disponivel no lisha
+    1x Conector Fêmea para Wifi (2*4 = 8 pinos) 2.54mm - Disponível 4 conectores de 2pinos 2.54mm            
     1x Conector Macho 3 pinos para selecionar tensão 2.54mm        - JÁ EXISTE NO LISHA
     1x Conector Macho 2 pinos para entrada bateria externa 2.54mm  - JÁ EXISTE NO LISHA
     
