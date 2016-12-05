@@ -35,80 +35,129 @@ void App::fftHandler(unsigned int output) {
 		fft->write(buffer.pop());
 }
 
-//If we have 5 motors in a column, each motor is responsible for 72� each; We receive a float in (-180�, 180�]. To simplify we add 180 to it.
+//If we have 5 motors in a column, each motor is responsible for 72 degree each;
+//We receive a float in (-180 degree, 180 degree]. To simplify we add 180 to it.
+
 void App::writeCompass(int direction) {
-	int responsible = 360/COLUMNS;
-	direction += 180;
-	int motor = (direction/responsible)%COLUMNS;
-	int cmd = 1 << 24;
-	int line = (LINES-1) << 16;
-	int column = (motor) << 8;
-
-	motors->write((int)( cmd | line |  column	|  2 ));
-	cmd = 2 << 24;
-	motors->write((int)( cmd | line |  column	|  1 ));
-
-	motors->write((int)(  0  | line |  column	| compass_vib_value ));
+    if(COLUMNS >= 8) {
+        return compass8(direction);
+    } else if(COLUMNS >= 4) {
+        return compass4(direction);
+    }
 }
+
+void App::compass4(int direction) {
+    if(direction < 5 || direction > 355) {
+        motors->write( 0 | LINES-2 | (COLUMNS-1)/2 | compass_vib_value );
+        if(direction < 5 && direction != 0)
+            motors->write( 0 | LINES-1 | 1 | compass_vib_value/2 );
+        else if(direction > 355 && direction != 360)
+            motors->write( 0 | LINES-1 | COLUMNS-2 | compass_vib_value/2 );
+        return;
+    }
+    int motor = direction < 180 ? (direction < 90 ? 1 : 0) : (direction < 270 ? COLUMNS-2 : COLUMNS-1);
+    motors->write( 0 | LINES-1 | motor | compass_vib_value );
+}
+
+void App::compass8(int direction) {
+    if(direction < 5 || direction > 355) {
+        motors->write( 0 | LINES-2 | (COLUMNS-1)/2 | compass_vib_value );
+        if(direction < 5 && direction != 0)
+            motors->write( 0 | LINES-1 | 3 | compass_vib_value/2 );
+        else if(direction > 355 && direction != 360)
+            motors->write( 0 | LINES-1 | COLUMNS-4 | compass_vib_value/2 );
+        return;
+    }
+    int motor;
+    if(direction <= 180) {
+        if(direction <= 90) {
+            motor = direction <= 45 ? 3 : 2;
+        } else {
+            motor = direction <= 135 ? 1 : 0;
+        }
+    } else {
+        if(direction < 270) {
+            motor = direction < 225 ? COLUMNS-1 : COLUMNS-2;
+        } else {
+            motor = direction < 315 ? COLUMNS-3 : COLUMNS-4;
+        }
+    }
+    motors->write( 0 | LINES-1 | motor | compass_vib_value );
+}
+
 
 void App::writeGyroscope(int xAngle, int yAngle, int zAngle) {
-	int x = defineIndex(xAngle) << 16;
-	int y = defineIndex(yAngle) << 8;
-	motors->write(( (1 << 24) | x | y | 2 ));
-	motors->write(( (2 << 24) | x | y | 1 ));
-	zAngle = zAngle < 0 ? zAngle*(-1) : zAngle;
-	zAngle += 10;
-	motors->write((     0     | x | y | (zAngle > 240 ? 240 : zAngle)));
-}
+        int x = defineIndex(xAngle, COLUMNS) << 16;
+        int y = defineIndex(yAngle, LINES) << 8;
+        zAngle = zAngle < 0 ? zAngle*(-1) : zAngle;
+        zAngle = zAngle > 240 ? 240 : zAngle;
+        zAngle += 10;
+        motors->write(( 0 | x | y | zAngle));
+    }
 
-int App::defineIndex(int value) {
-	float line_int = 200/LINES-2;
-	// each motor has an interval defined by this size
-	int half_mot = (LINES - 1)%2 == 0 ? LINES/2 : ((int)(LINES - 1)/2) + 1;
-	// the motor in the middle of the line/column
-	float half_int_end = line_int*(half_mot-1);
-	// the point in the end of the middle motor interval
-	if((-1)*half_int_end/2 < value && value < half_int_end/2) {
-		return half_mot;
-		// if the value is in the middle interval, return the middle identifier
-	}
-	float mot_int_b = half_int_end/2;
-	// the begin of the interval that will be tested
-	int x = -1;
-	if(value >= 0) { // if is in the positive part
-		for(int i = 1; 2*i < LINES-2 && x == -1; i++) {
-			// for each motor in the positive part but the last
-			if(mot_int_b <= value && value < mot_int_b + line_int) {
-				x = i + half_mot;
-				// if the value is in the interval of the motor being tested,
-				// return it's identifier
-			} else {
-				mot_int_b += line_int; // else, just set to test the next motor
-			}
-		}
-		if (x == -1) {
-			x = LINES-1; // if it is in the positive part and the responsible
-			// motor was not found, then the signal is bigger than 100
-		}
-		return x;
-	}
-	mot_int_b *= -1; // set to test in the negative part
-	line_int *= -1;
-	for(int i = 1; 2*i < LINES-2 && x == -1; i++) {
-		//for each motor in the negative part
-		if(mot_int_b >= value && value > mot_int_b + line_int) {
-			x = i + half_mot; // if the value is in the interval of the motor
-			// being tested, return it's identifier
-		} else {
-			mot_int_b += line_int; // else, just set to test the next motor
-		}
-	}
-	if (x == -1) {
-		x = 0; // if it is in the negative part and the responsible
-		// motor was not found, then the signal is smaller than -100
-	}
-	return x;
-}
+int App::defineIndex(int value, int size) {
+     if(size%2 == 0) {
+         return evenMotors(value, size);
+     }
+     return oddMotors(value, size);
+ }
+
+ int App::oddMotors(int value, int size) {
+     float line_int = 200.0/(size-2);
+     int half_mot = (size-1)/2;
+     float half_int_end = line_int*(half_mot-1)/2.0;
+     if((-1)*half_int_end < value && value < half_int_end) {
+         return half_mot;
+     }
+     float mot_int_beg;
+     int x = -1;
+     if(value > 0) {
+         mot_int_beg = half_int_end;
+         for(int i = half_mot+1; i < size - 1 && x == -1; i++) {
+             if(mot_int_beg <= value && value < mot_int_beg + line_int) {
+                 x = i;
+             } else {
+                 mot_int_beg += line_int;
+             }
+         }
+         if (x == -1) {
+             return size-1;
+         }
+         return x;
+     }
+     mot_int_beg = half_int_end*(-1);
+     for(int i = half_mot-1; i > 0 && x == -1; i--) {
+         if(mot_int_beg - line_int < value && value <= mot_int_beg) {
+             x = i;
+         } else {
+             mot_int_beg -= line_int;
+         }
+     }
+     if (x == -1) {
+         return 0;
+     }
+     return x;
+ }
+
+ int App::evenMotors(int value, int size) {
+     float line_int = 200.0/(size-2);
+     if(value <= -100) {
+         return 0;
+     }
+     if(value >= 100) {
+         return size-1;
+     }
+     float int_beg = -100;
+     int x = -1;
+     for(int i = 1; i < size-1 && x == -1; i++) {
+         if(int_beg < value && value <= int_beg + line_int) {
+             x = i;
+         } else {
+             int_beg += line_int;
+         }
+     }
+     return x;
+ }
 
 void App::writeAudio(int* freq, int samples) {
 	int commom = samples/COLUMNS;

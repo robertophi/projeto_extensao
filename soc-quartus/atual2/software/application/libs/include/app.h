@@ -97,8 +97,12 @@ private:
 	void vibrate(void *arg);
 	void writeCompass(int direction);
 	void writeGyroscope(int xAngle, int yAngle, int zAngle);
-	int defineIndex(int value);
+	int defineIndex(int value, int size);
+	int oddMotors(int value, int size);
+	int evenMotors(int value, int size);
 	void writeAudio(int* freq, int samples);
+	void compass4(int direction);
+	void compass8(int direction);
 
 	static void fftHandler(unsigned int output);
 	static Motors *motors;
