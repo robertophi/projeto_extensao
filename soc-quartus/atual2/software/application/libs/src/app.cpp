@@ -3,7 +3,7 @@
 #define PASSWORD "12345678"
 #define COLUMNS 5
 #define LINES 8
-//Senha não pode ter menos de 8 caracteres
+//Senha nao pode ter menos de 8 caracteres
 
 /*Static*/
 Motors  *App::motors = Motors::getSingleton();
@@ -24,25 +24,12 @@ App::~App() {
 void App::setup() {
     wifi->config(SSID, PASSWORD);
     wifi->startServer();
-    //fft->setInterruptHandler(App::fftHandler);
 }
 
-//void App::fftHandler(unsigned int output) {
-//
-//  //  motors->write(output);
-//  fft->read();
-//
-//  if(buffer.length() > 0)
-//      fft->write((int*)buffer.pop(), samples);
-//}
-
-//If we have 5 motors in a column, each motor is responsible for 72� each; We receive a float in (-180�, 180�]. To simplify we add 180 to it.
+//If we have 5 motors in a column, each motor is responsible for 72 degree each;
+//We receive a float in (-180 degree, 180 degree]. To simplify we add 180 to it.
 void App::writeCompass(int direction) {
-    if(COLUMNS >= 8) {
-        compass8(direction);
-    } else if(COLUMNS >= 4) {
-        compass4(direction);
-    }
+    switch_impl<COLUMNS>=8, COLUMNS>=4 && COLUMNS <=7>::run(*this, direction);
 }
 
 void App::compass4(int direction) {
@@ -177,7 +164,8 @@ void App::run() {
     unsigned char *data;
     unsigned int *size;
 
-    //Shift amount de 10, Decaimento de 15 e potencia de 255 em cada motor, durante inicialização do programa.
+    // Shift amount de 10, Decaimento de 15 e potencia de 255 em cada motor,
+    // durante inicialização do programa.
     motors->write((1<<24)|(255<<16)|(255<<8)|(10));
     motors->write((2<<24)|(255<<16)|(255<<8)|(15));
     motors->write((0<<24)|(255<<16)|(255<<8)|(255));
@@ -210,7 +198,7 @@ void App::run() {
             break;
         case 'a': { /*audio*/
             int* c = new int[this->samples];
-            for(int i = 0; i <= samples; i++) {
+            for(unsigned int i = 0; i <= samples; i++) {
                 c[i] = data[i+1];
             }
             fft->write(c, this->samples);

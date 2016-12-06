@@ -31,6 +31,8 @@ public:
     App();
     ~App();
 
+    void compass4(int direction);
+    void compass8(int direction);
     void setup();
     void run();
 
@@ -96,14 +98,15 @@ private:
         };
 
     void vibrate(void *arg);
-    void writeCompass(int direction);
-    void compass4(int direction);
-    void compass8(int direction);
+    //void writeCompass(int direction);
     void writeGyroscope(int xAngle, int yAngle, int zAngle);
     int defineIndex(int value, int size);
     int oddMotors(int value, int size);
     int evenMotors(int value, int size);
     void writeAudio(int* freq, int samples);
+
+    void writeCompass(int i);
+
 
     void update_motors_settings() {
         switch(this->running.current) {
@@ -133,6 +136,31 @@ private:
     run_param running;
     unsigned int samples;
 
-    WiFi *wifi;};
+    WiFi *wifi;
+};
+
+template <bool a_even, bool b_even>
+struct switch_impl {
+    static void run(App &a, int i)
+    {
+        return;
+    }
+};
+
+template <>
+struct switch_impl<true, false> {
+    static void run(App &a, int i)
+    {
+        a.compass8(i);
+    }
+};
+
+template <>
+struct switch_impl<false, true> {
+    static void run(App &a, int i)
+    {
+        a.compass4(i);
+    }
+};
 
 #endif
