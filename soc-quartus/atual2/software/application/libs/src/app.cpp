@@ -3,207 +3,217 @@
 #define PASSWORD "12345678"
 #define COLUMNS 5
 #define LINES 8
-//Senha não pode ter menos de 8 caracteres
+//Senha nao pode ter menos de 8 caracteres
 
 /*Static*/
-Motors	*App::motors = Motors::getSingleton();
-FFT	*App::fft = FFT::getSingleton();
-App::Buffer	App::buffer;
+Motors  *App::motors = Motors::getSingleton();
+FFT *App::fft = FFT::getSingleton();
+App::Buffer App::buffer;
 
 App::App() {
-	wifi = WiFi::getSingleton();
-	compass_vib_value = 25;
-	running.init();
+    wifi = WiFi::getSingleton();
+    compass_vib_value = 25;
+    running.init();
+    samples = 1024;
 }
 
 App::~App() {
-	wifi->stopServer();
+    wifi->stopServer();
 }
 
 void App::setup() {
-	wifi->config(SSID, PASSWORD);
-	wifi->startServer();
-	//fft->setInterruptHandler(App::fftHandler);
+    wifi->config(SSID, PASSWORD);
+    wifi->startServer();
 }
 
-void App::fftHandler(unsigned int output) {
-
-	//	motors->write(output);
-	fft->read();
-
-	if(buffer.length() > 0)
-		fft->write(buffer.pop());
-}
-
-//If we have 5 motors in a column, each motor is responsible for 72� each; We receive a float in (-180�, 180�]. To simplify we add 180 to it.
+//If we have 5 motors in a column, each motor is responsible for 72 degree each;
+//We receive a float in (-180 degree, 180 degree]. To simplify we add 180 to it.
 void App::writeCompass(int direction) {
-	int responsible = 360/COLUMNS;
-	direction += 180;
-	int motor = (direction/responsible)%COLUMNS;
-	int cmd = 1 << 24;
-	int line = (LINES-1) << 16;
-	int column = (motor) << 8;
+    switch_impl<COLUMNS>=8, COLUMNS>=4 && COLUMNS <=7>::run(*this, direction);
+}
 
-	motors->write((int)( cmd | line |  column	|  2 ));
-	cmd = 2 << 24;
-	motors->write((int)( cmd | line |  column	|  1 ));
+void App::compass4(int direction) {
+    if(direction < 5 || direction > 355) {
+        motors->write( 0 | LINES-2 | (COLUMNS-1)/2 | compass_vib_value );
+         if(direction < 5 && direction != 0)
+            motors->write( 0 | LINES-1 | 1 | compass_vib_value/2 );
+         else if(direction > 355 && direction != 360)
+            motors->write( 0 | LINES-1 | COLUMNS-2 | compass_vib_value/2 );
+        return;
+    }
+    int motor = direction < 180 ? (direction < 90 ? 1 : 0) : (direction < 270 ? COLUMNS-1 : COLUMNS-2);
+    motors->write( 0 | LINES-1 | motor | compass_vib_value );
+}
 
-	motors->write((int)(  0  | line |  column	| compass_vib_value ));
+void App::compass8(int direction) {
+    if(direction < 5 || direction > 355) {
+        motors->write( 0 | LINES-2 | (COLUMNS-1)/2 | compass_vib_value );
+         if(direction < 5 && direction != 0)
+            motors->write( 0 | LINES-1 | 3 | compass_vib_value/2 );
+         else if(direction > 355 && direction != 360)
+            motors->write( 0 | LINES-1 | COLUMNS-4 | compass_vib_value/2 );
+        return;
+    }
+    int motor;
+    if(direction <= 180) {
+        if(direction <= 90) {
+            motor = direction <= 45 ? 3 : 2;
+        } else {
+            motor = direction <= 135 ? 1 : 0;
+        }
+    } else {
+        if(direction < 270) {
+            motor = direction < 225 ? COLUMNS-1 : COLUMNS-2;
+        } else {
+            motor = direction < 315 ? COLUMNS-3 : COLUMNS-4;
+        }
+    }
+    motors->write( 0 | LINES-1 | motor | compass_vib_value );
 }
 
 void App::writeGyroscope(int xAngle, int yAngle, int zAngle) {
-	int x = defineIndex(xAngle) << 16;
-	int y = defineIndex(yAngle) << 8;
-	motors->write(( (1 << 24) | x | y | 2 ));
-	motors->write(( (2 << 24) | x | y | 1 ));
-	zAngle = zAngle < 0 ? zAngle*(-1) : zAngle;
-	zAngle += 10;
-	motors->write((     0     | x | y | (zAngle > 240 ? 240 : zAngle)));
+    int x = defineIndex(xAngle, COLUMNS) << 16;
+    int y = defineIndex(yAngle, LINES) << 8;
+    zAngle = zAngle < 0 ? zAngle*(-1) : zAngle;
+    zAngle = zAngle > 240 ? 240 : zAngle;
+    zAngle += 10;
+    motors->write( 0 | x | y | zAngle );
 }
 
-int App::defineIndex(int value) {
-	float line_int = 200/LINES-2;
-	// each motor has an interval defined by this size
-	int half_mot = (LINES - 1)%2 == 0 ? LINES/2 : ((int)(LINES - 1)/2) + 1;
-	// the motor in the middle of the line/column
-	float half_int_end = line_int*(half_mot-1);
-	// the point in the end of the middle motor interval
-	if((-1)*half_int_end/2 < value && value < half_int_end/2) {
-		return half_mot;
-		// if the value is in the middle interval, return the middle identifier
-	}
-	float mot_int_b = half_int_end/2;
-	// the begin of the interval that will be tested
-	int x = -1;
-	if(value >= 0) { // if is in the positive part
-		for(int i = 1; 2*i < LINES-2 && x == -1; i++) {
-			// for each motor in the positive part but the last
-			if(mot_int_b <= value && value < mot_int_b + line_int) {
-				x = i + half_mot;
-				// if the value is in the interval of the motor being tested,
-				// return it's identifier
-			} else {
-				mot_int_b += line_int; // else, just set to test the next motor
-			}
-		}
-		if (x == -1) {
-			x = LINES-1; // if it is in the positive part and the responsible
-			// motor was not found, then the signal is bigger than 100
-		}
-		return x;
-	}
-	mot_int_b *= -1; // set to test in the negative part
-	line_int *= -1;
-	for(int i = 1; 2*i < LINES-2 && x == -1; i++) {
-		//for each motor in the negative part
-		if(mot_int_b >= value && value > mot_int_b + line_int) {
-			x = i + half_mot; // if the value is in the interval of the motor
-			// being tested, return it's identifier
-		} else {
-			mot_int_b += line_int; // else, just set to test the next motor
-		}
-	}
-	if (x == -1) {
-		x = 0; // if it is in the negative part and the responsible
-		// motor was not found, then the signal is smaller than -100
-	}
-	return x;
+int App::defineIndex(int value, int size) {
+        if(size%2 == 0) {
+            return evenMotors(value, size);
+        }
+        return oddMotors(value, size);
+    }
+
+int App::oddMotors(int value, int size) {
+    float line_int = 200.0/(size-2);
+    int half_mot = (size-1)/2;
+    float half_int_end = line_int*(half_mot-1)/2.0;
+    if((-1)*half_int_end < value && value < half_int_end) {
+        return half_mot;
+    }
+    float mot_int_beg;
+    int x = -1;
+    if(value > 0) {
+        mot_int_beg = half_int_end;
+        for(int i = half_mot+1; i < size - 1 && x == -1; i++) {
+            if(mot_int_beg <= value && value < mot_int_beg + line_int) {
+                x = i;
+            } else {
+                mot_int_beg += line_int;
+            }
+        }
+        if (x == -1) {
+            return size-1;
+        }
+        return x;
+    }
+    mot_int_beg = half_int_end*(-1);
+    for(int i = half_mot-1; i > 0 && x == -1; i--) {
+        if(mot_int_beg - line_int < value && value <= mot_int_beg) {
+            x = i;
+        } else {
+            mot_int_beg -= line_int;
+        }
+    }
+    if (x == -1) {
+        return 0;
+    }
+    return x;
+}
+
+int App::evenMotors(int value, int size) {
+    float line_int = 200.0/(size-2);
+    if(value <= -100) {
+        return 0;
+    }
+    if(value >= 100) {
+        return size-1;
+    }
+    float int_beg = -100;
+    int x = -1;
+    for(int i = 1; i < size-1 && x == -1; i++) {
+        if(int_beg < value && value <= int_beg + line_int) {
+            x = i;
+        } else {
+            int_beg += line_int;
+        }
+    }
+    return x;
 }
 
 void App::writeAudio(int* freq, int samples) {
-	int commom = samples/COLUMNS;
-	int summation = 0;
-	int pos = 0;
-	motors->write_to_next_line();
-	motors->write( 0 | 0 | 255 | 0 );
-	motors->write( 2 << 24 | 0 | 255 | 1 );
-	for(int i = 0; i < samples; i++) {
-		summation += freq[i];
-		if(i%commom == commom - 1) {
-			motors->write((1<<24)| 0 | (pos << 8) |(5));
-			motors->write((  0   | 0 | (pos << 8) | summation/commom ));
-			pos++;
-			summation = 0;
-		}
-	}
+    int commom = samples/COLUMNS;
+    int summation = 0;
+    int pos = 0;
+    motors->write_to_next_line();
+    for(int i = 0; i < samples; i++) {
+        summation += freq[i];
+        if(i%commom == commom - 1) {
+            motors->write((  0   | 0 | (pos << 8) | summation/commom ));
+            pos++;
+            summation = 0;
+        }
+    }
+    delete freq;
 }
 
 void App::run() {
-	unsigned char *data;
-	unsigned int *size;
+    unsigned char *data;
+    unsigned int *size;
 
-	//Shift amount de 10, Decaimento de 15 e potencia de 255 em cada motor, durante inicialização do programa.
-	motors->write((1<<24)|(255<<16)|(255<<8)|(10));
-	motors->write((2<<24)|(255<<16)|(255<<8)|(15));
-	motors->write((0<<24)|(255<<16)|(255<<8)|(255));
+    // Shift amount de 10, Decaimento de 15 e potencia de 255 em cada motor,
+    // durante inicialização do programa.
+    motors->write((1<<24)|(255<<16)|(255<<8)|(10));
+    motors->write((2<<24)|(255<<16)|(255<<8)|(15));
+    motors->write((0<<24)|(255<<16)|(255<<8)|(255));
 
-	alt_timestamp_start();
+    alt_timestamp_start();
 
-	while (1) {
+    while (1) {
 
-		wifi->receive(data, size);
-		char type = data[0];
-		if(alt_timestamp() >= 500) {
-			running.next();
-			motors->write( 1 | 255 << 16 | 255 << 8 | 0); // setting shift amount to instantaneous
-			motors->write( 0 | 255 << 16 | 255 << 8 | 0); // setting all motors to not vibrate
-			alt_timestamp_start();
-		}
-		if(running.current != type) {
-			continue;
-		}
-		switch (type) {
-		case 'm': { /* motors */
-			int cmd = (int)(data[1]);
-			int linha = (int)(data[2]);
-			int coluna = (int)(data[3]);
-			int valor = (int)(data[4]);
-//			alt_putstr("Motors received. Sending it to the motors...\n");
-			int command = (  (cmd << 24) | (linha << 16) | (coluna << 8) | (valor) );
-//			alt_printf("Comando: %d %d %d %d = %d\n" ,cmd, linha, coluna, valor, command );
-			motors->write(command);
-		}
-			break;
-		case 'a': { /*audio*/
-//			alt_putstr("Audio received. Sending it to the FFT...\n");
-//			alt_printf("%s\n", data);
-			//buffer.push(data);
-			motors->write_to_next_line();
-			fft->write(data);
-			int* freq = fft->read();
-			writeAudio(freq, 11);
-
-//			|           _
-//			|    _     / \
-//		____|___/_\___/___\_____
-//			|\_/   \_/     \   /
-//			|               \_/
-
-			//if(!fft->isProcessing()) {
-			//	fft->write(buffer.pop());
-			//}
-
-
-		}
-			break;
-		case 'c': { /*compass*/
-//			alt_putstr("Compass received. Sending to the motors...\n");
-//			alt_printf("%s\n", data);
-
-			writeCompass((int)data[1]);
-		}
-			break;
-		case 'g': { /*gyroscope*/
-//			alt_putstr("Gyroscope received. Sending to the motors...\n");
-//			alt_printf("%s\n", data);
-			writeGyroscope(int(data[1]), int(data[2]), int(data[3]));
-		}
-			break;
-		default: {
-//			alt_putstr("Some data received. Don't know what to do...\n");
-//			alt_printf("%s\n", data);
-		}
-			break;
-		}
-	}
+        wifi->receive(data, size);
+        char type = data[0];
+        if(alt_timestamp() >= 500) {
+            running.next();
+            motors->write( 1 << 24 | 255 << 16 | 255 << 8 | 0); // setting shift amount to instantaneous
+            motors->write( 0 | 255 << 16 | 255 << 8 | 0); // setting all motors to not vibrate
+            alt_timestamp_start();
+            update_motors_settings();
+        }
+        if(running.current != type) {
+            continue;
+        }
+        switch (type) {
+        case 'm': { /* motors */
+            int cmd = (int)(data[1]);
+            int linha = (int)(data[2]);
+            int coluna = (int)(data[3]);
+            int valor = (int)(data[4]);
+            int command = (  (cmd << 24) | (linha << 16) | (coluna << 8) | (valor) );
+            motors->write(command);
+        }
+            break;
+        case 'a': { /*audio*/
+            int* c = new int[this->samples];
+            for(unsigned int i = 0; i <= samples; i++) {
+                c[i] = data[i+1];
+            }
+            fft->write(c, this->samples);
+            int* freq = fft->read();
+            writeAudio(freq, this->samples/2);
+        }
+            break;
+        case 'c': { /*compass*/
+            writeCompass((int)data[1]);
+        }
+            break;
+        case 'g': { /*gyroscope*/
+            writeGyroscope(int(data[1]), int(data[2]), int(data[3]));
+        }
+            break;
+        }
+    }
 }

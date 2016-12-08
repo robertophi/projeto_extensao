@@ -7,16 +7,16 @@
 
 class FFT {
  public:
-	FFT();
-	~FFT();
+    FFT();
+    ~FFT();
 
-	static FFT *getSingleton();
-	void write(unsigned char *input);
-	int* read();
+    static FFT *getSingleton();
+    void write(int *input, int samples);
+    int* read();
 
  private:
-	static FFT *fft;
-	volatile unsigned int *data,*writeFFT,*readFFT;
+    static FFT *fft;
+    volatile int data,*writeFFT,*readFFT;
 };
 
 #endif

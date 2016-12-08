@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2' in SOPC Builder design 'qsys_system'
  * SOPC Builder design path: ../../qsys_system.sopcinfo
  *
- * Generated: Tue Nov 08 14:18:45 BRT 2016
+ * Generated: Mon Dec 05 14:20:40 BRST 2016
  */
 
 /*
@@ -128,21 +128,21 @@
 #define __ALTERA_AVALON_TIMER
 #define __ALTERA_NIOS2_QSYS
 #define __FIFOED_AVALON_UART
-#define __MATRIZMOTORES
+#define __MATRIZMOTOR
 
 
 /*
- * MatrizMotores configuration
+ * MatrizMotor_0 configuration
  *
  */
 
-#define ALT_MODULE_CLASS_MatrizMotores MatrizMotores
-#define MATRIZMOTORES_BASE 0x2068
-#define MATRIZMOTORES_IRQ -1
-#define MATRIZMOTORES_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define MATRIZMOTORES_NAME "/dev/MatrizMotores"
-#define MATRIZMOTORES_SPAN 8
-#define MATRIZMOTORES_TYPE "MatrizMotores"
+#define ALT_MODULE_CLASS_MatrizMotor_0 MatrizMotor
+#define MATRIZMOTOR_0_BASE 0x2068
+#define MATRIZMOTOR_0_IRQ -1
+#define MATRIZMOTOR_0_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define MATRIZMOTOR_0_NAME "/dev/MatrizMotor_0"
+#define MATRIZMOTOR_0_SPAN 8
+#define MATRIZMOTOR_0_TYPE "MatrizMotor"
 
 
 /*
