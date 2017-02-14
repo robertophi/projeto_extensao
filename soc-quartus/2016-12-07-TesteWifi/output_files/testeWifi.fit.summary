@@ -1,0 +1,20 @@
+Fitter Status : Successful - Tue Jan 24 17:39:13 2017
+Quartus II 32-bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : testeWifi
+Top-level Entity Name : testeWifi
+Family : Cyclone IV GX
+Device : EP4CGX150DF31I7
+Timing Models : Final
+Total logic elements : 2,181 / 149,760 ( 1 % )
+    Total combinational functions : 2,054 / 149,760 ( 1 % )
+    Dedicated logic registers : 1,236 / 149,760 ( < 1 % )
+Total registers : 1236
+Total pins : 83 / 508 ( 16 % )
+Total virtual pins : 0
+Total memory bits : 819,584 / 6,635,520 ( 12 % )
+Embedded Multiplier 9-bit elements : 0 / 720 ( 0 % )
+Total GXB Receiver Channel PCS : 0 / 8 ( 0 % )
+Total GXB Receiver Channel PMA : 0 / 8 ( 0 % )
+Total GXB Transmitter Channel PCS : 0 / 8 ( 0 % )
+Total GXB Transmitter Channel PMA : 0 / 8 ( 0 % )
+Total PLLs : 0 / 8 ( 0 % )

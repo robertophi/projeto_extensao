@@ -1,0 +1,1275 @@
+!SESSION 2016-12-01 16:38:57.243 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-12-01 16:40:56.446
+!MESSAGE Indexed 'application_bsp' (89 sources, 158 headers) in 10.36 sec: 4,462 declarations; 6,897 references; 15 unresolved inclusions; 5 syntax errors; 81 unresolved names (0.71%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-12-01 16:41:24.262
+!MESSAGE Indexed 'application' (5 sources, 17 headers) in 1.36 sec: 217 declarations; 434 references; 21 unresolved inclusions; 0 syntax errors; 22 unresolved names (3.27%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-01 16:45:16.182
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-01 16:45:17.703
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go /home/roberto/dev/soc-quartus/2016-12-01-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-01 16:45:52.568
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-01 16:45:54.170
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go /home/roberto/dev/soc-quartus/2016-12-01-SoC/software/application/application.elf]
+!SESSION 2016-12-13 15:27:21.248 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.ui 4 0 2016-12-13 15:27:41.892
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (org.eclipse.swt.SWTError: No more handles [Unknown Mozilla path (MOZILLA_FIVE_HOME not set)])
+	at org.eclipse.swt.SWT.error(SWT.java:4282)
+	at org.eclipse.swt.SWT.error(SWT.java:4197)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3563)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3212)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1386)
+Caused by: org.eclipse.swt.SWTError: No more handles [Unknown Mozilla path (MOZILLA_FIVE_HOME not set)]
+	at org.eclipse.swt.SWT.error(SWT.java:4308)
+	at org.eclipse.swt.browser.Mozilla.initMozilla(Mozilla.java:1826)
+	at org.eclipse.swt.browser.Mozilla.create(Mozilla.java:687)
+	at org.eclipse.swt.browser.Browser.<init>(Browser.java:99)
+	at org.eclipse.epp.usagedata.internal.ui.wizards.TermsOfUseWizardPage.createControl(TermsOfUseWizardPage.java:48)
+	at org.eclipse.jface.wizard.Wizard.createPageControls(Wizard.java:174)
+	at org.eclipse.jface.wizard.WizardDialog.createPageControls(WizardDialog.java:736)
+	at org.eclipse.jface.wizard.WizardDialog.createContents(WizardDialog.java:608)
+	at org.eclipse.jface.window.Window.create(Window.java:431)
+	at org.eclipse.jface.dialogs.Dialog.create(Dialog.java:1089)
+	at org.eclipse.jface.window.Window.open(Window.java:790)
+	at org.eclipse.epp.usagedata.internal.ui.uploaders.AskUserUploader$1.run(AskUserUploader.java:65)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:164)
+	at org.eclipse.ui.internal.UISynchronizer$3.run(UISynchronizer.java:158)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 23 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-13 15:28:32.945
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-12-13 15:28:34.031
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-13 15:28:34.075
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-01-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-13 15:29:18.864
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-13 15:29:38.955
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-12-13 15:29:40.032
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-13 15:29:40.187
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-01-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-13 15:30:41.976
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-13 15:31:02.149
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-12-13 15:31:03.239
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-13 15:31:03.371
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-01-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-13 15:45:11.468
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-13 15:45:31.553
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-12-13 15:45:32.682
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-13 15:45:32.806
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-01-SoC/software/application/application.elf]
+!SESSION 2016-12-14 13:38:42.602 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-14 13:40:18.736
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-12-14 13:40:20.385
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-14 13:40:20.428
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-01-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-12-14 13:40:21.755
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --go, --accept-bad-sysid, /home/roberto/dev/soc-quartus/2016-12-01-SoC/software/application/application.elf] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-12-14 13:40:21.758
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-12-14 13:41:38.980
+!MESSAGE Indexed 'application' (5 sources, 17 headers) in 0.37 sec: 217 declarations; 434 references; 21 unresolved inclusions; 0 syntax errors; 22 unresolved names (3.27%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-12-14 13:42:10.382
+!MESSAGE Indexed 'application_bsp' (89 sources, 160 headers) in 3.31 sec: 4,721 declarations; 7,268 references; 19 unresolved inclusions; 5 syntax errors; 114 unresolved names (0.94%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-14 13:42:53.417
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-12-14 13:42:54.504
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-14 13:42:54.543
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-01-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-12-14 13:42:55.768
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --go, --accept-bad-sysid, /home/roberto/dev/soc-quartus/2016-12-01-SoC/software/application/application.elf] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-12-14 13:42:55.770
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-14 13:43:32.171
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-12-14 13:43:33.241
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-14 13:43:33.282
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-05-Soc-Caique-Lucas/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-14 13:44:27.769
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-14 13:44:27.830
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-12-14 13:44:28.910
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-14 13:44:28.950
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-14 13:49:25.680
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-14 13:49:45.777
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-12-14 13:49:46.871
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-14 13:49:46.985
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-14 13:55:06.411
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-14 13:55:26.488
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2016-12-14 13:55:27.609
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-12-14 13:55:27.726
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+!SESSION 2017-01-19 15:32:33.609 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-01-19 15:35:58.744
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui 4 0 2017-01-19 15:36:18.174
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (org.eclipse.swt.SWTError: No more handles [Unknown Mozilla path (MOZILLA_FIVE_HOME not set)])
+	at org.eclipse.swt.SWT.error(SWT.java:4282)
+	at org.eclipse.swt.SWT.error(SWT.java:4197)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3563)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3212)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1386)
+Caused by: org.eclipse.swt.SWTError: No more handles [Unknown Mozilla path (MOZILLA_FIVE_HOME not set)]
+	at org.eclipse.swt.SWT.error(SWT.java:4308)
+	at org.eclipse.swt.browser.Mozilla.initMozilla(Mozilla.java:1826)
+	at org.eclipse.swt.browser.Mozilla.create(Mozilla.java:687)
+	at org.eclipse.swt.browser.Browser.<init>(Browser.java:99)
+	at org.eclipse.epp.usagedata.internal.ui.wizards.TermsOfUseWizardPage.createControl(TermsOfUseWizardPage.java:48)
+	at org.eclipse.jface.wizard.Wizard.createPageControls(Wizard.java:174)
+	at org.eclipse.jface.wizard.WizardDialog.createPageControls(WizardDialog.java:736)
+	at org.eclipse.jface.wizard.WizardDialog.createContents(WizardDialog.java:608)
+	at org.eclipse.jface.window.Window.create(Window.java:431)
+	at org.eclipse.jface.dialogs.Dialog.create(Dialog.java:1089)
+	at org.eclipse.jface.window.Window.open(Window.java:790)
+	at org.eclipse.epp.usagedata.internal.ui.uploaders.AskUserUploader$1.run(AskUserUploader.java:65)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:164)
+	at org.eclipse.ui.internal.UISynchronizer$3.run(UISynchronizer.java:158)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 23 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-19 15:37:21.155
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-19 15:37:23.305
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-19 15:37:23.348
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-19 15:43:32.951
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-19 15:43:33.027
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-19 15:43:34.121
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-19 15:43:34.162
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-19 15:55:06.925
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-19 15:55:06.993
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-19 15:55:08.083
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-19 15:55:08.110
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-19 15:55:09.301
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --go, --accept-bad-sysid, /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-19 15:55:09.305
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-19 15:55:36.933
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-19 15:55:38.013
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-19 15:55:38.040
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-19 15:55:39.223
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --go, --accept-bad-sysid, /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-19 15:55:39.536
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-19 15:56:01.491
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-19 15:56:02.564
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-19 15:56:02.639
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-19 15:56:03.822
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --go, --accept-bad-sysid, /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-19 15:56:03.824
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-19 15:56:21.397
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-19 15:56:22.464
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-19 15:56:22.514
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-19 15:56:23.706
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --go, --accept-bad-sysid, /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-19 15:56:23.708
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-19 15:56:47.438
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-19 15:56:48.505
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-19 15:56:48.563
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-19 15:56:49.750
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --go, --accept-bad-sysid, /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-19 15:56:49.751
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-19 15:57:36.549
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-19 15:57:37.621
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-19 15:57:37.670
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-19 15:57:38.852
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --go, --accept-bad-sysid, /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-19 15:57:38.854
+!MESSAGE Downloading ELF Process failed
+!SESSION 2017-01-19 16:06:12.370 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-01-19 16:06:39.272
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2017-01-23 15:46:14.814 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-01-23 15:46:42.134
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 15:48:24.817
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-23 15:48:26.687
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 15:48:26.731
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-23 15:48:28.036
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --go, --accept-bad-sysid, /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-23 15:48:28.040
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 15:48:59.186
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-23 15:49:00.249
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 15:49:00.292
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 15:54:25.274
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 15:54:25.342
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-23 15:54:26.420
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 15:54:26.462
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 16:00:34.498
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 16:00:34.565
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-23 16:00:35.625
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 16:00:35.666
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 16:01:08.732
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 16:01:28.825
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-23 16:01:29.915
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 16:01:30.037
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 16:03:44.887
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 16:04:04.985
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-23 16:04:06.068
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 16:04:06.219
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 16:15:55.410
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 16:16:15.494
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-23 16:16:16.574
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 16:16:16.681
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 17:37:14.012
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-23 17:37:15.077
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 17:37:15.164
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 17:39:25.925
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 17:39:26.079
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-23 17:39:27.143
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 17:39:27.369
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 17:44:39.629
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 17:44:59.716
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-23 17:45:00.801
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 17:45:00.908
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 17:45:54.764
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 17:46:14.849
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-23 17:46:15.920
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 17:46:16.045
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 17:49:27.637
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 17:49:47.729
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-23 17:49:48.868
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 17:49:49.026
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 17:52:15.565
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 17:52:35.704
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-23 17:52:36.800
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 17:52:36.913
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 17:55:32.478
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 17:55:52.576
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-23 17:55:53.715
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 17:55:53.925
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 18:22:01.169
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-23 18:22:02.580
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 18:22:02.752
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 18:25:32.293
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 18:25:52.379
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-23 18:25:53.469
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 18:25:53.579
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 18:29:02.590
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 18:29:22.692
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-23 18:29:23.771
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 18:29:23.877
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 18:31:33.781
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 18:31:53.923
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-23 18:31:55.010
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 18:31:55.227
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 18:33:07.599
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 18:33:27.681
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-23 18:33:28.755
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 18:33:28.876
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 18:40:08.910
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 18:40:29.003
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-23 18:40:30.093
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 18:40:30.166
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 18:44:40.981
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 18:45:01.060
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-23 18:45:02.143
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 18:45:02.250
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 18:47:15.284
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 18:47:35.365
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-23 18:47:36.514
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 18:47:36.602
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 19:03:50.551
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 19:03:50.641
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-23 19:03:51.717
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 19:03:51.758
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 19:06:37.167
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 19:06:37.372
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-23 19:06:38.451
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 19:06:38.592
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 19:09:04.301
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 19:09:04.515
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-23 19:09:05.598
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 19:09:05.730
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 19:11:21.753
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 19:11:41.832
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-23 19:11:42.911
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 19:11:42.999
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 19:13:06.896
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 19:13:26.975
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-23 19:13:28.069
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-23 19:13:28.183
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+!SESSION 2017-01-24 14:38:12.372 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 14:44:30.593
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-24 14:44:32.853
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 14:44:32.893
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 14:47:30.329
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 14:47:30.387
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-24 14:47:31.475
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 14:47:31.513
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 15:24:38.461
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-24 15:24:39.600
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 15:24:39.639
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY org.eclipse.ui 4 0 2017-01-24 15:37:09.232
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (org.eclipse.swt.SWTError: No more handles [Unknown Mozilla path (MOZILLA_FIVE_HOME not set)])
+	at org.eclipse.swt.SWT.error(SWT.java:4282)
+	at org.eclipse.swt.SWT.error(SWT.java:4197)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3563)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3212)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1386)
+Caused by: org.eclipse.swt.SWTError: No more handles [Unknown Mozilla path (MOZILLA_FIVE_HOME not set)]
+	at org.eclipse.swt.SWT.error(SWT.java:4308)
+	at org.eclipse.swt.browser.Mozilla.initMozilla(Mozilla.java:1826)
+	at org.eclipse.swt.browser.Mozilla.create(Mozilla.java:687)
+	at org.eclipse.swt.browser.Browser.<init>(Browser.java:99)
+	at org.eclipse.epp.usagedata.internal.ui.wizards.TermsOfUseWizardPage.createControl(TermsOfUseWizardPage.java:48)
+	at org.eclipse.jface.wizard.Wizard.createPageControls(Wizard.java:174)
+	at org.eclipse.jface.wizard.WizardDialog.createPageControls(WizardDialog.java:736)
+	at org.eclipse.jface.wizard.WizardDialog.createContents(WizardDialog.java:608)
+	at org.eclipse.jface.window.Window.create(Window.java:431)
+	at org.eclipse.jface.dialogs.Dialog.create(Dialog.java:1089)
+	at org.eclipse.jface.window.Window.open(Window.java:790)
+	at org.eclipse.epp.usagedata.internal.ui.uploaders.AskUserUploader$1.run(AskUserUploader.java:65)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:164)
+	at org.eclipse.ui.internal.UISynchronizer$3.run(UISynchronizer.java:158)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 23 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 15:47:47.484
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 15:47:47.546
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-24 15:47:48.625
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 15:47:48.665
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 15:55:26.187
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 15:55:26.247
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-24 15:55:27.323
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 15:55:27.365
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 16:02:04.387
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 16:02:04.449
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-24 16:02:05.558
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 16:02:05.599
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 16:02:52.472
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 16:02:52.528
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-24 16:02:53.617
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 16:02:53.659
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 16:03:48.315
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 16:03:48.383
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-24 16:03:49.467
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 16:03:49.511
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 16:05:59.645
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 16:05:59.705
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-24 16:06:00.779
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 16:06:00.820
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 16:07:12.825
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 16:07:12.883
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-24 16:07:13.955
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 16:07:13.999
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 16:11:45.852
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 16:11:45.911
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-24 16:11:46.984
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 16:11:47.025
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 16:14:12.241
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 16:14:12.300
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-24 16:14:13.383
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 16:14:13.425
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 16:14:55.958
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 16:14:56.018
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-24 16:14:57.093
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 16:14:57.141
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 16:29:02.506
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 16:29:02.569
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-24 16:29:03.699
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 16:29:03.740
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 16:29:35.764
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 16:29:35.854
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-24 16:29:36.921
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 16:29:36.963
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 16:30:01.678
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 16:30:01.739
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-24 16:30:02.812
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 16:30:02.847
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 17:11:11.046
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 17:11:11.170
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-24 17:11:12.487
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-24 17:11:12.527
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+!SESSION 2017-01-25 11:31:38.264 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 11:32:37.336
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-25 11:32:39.042
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 11:32:39.083
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+!SESSION 2017-01-25 11:38:51.158 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-01-25 11:41:18.812
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 11:45:49.761
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-25 11:45:51.678
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 11:45:51.720
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-1]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-25 11:45:53.022
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-1]', --device=1, --instance=0, --go, --accept-bad-sysid, /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-25 11:45:53.025
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 11:46:21.558
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-25 11:46:22.651
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 11:46:22.690
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 11:48:28.196
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 11:48:48.309
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-25 11:48:49.417
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 11:48:49.522
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 11:50:17.181
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 11:50:37.267
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-25 11:50:38.356
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 11:50:38.485
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 11:52:59.953
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 11:53:20.041
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-25 11:53:21.170
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 11:53:21.304
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 12:12:07.336
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-25 12:12:08.539
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 12:12:08.902
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 12:21:17.061
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-25 12:21:18.208
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 12:21:18.286
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 12:32:20.364
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-25 12:32:21.526
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 12:32:21.687
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 12:51:46.180
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-25 12:51:47.321
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 12:51:47.431
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 13:48:46.432
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-25 13:48:48.260
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 13:48:48.575
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:06:27.684
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-25 14:06:29.427
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:06:29.676
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:07:10.605
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:07:10.683
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-25 14:07:11.761
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:07:11.980
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:08:46.157
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:08:46.477
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-25 14:08:47.572
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:08:47.799
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:09:04.773
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:09:05.022
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-25 14:09:06.140
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:09:06.271
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:10:09.114
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:10:09.227
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-25 14:10:10.390
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:10:10.517
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:25:30.156
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-25 14:25:31.789
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:25:32.174
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:26:27.565
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:26:27.696
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-25 14:26:28.812
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:26:28.947
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:35:46.227
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-25 14:35:47.616
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:35:47.681
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:38:49.993
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:39:10.141
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-25 14:39:11.234
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:39:11.389
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:39:44.707
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:40:05.017
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-25 14:40:06.113
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:40:06.246
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:43:20.587
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:43:40.828
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-25 14:43:41.981
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:43:42.103
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:54:42.354
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:55:02.427
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-25 14:55:03.517
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:55:03.628
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:56:53.732
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:57:13.947
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-25 14:57:15.050
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 14:57:15.163
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 15:10:57.343
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-25 15:10:58.859
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 15:10:58.902
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 15:20:54.357
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2017-01-25 15:20:56.081
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-2]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2017-01-25 15:20:56.301
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --accept-bad-sysid /home/roberto/dev/soc-quartus/2016-12-13-SoC/software/application/application.elf]

@@ -1,0 +1,112 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity SoC is
+	port(
+		-- de2i-150
+		clock_50 : in std_logic;
+		ledg : out std_logic_vector(8 downto 0);
+		ledr : out std_logic_vector(17 downto 0);
+		sw : in std_logic_vector(17 downto 0);
+		GPIOGPIO : out std_logic_vector(35 downto 0);
+		FAN_CTRL : out std_logic
+		
+	);
+end entity SoC;
+
+architecture SoC_arch of SoC is
+
+-----------------------------------------
+--Component declaration
+   component qsys_system is
+        port (
+            clk_clk     : in  std_logic                     := 'X'; -- clk
+            esp8266_rxd : in  std_logic                     := 'X'; -- rxd
+            esp8266_txd : out std_logic;                            -- txd
+            pwms_export : out std_logic_vector(31 downto 0)         -- export
+        );
+    end component qsys_system;
+-----------------------------------------
+
+
+	--Wifi signals
+	signal wifi_tx, wifi_rx : std_logic;
+	-- Motor Matrix Control export signal => pwms
+	signal pwms : std_logic_vector(31 downto 0);
+
+	
+begin
+	
+	
+	FAN_CTRL <= '0';
+	
+	
+	------------------------------------------
+	--Component port map
+	system : qsys_system
+		port map(
+			clk_clk => clock_50,
+			-- wifi
+			esp8266_rxd => wifi_rx,
+			esp8266_txd => wifi_tx,
+			-- matriz
+			pwms_export => pwms
+		);
+	------------------------------------------
+	
+		
+
+	ledr(17 downto 0) <= pwms(17 downto 0);
+	ledg(7 downto 0)<= pwms(31 downto 24);
+										
+										
+										
+	--Mapping of MatrizControl to GPIO
+	GPIOGPIO(0) <= pwms(6);
+	GPIOGPIO(1) <= pwms(5);
+	GPIOGPIO(2) <= pwms(7);
+	GPIOGPIO(3) <= pwms(4);
+	GPIOGPIO(4) <= pwms(8);
+	GPIOGPIO(5) <= pwms(3);
+	GPIOGPIO(6) <= pwms(9);
+	GPIOGPIO(7) <= pwms(2);
+
+
+	GPIOGPIO(8) <= pwms(10);
+	GPIOGPIO(9) <= pwms(1);
+	GPIOGPIO(10) <= pwms(11);
+	GPIOGPIO(11) <= pwms(0);
+	GPIOGPIO(12) <= pwms(12);
+	--	GPIOGPIO(13) <= pwms(6); --wifi
+	GPIOGPIO(14) <= pwms(13);
+	--	GPIOGPIO(15) <= pwms(6); --wifi	
+
+
+	GPIOGPIO(16) <= pwms(14);
+	--	GPIOGPIO(17) <= pwms(6); --wifi
+	GPIOGPIO(18) <= pwms(15);
+	--	GPIOGPIO(19) <= pwms(6); --wifi
+	GPIOGPIO(20) <= pwms(16);
+	GPIOGPIO(21) <= pwms(31);
+	GPIOGPIO(22) <= pwms(17);
+	GPIOGPIO(23) <= pwms(30);
+
+
+	GPIOGPIO(24) <= pwms(18);
+	GPIOGPIO(25) <= pwms(29);
+	GPIOGPIO(26) <= pwms(19);
+	GPIOGPIO(27) <= pwms(28);
+	GPIOGPIO(28) <= pwms(20);
+	GPIOGPIO(29) <= pwms(27);
+	GPIOGPIO(30) <= pwms(21);
+	GPIOGPIO(31) <= pwms(26);
+
+
+	GPIOGPIO(32) <= pwms(22);
+	GPIOGPIO(33) <= pwms(25);
+	GPIOGPIO(34) <= pwms(23);
+	GPIOGPIO(35) <= pwms(24);
+
+	
+	
+end architecture SoC_arch;

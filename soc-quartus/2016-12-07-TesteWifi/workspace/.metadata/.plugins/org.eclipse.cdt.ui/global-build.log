@@ -1,0 +1,10 @@
+
+**** Build of configuration Nios II for project testeWifi ****
+
+make all 
+Info: Building ../testeWifi_bsp/
+make --no-print-directory -C ../testeWifi_bsp/
+[BSP build complete]
+[testeWifi build complete]
+
+**** Build Finished ****

@@ -1,0 +1,9 @@
+	component qsys_system is
+		port (
+			clk_clk       : in  std_logic                     := 'X'; -- clk
+			pwms_export   : out std_logic_vector(31 downto 0);        -- export
+			uart_wifi_rxd : in  std_logic                     := 'X'; -- rxd
+			uart_wifi_txd : out std_logic                             -- txd
+		);
+	end component qsys_system;
+
