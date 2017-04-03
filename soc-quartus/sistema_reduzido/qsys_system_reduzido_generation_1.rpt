@@ -1,0 +1,125 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory=/home/roberto/dev/soc-quartus/sistema_reduzido/ --output-directory=/home/roberto/dev/soc-quartus/sistema_reduzido/qsys_system_reduzido/ --report-file=bsf:/home/roberto/dev/soc-quartus/sistema_reduzido/qsys_system_reduzido.bsf --system-info=DEVICE_FAMILY="Cyclone IV GX" --system-info=DEVICE=Unknown --system-info=DEVICE_SPEEDGRADE=Unknown --component-file=/home/roberto/dev/soc-quartus/sistema_reduzido/qsys_system_reduzido.qsys
+Progress: Loading sistema_reduzido/qsys_system_reduzido.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.0]
+Progress: Parameterizing module clk_0
+Progress: Adding nios2_qsys_0 [altera_nios2_qsys 13.0]
+Progress: Parameterizing module nios2_qsys_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 13.0.1.99.2]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 13.0.1.99.2]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding uart_0 [altera_avalon_uart 13.0.1.99.2]
+Progress: Parameterizing module uart_0
+Progress: Adding MatrizIP_0 [MatrizIP 1.0]
+Progress: Parameterizing module MatrizIP_0
+Progress: Adding FFT_dummy_0 [FFT_dummy 1.0]
+Progress: Parameterizing module FFT_dummy_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory=/home/roberto/dev/soc-quartus/sistema_reduzido/ --output-directory=/home/roberto/dev/soc-quartus/sistema_reduzido/qsys_system_reduzido/synthesis/ --file-set=QUARTUS_SYNTH --report-file=sopcinfo:/home/roberto/dev/soc-quartus/sistema_reduzido/qsys_system_reduzido.sopcinfo --report-file=html:/home/roberto/dev/soc-quartus/sistema_reduzido/qsys_system_reduzido.html --report-file=qip:/home/roberto/dev/soc-quartus/sistema_reduzido/qsys_system_reduzido/synthesis/qsys_system_reduzido.qip --report-file=cmp:/home/roberto/dev/soc-quartus/sistema_reduzido/qsys_system_reduzido.cmp --report-file=svd --system-info=DEVICE_FAMILY="Cyclone IV GX" --system-info=DEVICE=Unknown --system-info=DEVICE_SPEEDGRADE=Unknown --component-file=/home/roberto/dev/soc-quartus/sistema_reduzido/qsys_system_reduzido.qsys --language=VERILOG
+Progress: Loading sistema_reduzido/qsys_system_reduzido.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.0]
+Progress: Parameterizing module clk_0
+Progress: Adding nios2_qsys_0 [altera_nios2_qsys 13.0]
+Progress: Parameterizing module nios2_qsys_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 13.0.1.99.2]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 13.0.1.99.2]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding uart_0 [altera_avalon_uart 13.0.1.99.2]
+Progress: Parameterizing module uart_0
+Progress: Adding MatrizIP_0 [MatrizIP 1.0]
+Progress: Parameterizing module MatrizIP_0
+Progress: Adding FFT_dummy_0 [FFT_dummy 1.0]
+Progress: Parameterizing module FFT_dummy_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys_system_reduzido: Generating qsys_system_reduzido "qsys_system_reduzido" for QUARTUS_SYNTH
+Info: pipeline_bridge_swap_transform: After transform: 7 modules, 26 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_translator_transform: After transform: 15 modules, 52 connections
+Info: merlin_domain_transform: After transform: 30 modules, 135 connections
+Info: merlin_router_transform: After transform: 38 modules, 161 connections
+Info: reset_adaptation_transform: After transform: 40 modules, 154 connections
+Info: merlin_network_to_switch_transform: After transform: 55 modules, 188 connections
+Info: merlin_mm_transform: After transform: 55 modules, 188 connections
+Info: merlin_interrupt_mapper_transform: After transform: 56 modules, 191 connections
+Warning: qsys_system_reduzido: "No matching role found for uart_0:s1:dataavailable (dataavailable)"
+Warning: qsys_system_reduzido: "No matching role found for uart_0:s1:readyfordata (readyfordata)"
+Warning: qsys_system_reduzido: "No matching role found for rst_controller_001:reset_out:reset_req (reset_req)"
+Warning: qsys_system_reduzido: "No matching role found for rst_controller_001:reset_out:reset_req (reset_req)"
+Warning: qsys_system_reduzido: "No matching role found for rst_controller_001:reset_out:reset_req (reset_req)"
+Warning: qsys_system_reduzido: "No matching role found for rst_controller_001:reset_out:reset_req (reset_req)"
+Warning: qsys_system_reduzido: "No matching role found for rst_controller_001:reset_out:reset_req (reset_req)"
+Warning: qsys_system_reduzido: "No matching role found for rst_controller_001:reset_out:reset_req (reset_req)"
+Warning: qsys_system_reduzido: "No matching role found for rst_controller_001:reset_out:reset_req (reset_req)"
+Warning: qsys_system_reduzido: "No matching role found for rst_controller_001:reset_out:reset_req (reset_req)"
+Warning: qsys_system_reduzido: "No matching role found for rst_controller_001:reset_out:reset_req (reset_req)"
+Warning: qsys_system_reduzido: "No matching role found for rst_controller_001:reset_out:reset_req (reset_req)"
+Warning: qsys_system_reduzido: "No matching role found for rst_controller_001:reset_out:reset_req (reset_req)"
+Warning: qsys_system_reduzido: "No matching role found for rst_controller_001:reset_out:reset_req (reset_req)"
+Warning: qsys_system_reduzido: "No matching role found for rst_controller_001:reset_out:reset_req (reset_req)"
+Info: nios2_qsys_0: Starting RTL generation for module 'qsys_system_reduzido_nios2_qsys_0'
+Info: nios2_qsys_0:   Generation command is [exec /home/roberto/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/eperl -I /home/roberto/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I /home/roberto/altera/13.0sp1/quartus/sopc_builder/bin/europa -I /home/roberto/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I /home/roberto/altera/13.0sp1/quartus/sopc_builder/bin -I /home/roberto/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/cpu_lib -I /home/roberto/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/nios_lib -I /home/roberto/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -I /home/roberto/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -- /home/roberto/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/generate_rtl.epl --name=qsys_system_reduzido_nios2_qsys_0 --dir=/tmp/alt7101_3237086648889412457.dir/0004_nios2_qsys_0_gen/ --quartus_dir=/home/roberto/altera/13.0sp1/quartus --verilog --config=/tmp/alt7101_3237086648889412457.dir/0004_nios2_qsys_0_gen//qsys_system_reduzido_nios2_qsys_0_processor_configuration.pl  --do_build_sim=0    --bogus  ]
+Info: nios2_qsys_0: # 2016.10.27 17:16:43 (*) Starting Nios II generation
+Info: nios2_qsys_0: # 2016.10.27 17:16:43 (*)   Checking for plaintext license.
+Info: nios2_qsys_0: # 2016.10.27 17:16:44 (*)   Couldn't query license setup in Quartus directory /home/roberto/altera/13.0sp1/quartus
+Info: nios2_qsys_0: # 2016.10.27 17:16:44 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: nios2_qsys_0: # 2016.10.27 17:16:44 (*)   LM_LICENSE_FILE environment variable is empty
+Info: nios2_qsys_0: # 2016.10.27 17:16:44 (*)   Plaintext license not found.
+Info: nios2_qsys_0: # 2016.10.27 17:16:44 (*)   No license required to generate encrypted Nios II/e.
+Info: nios2_qsys_0: # 2016.10.27 17:16:44 (*)   Elaborating CPU configuration settings
+Info: nios2_qsys_0: # 2016.10.27 17:16:44 (*)   Creating all objects for CPU
+Info: nios2_qsys_0: # 2016.10.27 17:16:46 (*)   Generating RTL from CPU objects
+Info: nios2_qsys_0: # 2016.10.27 17:16:46 (*)   Creating plain-text RTL
+Info: nios2_qsys_0: # 2016.10.27 17:16:49 (*) Done Nios II generation
+Info: nios2_qsys_0: Done RTL generation for module 'qsys_system_reduzido_nios2_qsys_0'
+Info: nios2_qsys_0: "qsys_system_reduzido" instantiated altera_nios2_qsys "nios2_qsys_0"
+Info: onchip_memory2_0: Starting RTL generation for module 'qsys_system_reduzido_onchip_memory2_0'
+Info: onchip_memory2_0:   Generation command is [exec /home/roberto/altera/13.0sp1/quartus/linux/perl/bin/perl -I /home/roberto/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I /home/roberto/altera/13.0sp1/quartus/sopc_builder/bin/europa -I /home/roberto/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I /home/roberto/altera/13.0sp1/quartus/sopc_builder/bin -I /home/roberto/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I /home/roberto/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/roberto/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=qsys_system_reduzido_onchip_memory2_0 --dir=/tmp/alt7101_3237086648889412457.dir/0005_onchip_memory2_0_gen/ --quartus_dir=/home/roberto/altera/13.0sp1/quartus --verilog --config=/tmp/alt7101_3237086648889412457.dir/0005_onchip_memory2_0_gen//qsys_system_reduzido_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0: Done RTL generation for module 'qsys_system_reduzido_onchip_memory2_0'
+Info: onchip_memory2_0: "qsys_system_reduzido" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: jtag_uart_0: Starting RTL generation for module 'qsys_system_reduzido_jtag_uart_0'
+Info: jtag_uart_0:   Generation command is [exec /home/roberto/altera/13.0sp1/quartus/linux/perl/bin/perl -I /home/roberto/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I /home/roberto/altera/13.0sp1/quartus/sopc_builder/bin/europa -I /home/roberto/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I /home/roberto/altera/13.0sp1/quartus/sopc_builder/bin -I /home/roberto/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I /home/roberto/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/roberto/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=qsys_system_reduzido_jtag_uart_0 --dir=/tmp/alt7101_3237086648889412457.dir/0006_jtag_uart_0_gen/ --quartus_dir=/home/roberto/altera/13.0sp1/quartus --verilog --config=/tmp/alt7101_3237086648889412457.dir/0006_jtag_uart_0_gen//qsys_system_reduzido_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart_0: Done RTL generation for module 'qsys_system_reduzido_jtag_uart_0'
+Info: jtag_uart_0: "qsys_system_reduzido" instantiated altera_avalon_jtag_uart "jtag_uart_0"
+Info: uart_0: Starting RTL generation for module 'qsys_system_reduzido_uart_0'
+Info: uart_0:   Generation command is [exec /home/roberto/altera/13.0sp1/quartus/linux/perl/bin/perl -I /home/roberto/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I /home/roberto/altera/13.0sp1/quartus/sopc_builder/bin/europa -I /home/roberto/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I /home/roberto/altera/13.0sp1/quartus/sopc_builder/bin -I /home/roberto/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I /home/roberto/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_uart -- /home/roberto/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_uart/generate_rtl.pl --name=qsys_system_reduzido_uart_0 --dir=/tmp/alt7101_3237086648889412457.dir/0007_uart_0_gen/ --quartus_dir=/home/roberto/altera/13.0sp1/quartus --verilog --config=/tmp/alt7101_3237086648889412457.dir/0007_uart_0_gen//qsys_system_reduzido_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info: uart_0: Done RTL generation for module 'qsys_system_reduzido_uart_0'
+Info: uart_0: "qsys_system_reduzido" instantiated altera_avalon_uart "uart_0"
+Info: MatrizIP_0: "qsys_system_reduzido" instantiated MatrizIP "MatrizIP_0"
+Info: FFT_dummy_0: "qsys_system_reduzido" instantiated FFT_dummy "FFT_dummy_0"
+Info: nios2_qsys_0_instruction_master_translator: "qsys_system_reduzido" instantiated altera_merlin_master_translator "nios2_qsys_0_instruction_master_translator"
+Info: nios2_qsys_0_jtag_debug_module_translator: "qsys_system_reduzido" instantiated altera_merlin_slave_translator "nios2_qsys_0_jtag_debug_module_translator"
+Info: nios2_qsys_0_instruction_master_translator_avalon_universal_master_0_agent: "qsys_system_reduzido" instantiated altera_merlin_master_agent "nios2_qsys_0_instruction_master_translator_avalon_universal_master_0_agent"
+Info: nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent: "qsys_system_reduzido" instantiated altera_merlin_slave_agent "nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent"
+Info: nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo: "qsys_system_reduzido" instantiated altera_avalon_sc_fifo "nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo"
+Info: addr_router: "qsys_system_reduzido" instantiated altera_merlin_router "addr_router"
+Info: addr_router_001: "qsys_system_reduzido" instantiated altera_merlin_router "addr_router_001"
+Info: id_router: "qsys_system_reduzido" instantiated altera_merlin_router "id_router"
+Info: id_router_003: "qsys_system_reduzido" instantiated altera_merlin_router "id_router_003"
+Info: rst_controller: "qsys_system_reduzido" instantiated altera_reset_controller "rst_controller"
+Info: cmd_xbar_demux: "qsys_system_reduzido" instantiated altera_merlin_demultiplexer "cmd_xbar_demux"
+Info: cmd_xbar_demux_001: "qsys_system_reduzido" instantiated altera_merlin_demultiplexer "cmd_xbar_demux_001"
+Info: cmd_xbar_mux: "qsys_system_reduzido" instantiated altera_merlin_multiplexer "cmd_xbar_mux"
+Info: rsp_xbar_demux: "qsys_system_reduzido" instantiated altera_merlin_demultiplexer "rsp_xbar_demux"
+Info: rsp_xbar_demux_003: "qsys_system_reduzido" instantiated altera_merlin_demultiplexer "rsp_xbar_demux_003"
+Info: rsp_xbar_mux: "qsys_system_reduzido" instantiated altera_merlin_multiplexer "rsp_xbar_mux"
+Info: Reusing file /home/roberto/dev/soc-quartus/sistema_reduzido/qsys_system_reduzido/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_xbar_mux_001: "qsys_system_reduzido" instantiated altera_merlin_multiplexer "rsp_xbar_mux_001"
+Info: Reusing file /home/roberto/dev/soc-quartus/sistema_reduzido/qsys_system_reduzido/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: irq_mapper: "qsys_system_reduzido" instantiated altera_irq_mapper "irq_mapper"
+Info: qsys_system_reduzido: Done qsys_system_reduzido" with 25 modules, 85 files, 1465530 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

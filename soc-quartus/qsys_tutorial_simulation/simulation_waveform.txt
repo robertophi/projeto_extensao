@@ -1,0 +1,43 @@
+add wave -position insertpoint  \
+sim:/matriz_interface/avs_aslave_write \
+sim:/matriz_interface/avs_aslave_writedata \
+sim:/matriz_interface/csi_csink_clock \
+sim:/matriz_interface/rsi_rsink_resetn \
+sim:/matriz_interface/coe_pwms_export
+
+run 100
+
+add wave -position insertpoint  \
+sim:/matriz_interface/matriz_inst/commands_control/current_state \
+sim:/matriz_interface/matriz_inst/commands_control/next_state
+
+
+force csi_csink_clock 0 50, 1 100 -repeat 100
+force avs_aslave_read 0
+force rsi_rsink_resetn 0
+force avs_aslave_write 1
+run 500
+
+force avs_aslave_writedata x"FFFFFFFF"
+
+force avs_aslave_write 0
+force rsi_rsink_resetn 1
+run 3000
+
+
+force avs_aslave_writedata x"00FFFFFF"
+force avs_aslave_write 1
+run 100
+force avs_aslave_write 0
+run 200
+
+
+
+force avs_aslave_writedata x"02FFFF05"
+force avs_aslave_write 1
+run 100
+force avs_aslave_write 0
+run 100000
+
+
+

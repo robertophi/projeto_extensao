@@ -1,0 +1,647 @@
+Archive member included because of file (symbol)
+
+../testeWifi_bsp//libhal_bsp.a(alt_irq_register.o)
+                              obj/default/testeWifi.o (alt_irq_register)
+../testeWifi_bsp//libhal_bsp.a(alt_irq_vars.o)
+                              ../testeWifi_bsp//libhal_bsp.a(alt_irq_register.o) (alt_irq_active)
+../testeWifi_bsp//libhal_bsp.a(alt_load.o)
+                              ../testeWifi_bsp//obj/HAL/src/crt0.o (alt_load)
+../testeWifi_bsp//libhal_bsp.a(alt_main.o)
+                              ../testeWifi_bsp//obj/HAL/src/crt0.o (alt_main)
+../testeWifi_bsp//libhal_bsp.a(alt_putchar.o)
+                              obj/default/testeWifi.o (alt_putchar)
+../testeWifi_bsp//libhal_bsp.a(alt_usleep.o)
+                              obj/default/testeWifi.o (usleep)
+../testeWifi_bsp//libhal_bsp.a(alt_sys_init.o)
+                              ../testeWifi_bsp//libhal_bsp.a(alt_main.o) (alt_sys_init)
+../testeWifi_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                              ../testeWifi_bsp//libhal_bsp.a(alt_putchar.o) (altera_avalon_jtag_uart_write)
+../testeWifi_bsp//libhal_bsp.a(alt_busy_sleep.o)
+                              ../testeWifi_bsp//libhal_bsp.a(alt_usleep.o) (alt_busy_sleep)
+../testeWifi_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+                              ../testeWifi_bsp//libhal_bsp.a(alt_load.o) (alt_dcache_flush_all)
+../testeWifi_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+                              ../testeWifi_bsp//libhal_bsp.a(alt_load.o) (alt_icache_flush_all)
+../testeWifi_bsp//libhal_bsp.a(alt_irq_entry.o)
+                              ../testeWifi_bsp//libhal_bsp.a(alt_irq_register.o) (alt_irq_entry)
+../testeWifi_bsp//libhal_bsp.a(alt_irq_handler.o)
+                              ../testeWifi_bsp//libhal_bsp.a(alt_irq_register.o) (alt_irq_handler)
+../testeWifi_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
+                              ../testeWifi_bsp//libhal_bsp.a(alt_sys_init.o) (altera_nios2_qsys_irq_init)
+../testeWifi_bsp//libhal_bsp.a(alt_exception_entry.o)
+                              ../testeWifi_bsp//libhal_bsp.a(alt_irq_entry.o) (alt_exception)
+/home/roberto/altera/13.0sp1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul/libgcc.a(lib2-divmod.o)
+                              ../testeWifi_bsp//libhal_bsp.a(alt_busy_sleep.o) (__udivsi3)
+/home/roberto/altera/13.0sp1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul/libgcc.a(lib2-mul.o)
+                              ../testeWifi_bsp//libhal_bsp.a(alt_busy_sleep.o) (__mulsi3)
+
+Allocating common symbols
+Common symbol       size              file
+
+alt_irq             0x100             ../testeWifi_bsp//libhal_bsp.a(alt_irq_handler.o)
+data_ptr            0x4               obj/default/testeWifi.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+reset            0x00040000         0x00000020
+onchip_memory2_0 0x00040020         0x00018680
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD ../testeWifi_bsp//obj/HAL/src/crt0.o
+                0x0004000c                exit = _exit
+LOAD obj/default/testeWifi.o
+LOAD /home/roberto/altera/13.0sp1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul/libstdc++.a
+LOAD /home/roberto/altera/13.0sp1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul/libm.a
+LOAD /home/roberto/altera/13.0sp1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul/libgcc.a
+START GROUP
+LOAD /home/roberto/altera/13.0sp1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul/libsmallc.a
+LOAD /home/roberto/altera/13.0sp1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul/libgcc.a
+LOAD ../testeWifi_bsp//libhal_bsp.a
+END GROUP
+LOAD /home/roberto/altera/13.0sp1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul/libgcc.a
+                0x00040000                __alt_mem_onchip_memory2_0 = 0x40000
+
+.entry          0x00040000       0x20
+ *(.entry)
+ .entry         0x00040000       0x20 ../testeWifi_bsp//obj/HAL/src/crt0.o
+                0x00040000                __reset
+                0x0004000c                _exit
+
+.exceptions     0x00040020      0x120
+                0x00040020                PROVIDE (__ram_exceptions_start, ABSOLUTE (.))
+                0x00040020                . = ALIGN (0x20)
+ *(.irq)
+ *(.exceptions.entry.label)
+ .exceptions.entry.label
+                0x00040020        0x0 ../testeWifi_bsp//libhal_bsp.a(alt_irq_entry.o)
+                0x00040020                alt_irq_entry
+ .exceptions.entry.label
+                0x00040020        0x0 ../testeWifi_bsp//libhal_bsp.a(alt_exception_entry.o)
+                0x00040020                alt_exception
+ *(.exceptions.entry.user)
+ *(.exceptions.entry)
+ .exceptions.entry
+                0x00040020       0x54 ../testeWifi_bsp//libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.irqtest.user)
+ *(.exceptions.irqtest)
+ .exceptions.irqtest
+                0x00040074       0x10 ../testeWifi_bsp//libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.irqhandler.user)
+ *(.exceptions.irqhandler)
+ .exceptions.irqhandler
+                0x00040084        0x4 ../testeWifi_bsp//libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.irqreturn.user)
+ *(.exceptions.irqreturn)
+ .exceptions.irqreturn
+                0x00040088        0x4 ../testeWifi_bsp//libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.notirq.label)
+ .exceptions.notirq.label
+                0x0004008c        0x0 ../testeWifi_bsp//libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.notirq.user)
+ *(.exceptions.notirq)
+ .exceptions.notirq
+                0x0004008c        0x8 ../testeWifi_bsp//libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.soft.user)
+ *(.exceptions.soft)
+ *(.exceptions.unknown.user)
+ *(.exceptions.unknown)
+ .exceptions.unknown
+                0x00040094        0x4 ../testeWifi_bsp//libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.exit.label)
+ .exceptions.exit.label
+                0x00040098        0x0 ../testeWifi_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .exceptions.exit.label
+                0x00040098        0x0 ../testeWifi_bsp//libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.exit.user)
+ *(.exceptions.exit)
+ .exceptions.exit
+                0x00040098       0x54 ../testeWifi_bsp//libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions)
+ .exceptions    0x000400ec       0x54 ../testeWifi_bsp//libhal_bsp.a(alt_irq_handler.o)
+                0x000400ec                alt_irq_handler
+                0x00040140                PROVIDE (__ram_exceptions_end, ABSOLUTE (.))
+                0x00040020                PROVIDE (__flash_exceptions_start, LOADADDR (.exceptions))
+
+.text           0x00040140      0x6a0
+                0x00040140                PROVIDE (stext, ABSOLUTE (.))
+ *(.interp)
+ *(.hash)
+ *(.dynsym)
+ *(.dynstr)
+ *(.gnu.version)
+ *(.gnu.version_d)
+ *(.gnu.version_r)
+ *(.rel.init)
+ *(.rela.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rel.fini)
+ *(.rela.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rela.ctors)
+ *(.rel.dtors)
+ *(.rela.dtors)
+ *(.rel.got)
+ *(.rela.got)
+ *(.rel.sdata .rel.sdata.* .rel.gnu.linkonce.s.*)
+ *(.rela.sdata .rela.sdata.* .rela.gnu.linkonce.s.*)
+ *(.rel.sbss .rel.sbss.* .rel.gnu.linkonce.sb.*)
+ *(.rela.sbss .rela.sbss.* .rela.gnu.linkonce.sb.*)
+ *(.rel.sdata2 .rel.sdata2.* .rel.gnu.linkonce.s2.*)
+ *(.rela.sdata2 .rela.sdata2.* .rela.gnu.linkonce.s2.*)
+ *(.rel.sbss2 .rel.sbss2.* .rel.gnu.linkonce.sb2.*)
+ *(.rela.sbss2 .rela.sbss2.* .rela.gnu.linkonce.sb2.*)
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+ *(.rel.plt)
+ *(.rela.plt)
+ *(.rel.dyn)
+ *(.init)
+ *(.plt)
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x00040140       0x3c ../testeWifi_bsp//obj/HAL/src/crt0.o
+                0x00040140                _start
+ .text          0x0004017c      0x240 obj/default/testeWifi.o
+                0x0004017c                waitForStatusReady
+                0x00040194                writeCommand
+                0x00040220                serial_init
+                0x000402f8                wifi_init
+                0x0004039c                main
+ .text          0x000403bc       0xa0 ../testeWifi_bsp//libhal_bsp.a(alt_irq_register.o)
+                0x000403bc                alt_irq_register
+ .text          0x0004045c        0x0 ../testeWifi_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .text          0x0004045c       0x8c ../testeWifi_bsp//libhal_bsp.a(alt_load.o)
+                0x0004047c                alt_load
+ .text          0x000404e8       0x2c ../testeWifi_bsp//libhal_bsp.a(alt_main.o)
+                0x000404e8                alt_main
+ .text          0x00040514       0x50 ../testeWifi_bsp//libhal_bsp.a(alt_putchar.o)
+                0x00040514                alt_putchar
+ .text          0x00040564        0x4 ../testeWifi_bsp//libhal_bsp.a(alt_usleep.o)
+                0x00040564                usleep
+ .text          0x00040568       0x24 ../testeWifi_bsp//libhal_bsp.a(alt_sys_init.o)
+                0x00040568                alt_sys_init
+                0x0004056c                alt_irq_init
+ .text          0x0004058c       0x34 ../testeWifi_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                0x0004058c                altera_avalon_jtag_uart_write
+ .text          0x000405c0       0x8c ../testeWifi_bsp//libhal_bsp.a(alt_busy_sleep.o)
+                0x000405c0                alt_busy_sleep
+ .text          0x0004064c        0x4 ../testeWifi_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+                0x0004064c                alt_dcache_flush_all
+ .text          0x00040650        0x4 ../testeWifi_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+                0x00040650                alt_icache_flush_all
+ .text          0x00040654        0x0 ../testeWifi_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .text          0x00040654        0x0 ../testeWifi_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .text          0x00040654        0x8 ../testeWifi_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
+                0x00040654                altera_nios2_qsys_irq_init
+ .text          0x0004065c        0x0 ../testeWifi_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .text          0x0004065c      0x14c /home/roberto/altera/13.0sp1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul/libgcc.a(lib2-divmod.o)
+                0x000406d8                __divsi3
+                0x00040738                __modsi3
+                0x00040798                __udivsi3
+                0x000407a0                __umodsi3
+ .text          0x000407a8       0x38 /home/roberto/altera/13.0sp1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul/libgcc.a(lib2-mul.o)
+                0x000407a8                __mulsi3
+ *(.gnu.warning.*)
+ *(.fini)
+                0x000407e0                PROVIDE (__etext, ABSOLUTE (.))
+                0x000407e0                PROVIDE (_etext, ABSOLUTE (.))
+                0x000407e0                PROVIDE (etext, ABSOLUTE (.))
+ *(.eh_frame_hdr)
+                0x000407e0                . = ALIGN (0x4)
+                0x000407e0                PROVIDE (__preinit_array_start, ABSOLUTE (.))
+ *(.preinit_array)
+                0x000407e0                PROVIDE (__preinit_array_end, ABSOLUTE (.))
+                0x000407e0                PROVIDE (__init_array_start, ABSOLUTE (.))
+ *(.init_array)
+                0x000407e0                PROVIDE (__init_array_end, ABSOLUTE (.))
+                0x000407e0                PROVIDE (__fini_array_start, ABSOLUTE (.))
+ *(.fini_array)
+                0x000407e0                PROVIDE (__fini_array_end, ABSOLUTE (.))
+ *(.eh_frame)
+ *(.gcc_except_table)
+ *(.dynamic)
+                0x000407e0                PROVIDE (__CTOR_LIST__, ABSOLUTE (.))
+ *(.ctors)
+ *(SORT(.ctors.*))
+                0x000407e0                PROVIDE (__CTOR_END__, ABSOLUTE (.))
+                0x000407e0                PROVIDE (__DTOR_LIST__, ABSOLUTE (.))
+ *(.dtors)
+ *(SORT(.dtors.*))
+                0x000407e0                PROVIDE (__DTOR_END__, ABSOLUTE (.))
+ *(.jcr)
+                0x000407e0                . = ALIGN (0x4)
+
+.rodata         0x000407e0       0x7c
+                0x000407e0                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
+                0x000407e0                . = ALIGN (0x4)
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.str1.4
+                0x000407e0       0x7c obj/default/testeWifi.o
+ *(.rodata1)
+                0x0004085c                . = ALIGN (0x4)
+                0x0004085c                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
+                0x000407e0                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
+
+.rwdata         0x0004085c        0x8 load address 0x00040864
+                0x0004085c                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
+                0x0004085c                . = ALIGN (0x4)
+ *(.got.plt)
+ *(.got)
+ *(.data1)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x0004085c        0x0 ../testeWifi_bsp//obj/HAL/src/crt0.o
+ .data          0x0004085c        0x0 obj/default/testeWifi.o
+ .data          0x0004085c        0x0 ../testeWifi_bsp//libhal_bsp.a(alt_irq_register.o)
+ .data          0x0004085c        0x0 ../testeWifi_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .data          0x0004085c        0x0 ../testeWifi_bsp//libhal_bsp.a(alt_load.o)
+ .data          0x0004085c        0x0 ../testeWifi_bsp//libhal_bsp.a(alt_main.o)
+ .data          0x0004085c        0x0 ../testeWifi_bsp//libhal_bsp.a(alt_putchar.o)
+ .data          0x0004085c        0x0 ../testeWifi_bsp//libhal_bsp.a(alt_usleep.o)
+ .data          0x0004085c        0x0 ../testeWifi_bsp//libhal_bsp.a(alt_sys_init.o)
+ .data          0x0004085c        0x0 ../testeWifi_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .data          0x0004085c        0x0 ../testeWifi_bsp//libhal_bsp.a(alt_busy_sleep.o)
+ .data          0x0004085c        0x0 ../testeWifi_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .data          0x0004085c        0x0 ../testeWifi_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .data          0x0004085c        0x0 ../testeWifi_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .data          0x0004085c        0x0 ../testeWifi_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .data          0x0004085c        0x0 ../testeWifi_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .data          0x0004085c        0x0 ../testeWifi_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .data          0x0004085c        0x0 /home/roberto/altera/13.0sp1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .data          0x0004085c        0x0 /home/roberto/altera/13.0sp1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul/libgcc.a(lib2-mul.o)
+                0x0004885c                _gp = ABSOLUTE ((. + 0x8000))
+                0x0004885c                PROVIDE (gp, _gp)
+ *(.rwdata .rwdata.*)
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ .sdata         0x0004085c        0x4 ../testeWifi_bsp//libhal_bsp.a(alt_irq_vars.o)
+                0x0004085c                alt_priority_mask
+ .sdata         0x00040860        0x4 ../testeWifi_bsp//libhal_bsp.a(alt_sys_init.o)
+                0x00040860                jtag_uart_0
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+                0x00040864                . = ALIGN (0x4)
+                0x00040864                _edata = ABSOLUTE (.)
+                0x00040864                PROVIDE (edata, ABSOLUTE (.))
+                0x00040864                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
+                0x00040864                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
+
+.bss            0x0004086c      0x118
+                0x0004086c                __bss_start = ABSOLUTE (.)
+                0x0004086c                PROVIDE (__sbss_start, ABSOLUTE (.))
+                0x0004086c                PROVIDE (___sbss_start, ABSOLUTE (.))
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ .sbss          0x0004086c        0x4 obj/default/testeWifi.o
+                0x0004086c                data_ptr
+ .sbss          0x00040870        0x4 ../testeWifi_bsp//libhal_bsp.a(alt_irq_vars.o)
+                0x00040870                alt_irq_active
+ .sbss          0x00040874        0xc ../testeWifi_bsp//libhal_bsp.a(alt_main.o)
+                0x00040874                alt_argc
+                0x00040878                alt_argv
+                0x0004087c                alt_envp
+ .sbss          0x00040880        0x4 ../testeWifi_bsp//libhal_bsp.a(alt_sys_init.o)
+                0x00040880                uart_wifi
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+ *(.scommon)
+                0x00040884                PROVIDE (__sbss_end, ABSOLUTE (.))
+                0x00040884                PROVIDE (___sbss_end, ABSOLUTE (.))
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x00040884        0x0 ../testeWifi_bsp//obj/HAL/src/crt0.o
+ .bss           0x00040884        0x0 obj/default/testeWifi.o
+ .bss           0x00040884        0x0 ../testeWifi_bsp//libhal_bsp.a(alt_irq_register.o)
+ .bss           0x00040884        0x0 ../testeWifi_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .bss           0x00040884        0x0 ../testeWifi_bsp//libhal_bsp.a(alt_load.o)
+ .bss           0x00040884        0x0 ../testeWifi_bsp//libhal_bsp.a(alt_main.o)
+ .bss           0x00040884        0x0 ../testeWifi_bsp//libhal_bsp.a(alt_putchar.o)
+ .bss           0x00040884        0x0 ../testeWifi_bsp//libhal_bsp.a(alt_usleep.o)
+ .bss           0x00040884        0x0 ../testeWifi_bsp//libhal_bsp.a(alt_sys_init.o)
+ .bss           0x00040884        0x0 ../testeWifi_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .bss           0x00040884        0x0 ../testeWifi_bsp//libhal_bsp.a(alt_busy_sleep.o)
+ .bss           0x00040884        0x0 ../testeWifi_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .bss           0x00040884        0x0 ../testeWifi_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .bss           0x00040884        0x0 ../testeWifi_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .bss           0x00040884        0x0 ../testeWifi_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .bss           0x00040884        0x0 ../testeWifi_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .bss           0x00040884        0x0 ../testeWifi_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .bss           0x00040884        0x0 /home/roberto/altera/13.0sp1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .bss           0x00040884        0x0 /home/roberto/altera/13.0sp1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul/libgcc.a(lib2-mul.o)
+ *(COMMON)
+ COMMON         0x00040884      0x100 ../testeWifi_bsp//libhal_bsp.a(alt_irq_handler.o)
+                0x00040884                alt_irq
+                0x00040984                . = ALIGN (0x4)
+                0x00040984                __bss_end = ABSOLUTE (.)
+
+.onchip_memory2_0
+                0x00040984        0x0
+                0x00040984                PROVIDE (_alt_partition_onchip_memory2_0_start, ABSOLUTE (.))
+ *(.onchip_memory2_0. onchip_memory2_0.*)
+                0x00040984                . = ALIGN (0x4)
+                0x00040984                PROVIDE (_alt_partition_onchip_memory2_0_end, ABSOLUTE (.))
+                0x00040984                _end = ABSOLUTE (.)
+                0x00040984                end = ABSOLUTE (.)
+                0x00040984                __alt_stack_base = ABSOLUTE (.)
+                0x00040984                PROVIDE (_alt_partition_onchip_memory2_0_load_addr, LOADADDR (.onchip_memory2_0))
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x26
+ *(.comment)
+ .comment       0x00000000       0x26 obj/default/testeWifi.o
+                                 0x27 (size before relaxing)
+ .comment       0x00000000       0x27 ../testeWifi_bsp//libhal_bsp.a(alt_irq_register.o)
+ .comment       0x00000000       0x27 ../testeWifi_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .comment       0x00000000       0x27 ../testeWifi_bsp//libhal_bsp.a(alt_load.o)
+ .comment       0x00000000       0x27 ../testeWifi_bsp//libhal_bsp.a(alt_main.o)
+ .comment       0x00000000       0x27 ../testeWifi_bsp//libhal_bsp.a(alt_putchar.o)
+ .comment       0x00000000       0x27 ../testeWifi_bsp//libhal_bsp.a(alt_usleep.o)
+ .comment       0x00000000       0x27 ../testeWifi_bsp//libhal_bsp.a(alt_sys_init.o)
+ .comment       0x00000000       0x27 ../testeWifi_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .comment       0x00000000       0x27 ../testeWifi_bsp//libhal_bsp.a(alt_busy_sleep.o)
+ .comment       0x00000000       0x27 ../testeWifi_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .comment       0x00000000       0x27 ../testeWifi_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .comment       0x00000000       0x27 ../testeWifi_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .comment       0x00000000       0x27 ../testeWifi_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .comment       0x00000000       0x27 /home/roberto/altera/13.0sp1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .comment       0x00000000       0x27 /home/roberto/altera/13.0sp1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul/libgcc.a(lib2-mul.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x278
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x28 ../testeWifi_bsp//obj/HAL/src/crt0.o
+ .debug_aranges
+                0x00000028       0x20 obj/default/testeWifi.o
+ .debug_aranges
+                0x00000048       0x20 ../testeWifi_bsp//libhal_bsp.a(alt_irq_register.o)
+ .debug_aranges
+                0x00000068       0x20 ../testeWifi_bsp//libhal_bsp.a(alt_load.o)
+ .debug_aranges
+                0x00000088       0x20 ../testeWifi_bsp//libhal_bsp.a(alt_main.o)
+ .debug_aranges
+                0x000000a8       0x20 ../testeWifi_bsp//libhal_bsp.a(alt_putchar.o)
+ .debug_aranges
+                0x000000c8       0x20 ../testeWifi_bsp//libhal_bsp.a(alt_usleep.o)
+ .debug_aranges
+                0x000000e8       0x20 ../testeWifi_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_aranges
+                0x00000108       0x20 ../testeWifi_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_aranges
+                0x00000128       0x20 ../testeWifi_bsp//libhal_bsp.a(alt_busy_sleep.o)
+ .debug_aranges
+                0x00000148       0x20 ../testeWifi_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_aranges
+                0x00000168       0x20 ../testeWifi_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_aranges
+                0x00000188       0x30 ../testeWifi_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .debug_aranges
+                0x000001b8       0x28 ../testeWifi_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_aranges
+                0x000001e0       0x20 ../testeWifi_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .debug_aranges
+                0x00000200       0x38 ../testeWifi_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .debug_aranges
+                0x00000238       0x20 /home/roberto/altera/13.0sp1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .debug_aranges
+                0x00000258       0x20 /home/roberto/altera/13.0sp1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul/libgcc.a(lib2-mul.o)
+
+.debug_pubnames
+                0x00000000      0x33f
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x6e obj/default/testeWifi.o
+ .debug_pubnames
+                0x0000006e       0x27 ../testeWifi_bsp//libhal_bsp.a(alt_irq_register.o)
+ .debug_pubnames
+                0x00000095       0x3b ../testeWifi_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .debug_pubnames
+                0x000000d0       0x1f ../testeWifi_bsp//libhal_bsp.a(alt_load.o)
+ .debug_pubnames
+                0x000000ef       0x46 ../testeWifi_bsp//libhal_bsp.a(alt_main.o)
+ .debug_pubnames
+                0x00000135       0x22 ../testeWifi_bsp//libhal_bsp.a(alt_putchar.o)
+ .debug_pubnames
+                0x00000157       0x1d ../testeWifi_bsp//libhal_bsp.a(alt_usleep.o)
+ .debug_pubnames
+                0x00000174       0x52 ../testeWifi_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_pubnames
+                0x000001c6       0x34 ../testeWifi_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_pubnames
+                0x000001fa       0x25 ../testeWifi_bsp//libhal_bsp.a(alt_busy_sleep.o)
+ .debug_pubnames
+                0x0000021f       0x2b ../testeWifi_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_pubnames
+                0x0000024a       0x2b ../testeWifi_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_pubnames
+                0x00000275       0x32 ../testeWifi_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_pubnames
+                0x000002a7       0x31 ../testeWifi_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .debug_pubnames
+                0x000002d8       0x48 /home/roberto/altera/13.0sp1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .debug_pubnames
+                0x00000320       0x1f /home/roberto/altera/13.0sp1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul/libgcc.a(lib2-mul.o)
+
+.debug_info     0x00000000     0x1559
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000       0x7b ../testeWifi_bsp//obj/HAL/src/crt0.o
+ .debug_info    0x0000007b      0x226 obj/default/testeWifi.o
+ .debug_info    0x000002a1      0x2f4 ../testeWifi_bsp//libhal_bsp.a(alt_irq_register.o)
+ .debug_info    0x00000595       0x92 ../testeWifi_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .debug_info    0x00000627      0x12e ../testeWifi_bsp//libhal_bsp.a(alt_load.o)
+ .debug_info    0x00000755      0x125 ../testeWifi_bsp//libhal_bsp.a(alt_main.o)
+ .debug_info    0x0000087a       0xc5 ../testeWifi_bsp//libhal_bsp.a(alt_putchar.o)
+ .debug_info    0x0000093f       0xab ../testeWifi_bsp//libhal_bsp.a(alt_usleep.o)
+ .debug_info    0x000009ea      0x1d1 ../testeWifi_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_info    0x00000bbb      0x18f ../testeWifi_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_info    0x00000d4a       0xd0 ../testeWifi_bsp//libhal_bsp.a(alt_busy_sleep.o)
+ .debug_info    0x00000e1a       0x8d ../testeWifi_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_info    0x00000ea7       0x8d ../testeWifi_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_info    0x00000f34       0x84 ../testeWifi_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .debug_info    0x00000fb8      0x17b ../testeWifi_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_info    0x00001133       0x8d ../testeWifi_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .debug_info    0x000011c0       0x8a ../testeWifi_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .debug_info    0x0000124a      0x21c /home/roberto/altera/13.0sp1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .debug_info    0x00001466       0xf3 /home/roberto/altera/13.0sp1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul/libgcc.a(lib2-mul.o)
+
+.debug_abbrev   0x00000000      0xb35
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000       0x12 ../testeWifi_bsp//obj/HAL/src/crt0.o
+ .debug_abbrev  0x00000012      0x194 obj/default/testeWifi.o
+ .debug_abbrev  0x000001a6      0x190 ../testeWifi_bsp//libhal_bsp.a(alt_irq_register.o)
+ .debug_abbrev  0x00000336       0x44 ../testeWifi_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .debug_abbrev  0x0000037a       0x97 ../testeWifi_bsp//libhal_bsp.a(alt_load.o)
+ .debug_abbrev  0x00000411       0xa6 ../testeWifi_bsp//libhal_bsp.a(alt_main.o)
+ .debug_abbrev  0x000004b7       0x7b ../testeWifi_bsp//libhal_bsp.a(alt_putchar.o)
+ .debug_abbrev  0x00000532       0x5d ../testeWifi_bsp//libhal_bsp.a(alt_usleep.o)
+ .debug_abbrev  0x0000058f       0xea ../testeWifi_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_abbrev  0x00000679       0xf0 ../testeWifi_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_abbrev  0x00000769       0x79 ../testeWifi_bsp//libhal_bsp.a(alt_busy_sleep.o)
+ .debug_abbrev  0x000007e2       0x3f ../testeWifi_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_abbrev  0x00000821       0x3f ../testeWifi_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_abbrev  0x00000860       0x12 ../testeWifi_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .debug_abbrev  0x00000872      0x117 ../testeWifi_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_abbrev  0x00000989       0x3f ../testeWifi_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .debug_abbrev  0x000009c8       0x12 ../testeWifi_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .debug_abbrev  0x000009da       0xe0 /home/roberto/altera/13.0sp1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .debug_abbrev  0x00000aba       0x7b /home/roberto/altera/13.0sp1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul/libgcc.a(lib2-mul.o)
+
+.debug_line     0x00000000     0x27a1
+ *(.debug_line)
+ .debug_line    0x00000000       0x66 ../testeWifi_bsp//obj/HAL/src/crt0.o
+ .debug_line    0x00000066      0x4d5 obj/default/testeWifi.o
+ .debug_line    0x0000053b      0x2b2 ../testeWifi_bsp//libhal_bsp.a(alt_irq_register.o)
+ .debug_line    0x000007ed       0x72 ../testeWifi_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .debug_line    0x0000085f      0x237 ../testeWifi_bsp//libhal_bsp.a(alt_load.o)
+ .debug_line    0x00000a96      0x2e2 ../testeWifi_bsp//libhal_bsp.a(alt_main.o)
+ .debug_line    0x00000d78      0x212 ../testeWifi_bsp//libhal_bsp.a(alt_putchar.o)
+ .debug_line    0x00000f8a      0x232 ../testeWifi_bsp//libhal_bsp.a(alt_usleep.o)
+ .debug_line    0x000011bc      0x2ff ../testeWifi_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_line    0x000014bb      0x314 ../testeWifi_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_line    0x000017cf      0x28e ../testeWifi_bsp//libhal_bsp.a(alt_busy_sleep.o)
+ .debug_line    0x00001a5d      0x1d5 ../testeWifi_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_line    0x00001c32      0x1d5 ../testeWifi_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_line    0x00001e07       0x6b ../testeWifi_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .debug_line    0x00001e72      0x23f ../testeWifi_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_line    0x000020b1      0x1ee ../testeWifi_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .debug_line    0x0000229f       0xab ../testeWifi_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .debug_line    0x0000234a      0x2c6 /home/roberto/altera/13.0sp1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .debug_line    0x00002610      0x191 /home/roberto/altera/13.0sp1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul/libgcc.a(lib2-mul.o)
+
+.debug_frame    0x00000000      0x2fc
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x98 obj/default/testeWifi.o
+ .debug_frame   0x00000098       0x20 ../testeWifi_bsp//libhal_bsp.a(alt_irq_register.o)
+ .debug_frame   0x000000b8       0x38 ../testeWifi_bsp//libhal_bsp.a(alt_load.o)
+ .debug_frame   0x000000f0       0x28 ../testeWifi_bsp//libhal_bsp.a(alt_main.o)
+ .debug_frame   0x00000118       0x2c ../testeWifi_bsp//libhal_bsp.a(alt_putchar.o)
+ .debug_frame   0x00000144       0x20 ../testeWifi_bsp//libhal_bsp.a(alt_usleep.o)
+ .debug_frame   0x00000164       0x38 ../testeWifi_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_frame   0x0000019c       0x20 ../testeWifi_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_frame   0x000001bc       0x28 ../testeWifi_bsp//libhal_bsp.a(alt_busy_sleep.o)
+ .debug_frame   0x000001e4       0x20 ../testeWifi_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_frame   0x00000204       0x20 ../testeWifi_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_frame   0x00000224       0x28 ../testeWifi_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_frame   0x0000024c       0x20 ../testeWifi_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .debug_frame   0x0000026c       0x70 /home/roberto/altera/13.0sp1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .debug_frame   0x000002dc       0x20 /home/roberto/altera/13.0sp1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul/libgcc.a(lib2-mul.o)
+
+.debug_str      0x00000000      0x7d1
+ *(.debug_str)
+ .debug_str     0x00000000      0x154 obj/default/testeWifi.o
+                                0x19f (size before relaxing)
+ .debug_str     0x00000154      0x112 ../testeWifi_bsp//libhal_bsp.a(alt_irq_register.o)
+                                0x1c6 (size before relaxing)
+ .debug_str     0x00000266       0x17 ../testeWifi_bsp//libhal_bsp.a(alt_irq_vars.o)
+                                0x10d (size before relaxing)
+ .debug_str     0x0000027d       0xe9 ../testeWifi_bsp//libhal_bsp.a(alt_load.o)
+                                0x1d0 (size before relaxing)
+ .debug_str     0x00000366       0x44 ../testeWifi_bsp//libhal_bsp.a(alt_main.o)
+                                0x154 (size before relaxing)
+ .debug_str     0x000003aa       0x4e ../testeWifi_bsp//libhal_bsp.a(alt_putchar.o)
+                                0x12d (size before relaxing)
+ .debug_str     0x000003f8       0x27 ../testeWifi_bsp//libhal_bsp.a(alt_usleep.o)
+                                0x106 (size before relaxing)
+ .debug_str     0x0000041f       0xf6 ../testeWifi_bsp//libhal_bsp.a(alt_sys_init.o)
+                                0x23f (size before relaxing)
+ .debug_str     0x00000515       0x56 ../testeWifi_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                                0x1cc (size before relaxing)
+ .debug_str     0x0000056b       0x42 ../testeWifi_bsp//libhal_bsp.a(alt_busy_sleep.o)
+                                0x129 (size before relaxing)
+ .debug_str     0x000005ad       0x34 ../testeWifi_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+                                0x113 (size before relaxing)
+ .debug_str     0x000005e1       0x34 ../testeWifi_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+                                0x113 (size before relaxing)
+ .debug_str     0x00000615       0x3a ../testeWifi_bsp//libhal_bsp.a(alt_irq_handler.o)
+                                0x155 (size before relaxing)
+ .debug_str     0x0000064f       0x3b ../testeWifi_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
+                                0x11a (size before relaxing)
+ .debug_str     0x0000068a      0x110 /home/roberto/altera/13.0sp1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul/libgcc.a(lib2-divmod.o)
+                                0x1b9 (size before relaxing)
+ .debug_str     0x0000079a       0x37 /home/roberto/altera/13.0sp1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul/libgcc.a(lib2-mul.o)
+                                0x17a (size before relaxing)
+
+.debug_loc      0x00000000      0x51e
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x11a obj/default/testeWifi.o
+ .debug_loc     0x0000011a       0x52 ../testeWifi_bsp//libhal_bsp.a(alt_irq_register.o)
+ .debug_loc     0x0000016c       0x1f ../testeWifi_bsp//libhal_bsp.a(alt_load.o)
+ .debug_loc     0x0000018b       0x1f ../testeWifi_bsp//libhal_bsp.a(alt_main.o)
+ .debug_loc     0x000001aa       0x3d ../testeWifi_bsp//libhal_bsp.a(alt_putchar.o)
+ .debug_loc     0x000001e7       0x13 ../testeWifi_bsp//libhal_bsp.a(alt_usleep.o)
+ .debug_loc     0x000001fa       0x32 ../testeWifi_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_loc     0x0000022c       0x26 ../testeWifi_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_loc     0x00000252       0x50 ../testeWifi_bsp//libhal_bsp.a(alt_busy_sleep.o)
+ .debug_loc     0x000002a2       0x5b ../testeWifi_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_loc     0x000002fd      0x1d2 /home/roberto/altera/13.0sp1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .debug_loc     0x000004cf       0x4f /home/roberto/altera/13.0sp1/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul/libgcc.a(lib2-mul.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_alt_sim_info
+                0x00000000       0x40
+ *(.debug_alt_sim_info)
+ .debug_alt_sim_info
+                0x00000000       0x10 ../testeWifi_bsp//obj/HAL/src/crt0.o
+ .debug_alt_sim_info
+                0x00000010       0x30 ../testeWifi_bsp//libhal_bsp.a(alt_busy_sleep.o)
+                0x000586a0                __alt_data_end = 0x586a0
+                0x000586a0                PROVIDE (__alt_stack_pointer, __alt_data_end)
+                0x00040984                PROVIDE (__alt_stack_limit, __alt_stack_base)
+                0x00040984                PROVIDE (__alt_heap_start, end)
+                0x000586a0                PROVIDE (__alt_heap_limit, 0x586a0)
+OUTPUT(testeWifi.elf elf32-littlenios2)
+
+.debug_ranges   0x00000000       0x90
+ .debug_ranges  0x00000000       0x20 ../testeWifi_bsp//obj/HAL/src/crt0.o
+ .debug_ranges  0x00000020       0x28 ../testeWifi_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .debug_ranges  0x00000048       0x18 ../testeWifi_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_ranges  0x00000060       0x30 ../testeWifi_bsp//libhal_bsp.a(alt_exception_entry.o)

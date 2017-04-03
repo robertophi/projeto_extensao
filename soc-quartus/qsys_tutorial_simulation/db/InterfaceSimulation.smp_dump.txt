@@ -1,0 +1,222 @@
+
+State Machine - |matriz_interface|MotorMatrixControl:matriz_inst|motor:\motors_ixj:3:i_motors_ixj:3:j_motors_ixj|motor_fsm:fsm_motor|current_state
+Name current_state.wait_new_command current_state.delay_decay current_state.sub_decay current_state.be_zero_power current_state.test_decay current_state.delay_shift_amount current_state.sub_shift_amount current_state.sum_shift_amount current_state.be_equal_shift_amount current_state.test_shift_amount 
+current_state.test_shift_amount 0 0 0 0 0 0 0 0 0 0 
+current_state.be_equal_shift_amount 0 0 0 0 0 0 0 0 1 1 
+current_state.sum_shift_amount 0 0 0 0 0 0 0 1 0 1 
+current_state.sub_shift_amount 0 0 0 0 0 0 1 0 0 1 
+current_state.delay_shift_amount 0 0 0 0 0 1 0 0 0 1 
+current_state.test_decay 0 0 0 0 1 0 0 0 0 1 
+current_state.be_zero_power 0 0 0 1 0 0 0 0 0 1 
+current_state.sub_decay 0 0 1 0 0 0 0 0 0 1 
+current_state.delay_decay 0 1 0 0 0 0 0 0 0 1 
+current_state.wait_new_command 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |matriz_interface|MotorMatrixControl:matriz_inst|motor:\motors_ixj:3:i_motors_ixj:2:j_motors_ixj|motor_fsm:fsm_motor|current_state
+Name current_state.wait_new_command current_state.delay_decay current_state.sub_decay current_state.be_zero_power current_state.test_decay current_state.delay_shift_amount current_state.sub_shift_amount current_state.sum_shift_amount current_state.be_equal_shift_amount current_state.test_shift_amount 
+current_state.test_shift_amount 0 0 0 0 0 0 0 0 0 0 
+current_state.be_equal_shift_amount 0 0 0 0 0 0 0 0 1 1 
+current_state.sum_shift_amount 0 0 0 0 0 0 0 1 0 1 
+current_state.sub_shift_amount 0 0 0 0 0 0 1 0 0 1 
+current_state.delay_shift_amount 0 0 0 0 0 1 0 0 0 1 
+current_state.test_decay 0 0 0 0 1 0 0 0 0 1 
+current_state.be_zero_power 0 0 0 1 0 0 0 0 0 1 
+current_state.sub_decay 0 0 1 0 0 0 0 0 0 1 
+current_state.delay_decay 0 1 0 0 0 0 0 0 0 1 
+current_state.wait_new_command 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |matriz_interface|MotorMatrixControl:matriz_inst|motor:\motors_ixj:3:i_motors_ixj:1:j_motors_ixj|motor_fsm:fsm_motor|current_state
+Name current_state.wait_new_command current_state.delay_decay current_state.sub_decay current_state.be_zero_power current_state.test_decay current_state.delay_shift_amount current_state.sub_shift_amount current_state.sum_shift_amount current_state.be_equal_shift_amount current_state.test_shift_amount 
+current_state.test_shift_amount 0 0 0 0 0 0 0 0 0 0 
+current_state.be_equal_shift_amount 0 0 0 0 0 0 0 0 1 1 
+current_state.sum_shift_amount 0 0 0 0 0 0 0 1 0 1 
+current_state.sub_shift_amount 0 0 0 0 0 0 1 0 0 1 
+current_state.delay_shift_amount 0 0 0 0 0 1 0 0 0 1 
+current_state.test_decay 0 0 0 0 1 0 0 0 0 1 
+current_state.be_zero_power 0 0 0 1 0 0 0 0 0 1 
+current_state.sub_decay 0 0 1 0 0 0 0 0 0 1 
+current_state.delay_decay 0 1 0 0 0 0 0 0 0 1 
+current_state.wait_new_command 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |matriz_interface|MotorMatrixControl:matriz_inst|motor:\motors_ixj:2:i_motors_ixj:3:j_motors_ixj|motor_fsm:fsm_motor|current_state
+Name current_state.wait_new_command current_state.delay_decay current_state.sub_decay current_state.be_zero_power current_state.test_decay current_state.delay_shift_amount current_state.sub_shift_amount current_state.sum_shift_amount current_state.be_equal_shift_amount current_state.test_shift_amount 
+current_state.test_shift_amount 0 0 0 0 0 0 0 0 0 0 
+current_state.be_equal_shift_amount 0 0 0 0 0 0 0 0 1 1 
+current_state.sum_shift_amount 0 0 0 0 0 0 0 1 0 1 
+current_state.sub_shift_amount 0 0 0 0 0 0 1 0 0 1 
+current_state.delay_shift_amount 0 0 0 0 0 1 0 0 0 1 
+current_state.test_decay 0 0 0 0 1 0 0 0 0 1 
+current_state.be_zero_power 0 0 0 1 0 0 0 0 0 1 
+current_state.sub_decay 0 0 1 0 0 0 0 0 0 1 
+current_state.delay_decay 0 1 0 0 0 0 0 0 0 1 
+current_state.wait_new_command 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |matriz_interface|MotorMatrixControl:matriz_inst|motor:\motors_ixj:2:i_motors_ixj:2:j_motors_ixj|motor_fsm:fsm_motor|current_state
+Name current_state.wait_new_command current_state.delay_decay current_state.sub_decay current_state.be_zero_power current_state.test_decay current_state.delay_shift_amount current_state.sub_shift_amount current_state.sum_shift_amount current_state.be_equal_shift_amount current_state.test_shift_amount 
+current_state.test_shift_amount 0 0 0 0 0 0 0 0 0 0 
+current_state.be_equal_shift_amount 0 0 0 0 0 0 0 0 1 1 
+current_state.sum_shift_amount 0 0 0 0 0 0 0 1 0 1 
+current_state.sub_shift_amount 0 0 0 0 0 0 1 0 0 1 
+current_state.delay_shift_amount 0 0 0 0 0 1 0 0 0 1 
+current_state.test_decay 0 0 0 0 1 0 0 0 0 1 
+current_state.be_zero_power 0 0 0 1 0 0 0 0 0 1 
+current_state.sub_decay 0 0 1 0 0 0 0 0 0 1 
+current_state.delay_decay 0 1 0 0 0 0 0 0 0 1 
+current_state.wait_new_command 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |matriz_interface|MotorMatrixControl:matriz_inst|motor:\motors_ixj:2:i_motors_ixj:1:j_motors_ixj|motor_fsm:fsm_motor|current_state
+Name current_state.wait_new_command current_state.delay_decay current_state.sub_decay current_state.be_zero_power current_state.test_decay current_state.delay_shift_amount current_state.sub_shift_amount current_state.sum_shift_amount current_state.be_equal_shift_amount current_state.test_shift_amount 
+current_state.test_shift_amount 0 0 0 0 0 0 0 0 0 0 
+current_state.be_equal_shift_amount 0 0 0 0 0 0 0 0 1 1 
+current_state.sum_shift_amount 0 0 0 0 0 0 0 1 0 1 
+current_state.sub_shift_amount 0 0 0 0 0 0 1 0 0 1 
+current_state.delay_shift_amount 0 0 0 0 0 1 0 0 0 1 
+current_state.test_decay 0 0 0 0 1 0 0 0 0 1 
+current_state.be_zero_power 0 0 0 1 0 0 0 0 0 1 
+current_state.sub_decay 0 0 1 0 0 0 0 0 0 1 
+current_state.delay_decay 0 1 0 0 0 0 0 0 0 1 
+current_state.wait_new_command 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |matriz_interface|MotorMatrixControl:matriz_inst|motor:\motors_ixj:1:i_motors_ixj:3:j_motors_ixj|motor_fsm:fsm_motor|current_state
+Name current_state.wait_new_command current_state.delay_decay current_state.sub_decay current_state.be_zero_power current_state.test_decay current_state.delay_shift_amount current_state.sub_shift_amount current_state.sum_shift_amount current_state.be_equal_shift_amount current_state.test_shift_amount 
+current_state.test_shift_amount 0 0 0 0 0 0 0 0 0 0 
+current_state.be_equal_shift_amount 0 0 0 0 0 0 0 0 1 1 
+current_state.sum_shift_amount 0 0 0 0 0 0 0 1 0 1 
+current_state.sub_shift_amount 0 0 0 0 0 0 1 0 0 1 
+current_state.delay_shift_amount 0 0 0 0 0 1 0 0 0 1 
+current_state.test_decay 0 0 0 0 1 0 0 0 0 1 
+current_state.be_zero_power 0 0 0 1 0 0 0 0 0 1 
+current_state.sub_decay 0 0 1 0 0 0 0 0 0 1 
+current_state.delay_decay 0 1 0 0 0 0 0 0 0 1 
+current_state.wait_new_command 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |matriz_interface|MotorMatrixControl:matriz_inst|motor:\motors_ixj:1:i_motors_ixj:2:j_motors_ixj|motor_fsm:fsm_motor|current_state
+Name current_state.wait_new_command current_state.delay_decay current_state.sub_decay current_state.be_zero_power current_state.test_decay current_state.delay_shift_amount current_state.sub_shift_amount current_state.sum_shift_amount current_state.be_equal_shift_amount current_state.test_shift_amount 
+current_state.test_shift_amount 0 0 0 0 0 0 0 0 0 0 
+current_state.be_equal_shift_amount 0 0 0 0 0 0 0 0 1 1 
+current_state.sum_shift_amount 0 0 0 0 0 0 0 1 0 1 
+current_state.sub_shift_amount 0 0 0 0 0 0 1 0 0 1 
+current_state.delay_shift_amount 0 0 0 0 0 1 0 0 0 1 
+current_state.test_decay 0 0 0 0 1 0 0 0 0 1 
+current_state.be_zero_power 0 0 0 1 0 0 0 0 0 1 
+current_state.sub_decay 0 0 1 0 0 0 0 0 0 1 
+current_state.delay_decay 0 1 0 0 0 0 0 0 0 1 
+current_state.wait_new_command 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |matriz_interface|MotorMatrixControl:matriz_inst|motor:\motors_ixj:1:i_motors_ixj:1:j_motors_ixj|motor_fsm:fsm_motor|current_state
+Name current_state.wait_new_command current_state.delay_decay current_state.sub_decay current_state.be_zero_power current_state.test_decay current_state.delay_shift_amount current_state.sub_shift_amount current_state.sum_shift_amount current_state.be_equal_shift_amount current_state.test_shift_amount 
+current_state.test_shift_amount 0 0 0 0 0 0 0 0 0 0 
+current_state.be_equal_shift_amount 0 0 0 0 0 0 0 0 1 1 
+current_state.sum_shift_amount 0 0 0 0 0 0 0 1 0 1 
+current_state.sub_shift_amount 0 0 0 0 0 0 1 0 0 1 
+current_state.delay_shift_amount 0 0 0 0 0 1 0 0 0 1 
+current_state.test_decay 0 0 0 0 1 0 0 0 0 1 
+current_state.be_zero_power 0 0 0 1 0 0 0 0 0 1 
+current_state.sub_decay 0 0 1 0 0 0 0 0 0 1 
+current_state.delay_decay 0 1 0 0 0 0 0 0 0 1 
+current_state.wait_new_command 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |matriz_interface|MotorMatrixControl:matriz_inst|motor:\motors_ix0:3:n_motors_ix0|motor_fsm:fsm_motor|current_state
+Name current_state.wait_new_command current_state.delay_decay current_state.sub_decay current_state.be_zero_power current_state.test_decay current_state.delay_shift_amount current_state.sub_shift_amount current_state.sum_shift_amount current_state.be_equal_shift_amount current_state.test_shift_amount 
+current_state.test_shift_amount 0 0 0 0 0 0 0 0 0 0 
+current_state.be_equal_shift_amount 0 0 0 0 0 0 0 0 1 1 
+current_state.sum_shift_amount 0 0 0 0 0 0 0 1 0 1 
+current_state.sub_shift_amount 0 0 0 0 0 0 1 0 0 1 
+current_state.delay_shift_amount 0 0 0 0 0 1 0 0 0 1 
+current_state.test_decay 0 0 0 0 1 0 0 0 0 1 
+current_state.be_zero_power 0 0 0 1 0 0 0 0 0 1 
+current_state.sub_decay 0 0 1 0 0 0 0 0 0 1 
+current_state.delay_decay 0 1 0 0 0 0 0 0 0 1 
+current_state.wait_new_command 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |matriz_interface|MotorMatrixControl:matriz_inst|motor:\motors_ix0:2:n_motors_ix0|motor_fsm:fsm_motor|current_state
+Name current_state.wait_new_command current_state.delay_decay current_state.sub_decay current_state.be_zero_power current_state.test_decay current_state.delay_shift_amount current_state.sub_shift_amount current_state.sum_shift_amount current_state.be_equal_shift_amount current_state.test_shift_amount 
+current_state.test_shift_amount 0 0 0 0 0 0 0 0 0 0 
+current_state.be_equal_shift_amount 0 0 0 0 0 0 0 0 1 1 
+current_state.sum_shift_amount 0 0 0 0 0 0 0 1 0 1 
+current_state.sub_shift_amount 0 0 0 0 0 0 1 0 0 1 
+current_state.delay_shift_amount 0 0 0 0 0 1 0 0 0 1 
+current_state.test_decay 0 0 0 0 1 0 0 0 0 1 
+current_state.be_zero_power 0 0 0 1 0 0 0 0 0 1 
+current_state.sub_decay 0 0 1 0 0 0 0 0 0 1 
+current_state.delay_decay 0 1 0 0 0 0 0 0 0 1 
+current_state.wait_new_command 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |matriz_interface|MotorMatrixControl:matriz_inst|motor:\motors_ix0:1:n_motors_ix0|motor_fsm:fsm_motor|current_state
+Name current_state.wait_new_command current_state.delay_decay current_state.sub_decay current_state.be_zero_power current_state.test_decay current_state.delay_shift_amount current_state.sub_shift_amount current_state.sum_shift_amount current_state.be_equal_shift_amount current_state.test_shift_amount 
+current_state.test_shift_amount 0 0 0 0 0 0 0 0 0 0 
+current_state.be_equal_shift_amount 0 0 0 0 0 0 0 0 1 1 
+current_state.sum_shift_amount 0 0 0 0 0 0 0 1 0 1 
+current_state.sub_shift_amount 0 0 0 0 0 0 1 0 0 1 
+current_state.delay_shift_amount 0 0 0 0 0 1 0 0 0 1 
+current_state.test_decay 0 0 0 0 1 0 0 0 0 1 
+current_state.be_zero_power 0 0 0 1 0 0 0 0 0 1 
+current_state.sub_decay 0 0 1 0 0 0 0 0 0 1 
+current_state.delay_decay 0 1 0 0 0 0 0 0 0 1 
+current_state.wait_new_command 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |matriz_interface|MotorMatrixControl:matriz_inst|motor:\motors_0xi:3:n_motors_0xi|motor_fsm:fsm_motor|current_state
+Name current_state.wait_new_command current_state.delay_decay current_state.sub_decay current_state.be_zero_power current_state.test_decay current_state.delay_shift_amount current_state.sub_shift_amount current_state.sum_shift_amount current_state.be_equal_shift_amount current_state.test_shift_amount 
+current_state.test_shift_amount 0 0 0 0 0 0 0 0 0 0 
+current_state.be_equal_shift_amount 0 0 0 0 0 0 0 0 1 1 
+current_state.sum_shift_amount 0 0 0 0 0 0 0 1 0 1 
+current_state.sub_shift_amount 0 0 0 0 0 0 1 0 0 1 
+current_state.delay_shift_amount 0 0 0 0 0 1 0 0 0 1 
+current_state.test_decay 0 0 0 0 1 0 0 0 0 1 
+current_state.be_zero_power 0 0 0 1 0 0 0 0 0 1 
+current_state.sub_decay 0 0 1 0 0 0 0 0 0 1 
+current_state.delay_decay 0 1 0 0 0 0 0 0 0 1 
+current_state.wait_new_command 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |matriz_interface|MotorMatrixControl:matriz_inst|motor:\motors_0xi:2:n_motors_0xi|motor_fsm:fsm_motor|current_state
+Name current_state.wait_new_command current_state.delay_decay current_state.sub_decay current_state.be_zero_power current_state.test_decay current_state.delay_shift_amount current_state.sub_shift_amount current_state.sum_shift_amount current_state.be_equal_shift_amount current_state.test_shift_amount 
+current_state.test_shift_amount 0 0 0 0 0 0 0 0 0 0 
+current_state.be_equal_shift_amount 0 0 0 0 0 0 0 0 1 1 
+current_state.sum_shift_amount 0 0 0 0 0 0 0 1 0 1 
+current_state.sub_shift_amount 0 0 0 0 0 0 1 0 0 1 
+current_state.delay_shift_amount 0 0 0 0 0 1 0 0 0 1 
+current_state.test_decay 0 0 0 0 1 0 0 0 0 1 
+current_state.be_zero_power 0 0 0 1 0 0 0 0 0 1 
+current_state.sub_decay 0 0 1 0 0 0 0 0 0 1 
+current_state.delay_decay 0 1 0 0 0 0 0 0 0 1 
+current_state.wait_new_command 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |matriz_interface|MotorMatrixControl:matriz_inst|motor:\motors_0xi:1:n_motors_0xi|motor_fsm:fsm_motor|current_state
+Name current_state.wait_new_command current_state.delay_decay current_state.sub_decay current_state.be_zero_power current_state.test_decay current_state.delay_shift_amount current_state.sub_shift_amount current_state.sum_shift_amount current_state.be_equal_shift_amount current_state.test_shift_amount 
+current_state.test_shift_amount 0 0 0 0 0 0 0 0 0 0 
+current_state.be_equal_shift_amount 0 0 0 0 0 0 0 0 1 1 
+current_state.sum_shift_amount 0 0 0 0 0 0 0 1 0 1 
+current_state.sub_shift_amount 0 0 0 0 0 0 1 0 0 1 
+current_state.delay_shift_amount 0 0 0 0 0 1 0 0 0 1 
+current_state.test_decay 0 0 0 0 1 0 0 0 0 1 
+current_state.be_zero_power 0 0 0 1 0 0 0 0 0 1 
+current_state.sub_decay 0 0 1 0 0 0 0 0 0 1 
+current_state.delay_decay 0 1 0 0 0 0 0 0 0 1 
+current_state.wait_new_command 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |matriz_interface|MotorMatrixControl:matriz_inst|motor:motor_0x0|motor_fsm:fsm_motor|current_state
+Name current_state.wait_new_command current_state.delay_decay current_state.sub_decay current_state.be_zero_power current_state.test_decay current_state.delay_shift_amount current_state.sub_shift_amount current_state.sum_shift_amount current_state.be_equal_shift_amount current_state.test_shift_amount 
+current_state.test_shift_amount 0 0 0 0 0 0 0 0 0 0 
+current_state.be_equal_shift_amount 0 0 0 0 0 0 0 0 1 1 
+current_state.sum_shift_amount 0 0 0 0 0 0 0 1 0 1 
+current_state.sub_shift_amount 0 0 0 0 0 0 1 0 0 1 
+current_state.delay_shift_amount 0 0 0 0 0 1 0 0 0 1 
+current_state.test_decay 0 0 0 0 1 0 0 0 0 1 
+current_state.be_zero_power 0 0 0 1 0 0 0 0 0 1 
+current_state.sub_decay 0 0 1 0 0 0 0 0 0 1 
+current_state.delay_decay 0 1 0 0 0 0 0 0 0 1 
+current_state.wait_new_command 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |matriz_interface|MotorMatrixControl:matriz_inst|fsm_commands:commands_control|current_state
+Name current_state.copy_to_next_col_decay current_state.copy_to_next_col_shift_amount current_state.copy_to_next_col_power current_state.copy_to_next_row_decay current_state.copy_to_next_row_shift_amount current_state.copy_to_next_row_power current_state.change_decay current_state.change_shift_amount current_state.change_power current_state.wait_acknowledge current_state.wait_command 
+current_state.wait_command 0 0 0 0 0 0 0 0 0 0 0 
+current_state.wait_acknowledge 0 0 0 0 0 0 0 0 0 1 1 
+current_state.change_power 0 0 0 0 0 0 0 0 1 0 1 
+current_state.change_shift_amount 0 0 0 0 0 0 0 1 0 0 1 
+current_state.change_decay 0 0 0 0 0 0 1 0 0 0 1 
+current_state.copy_to_next_row_power 0 0 0 0 0 1 0 0 0 0 1 
+current_state.copy_to_next_row_shift_amount 0 0 0 0 1 0 0 0 0 0 1 
+current_state.copy_to_next_row_decay 0 0 0 1 0 0 0 0 0 0 1 
+current_state.copy_to_next_col_power 0 0 1 0 0 0 0 0 0 0 1 
+current_state.copy_to_next_col_shift_amount 0 1 0 0 0 0 0 0 0 0 1 
+current_state.copy_to_next_col_decay 1 0 0 0 0 0 0 0 0 0 1 

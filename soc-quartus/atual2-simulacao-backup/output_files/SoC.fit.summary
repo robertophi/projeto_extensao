@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Sep 27 15:25:25 2016
+Quartus II 32-bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : SoC
+Top-level Entity Name : MotorMatrixControl
+Family : Cyclone II
+Device : EP2C35F672C6
+Timing Models : Final
+Total logic elements : 2,682 / 33,216 ( 8 % )
+    Total combinational functions : 2,630 / 33,216 ( 8 % )
+    Dedicated logic registers : 723 / 33,216 ( 2 % )
+Total registers : 756
+Total pins : 90 / 475 ( 19 % )
+Total virtual pins : 0
+Total memory bits : 0 / 483,840 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 70 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

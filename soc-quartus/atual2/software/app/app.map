@@ -1,0 +1,438 @@
+Archive member included because of file (symbol)
+
+../app_bsp//libhal_bsp.a(alt_load.o)
+                              ../app_bsp//obj/HAL/src/crt0.o (alt_load)
+../app_bsp//libhal_bsp.a(alt_main.o)
+                              ../app_bsp//obj/HAL/src/crt0.o (alt_main)
+../app_bsp//libhal_bsp.a(alt_sys_init.o)
+                              ../app_bsp//libhal_bsp.a(alt_main.o) (alt_sys_init)
+../app_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+                              ../app_bsp//libhal_bsp.a(alt_load.o) (alt_dcache_flush_all)
+../app_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+                              ../app_bsp//libhal_bsp.a(alt_load.o) (alt_icache_flush_all)
+../app_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
+                              ../app_bsp//libhal_bsp.a(alt_sys_init.o) (altera_nios2_qsys_irq_init)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+onchip_memory2_0 0x00000000         0x00001000
+reset            0x01000000         0x00000020
+sdram            0x01000020         0x007fffe0
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD ../app_bsp//obj/HAL/src/crt0.o
+                0x0100000c                exit = _exit
+LOAD obj/default/src/abstraction/data_handler.o
+LOAD obj/default/src/abstraction/pattern_manager.o
+LOAD obj/default/src/app/app_manager.o
+LOAD obj/default/src/mediator/fft_mediator.o
+LOAD /home/caique/Desktop/quartus/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul/libstdc++.a
+LOAD /home/caique/Desktop/quartus/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul/libm.a
+LOAD /home/caique/Desktop/quartus/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul/libgcc.a
+START GROUP
+LOAD /home/caique/Desktop/quartus/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul/libsmallc.a
+LOAD /home/caique/Desktop/quartus/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul/libgcc.a
+LOAD ../app_bsp//libhal_bsp.a
+END GROUP
+LOAD /home/caique/Desktop/quartus/nios2eds/bin/gnu/H-i686-pc-linux-gnu/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul/libgcc.a
+                0x00000000                __alt_mem_onchip_memory2_0 = 0x0
+                0x01000000                __alt_mem_sdram = 0x1000000
+
+.entry          0x01000000       0x20
+ *(.entry)
+ .entry         0x01000000       0x20 ../app_bsp//obj/HAL/src/crt0.o
+                0x01000000                __reset
+                0x0100000c                _exit
+
+.exceptions     0x01000020        0x0
+                0x01000020                PROVIDE (__ram_exceptions_start, ABSOLUTE (.))
+                0x01000020                . = ALIGN (0x20)
+ *(.irq)
+ *(.exceptions.entry.label)
+ *(.exceptions.entry.user)
+ *(.exceptions.entry)
+ *(.exceptions.irqtest.user)
+ *(.exceptions.irqtest)
+ *(.exceptions.irqhandler.user)
+ *(.exceptions.irqhandler)
+ *(.exceptions.irqreturn.user)
+ *(.exceptions.irqreturn)
+ *(.exceptions.notirq.label)
+ *(.exceptions.notirq.user)
+ *(.exceptions.notirq)
+ *(.exceptions.soft.user)
+ *(.exceptions.soft)
+ *(.exceptions.unknown.user)
+ *(.exceptions.unknown)
+ *(.exceptions.exit.label)
+ *(.exceptions.exit.user)
+ *(.exceptions.exit)
+ *(.exceptions)
+                0x01000020                PROVIDE (__ram_exceptions_end, ABSOLUTE (.))
+                0x01000020                PROVIDE (__flash_exceptions_start, LOADADDR (.exceptions))
+
+.text           0x01000020      0x128
+                0x01000020                PROVIDE (stext, ABSOLUTE (.))
+ *(.interp)
+ *(.hash)
+ *(.dynsym)
+ *(.dynstr)
+ *(.gnu.version)
+ *(.gnu.version_d)
+ *(.gnu.version_r)
+ *(.rel.init)
+ *(.rela.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rel.fini)
+ *(.rela.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rela.ctors)
+ *(.rel.dtors)
+ *(.rela.dtors)
+ *(.rel.got)
+ *(.rela.got)
+ *(.rel.sdata .rel.sdata.* .rel.gnu.linkonce.s.*)
+ *(.rela.sdata .rela.sdata.* .rela.gnu.linkonce.s.*)
+ *(.rel.sbss .rel.sbss.* .rel.gnu.linkonce.sb.*)
+ *(.rela.sbss .rela.sbss.* .rela.gnu.linkonce.sb.*)
+ *(.rel.sdata2 .rel.sdata2.* .rel.gnu.linkonce.s2.*)
+ *(.rela.sdata2 .rela.sdata2.* .rela.gnu.linkonce.s2.*)
+ *(.rel.sbss2 .rel.sbss2.* .rel.gnu.linkonce.sb2.*)
+ *(.rela.sbss2 .rela.sbss2.* .rela.gnu.linkonce.sb2.*)
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+ *(.rel.plt)
+ *(.rela.plt)
+ *(.rel.dyn)
+ *(.init)
+ *(.plt)
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x01000020       0x3c ../app_bsp//obj/HAL/src/crt0.o
+                0x01000020                _start
+ .text          0x0100005c        0x0 obj/default/src/abstraction/data_handler.o
+ .text          0x0100005c        0x0 obj/default/src/abstraction/pattern_manager.o
+ .text          0x0100005c        0x0 obj/default/src/app/app_manager.o
+ .text          0x0100005c        0x0 obj/default/src/mediator/fft_mediator.o
+ .text          0x0100005c       0x8c ../app_bsp//libhal_bsp.a(alt_load.o)
+                0x0100007c                alt_load
+ .text          0x010000e8       0x2c ../app_bsp//libhal_bsp.a(alt_main.o)
+                0x010000e8                alt_main
+ .text          0x01000114       0x24 ../app_bsp//libhal_bsp.a(alt_sys_init.o)
+                0x01000114                alt_sys_init
+                0x01000118                alt_irq_init
+ .text          0x01000138        0x4 ../app_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+                0x01000138                alt_dcache_flush_all
+ .text          0x0100013c        0x4 ../app_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+                0x0100013c                alt_icache_flush_all
+ .text          0x01000140        0x8 ../app_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
+                0x01000140                altera_nios2_qsys_irq_init
+ *(.gnu.warning.*)
+ *(.fini)
+                0x01000148                PROVIDE (__etext, ABSOLUTE (.))
+                0x01000148                PROVIDE (_etext, ABSOLUTE (.))
+                0x01000148                PROVIDE (etext, ABSOLUTE (.))
+ *(.eh_frame_hdr)
+                0x01000148                . = ALIGN (0x4)
+                0x01000148                PROVIDE (__preinit_array_start, ABSOLUTE (.))
+ *(.preinit_array)
+                0x01000148                PROVIDE (__preinit_array_end, ABSOLUTE (.))
+                0x01000148                PROVIDE (__init_array_start, ABSOLUTE (.))
+ *(.init_array)
+                0x01000148                PROVIDE (__init_array_end, ABSOLUTE (.))
+                0x01000148                PROVIDE (__fini_array_start, ABSOLUTE (.))
+ *(.fini_array)
+                0x01000148                PROVIDE (__fini_array_end, ABSOLUTE (.))
+ *(.eh_frame)
+ *(.gcc_except_table)
+ *(.dynamic)
+                0x01000148                PROVIDE (__CTOR_LIST__, ABSOLUTE (.))
+ *(.ctors)
+ *(SORT(.ctors.*))
+                0x01000148                PROVIDE (__CTOR_END__, ABSOLUTE (.))
+                0x01000148                PROVIDE (__DTOR_LIST__, ABSOLUTE (.))
+ *(.dtors)
+ *(SORT(.dtors.*))
+                0x01000148                PROVIDE (__DTOR_END__, ABSOLUTE (.))
+ *(.jcr)
+                0x01000148                . = ALIGN (0x4)
+
+.rodata         0x01000148        0x0
+                0x01000148                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
+                0x01000148                . = ALIGN (0x4)
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ *(.rodata1)
+                0x01000148                . = ALIGN (0x4)
+                0x01000148                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
+                0x01000148                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
+
+.rwdata         0x01000148        0x8 load address 0x01000150
+                0x01000148                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
+                0x01000148                . = ALIGN (0x4)
+ *(.got.plt)
+ *(.got)
+ *(.data1)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x01000148        0x0 ../app_bsp//obj/HAL/src/crt0.o
+ .data          0x01000148        0x0 obj/default/src/abstraction/data_handler.o
+ .data          0x01000148        0x0 obj/default/src/abstraction/pattern_manager.o
+ .data          0x01000148        0x0 obj/default/src/app/app_manager.o
+ .data          0x01000148        0x0 obj/default/src/mediator/fft_mediator.o
+ .data          0x01000148        0x0 ../app_bsp//libhal_bsp.a(alt_load.o)
+ .data          0x01000148        0x0 ../app_bsp//libhal_bsp.a(alt_main.o)
+ .data          0x01000148        0x0 ../app_bsp//libhal_bsp.a(alt_sys_init.o)
+ .data          0x01000148        0x0 ../app_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .data          0x01000148        0x0 ../app_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .data          0x01000148        0x0 ../app_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
+                0x01008148                _gp = ABSOLUTE ((. + 0x8000))
+                0x01008148                PROVIDE (gp, _gp)
+ *(.rwdata .rwdata.*)
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ .sdata         0x01000148        0x8 ../app_bsp//libhal_bsp.a(alt_sys_init.o)
+                0x01000148                jtag_uart_0
+                0x0100014c                esp8266
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+                0x01000150                . = ALIGN (0x4)
+                0x01000150                _edata = ABSOLUTE (.)
+                0x01000150                PROVIDE (edata, ABSOLUTE (.))
+                0x01000150                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
+                0x01000150                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
+
+.bss            0x01000158        0xc
+                0x01000158                __bss_start = ABSOLUTE (.)
+                0x01000158                PROVIDE (__sbss_start, ABSOLUTE (.))
+                0x01000158                PROVIDE (___sbss_start, ABSOLUTE (.))
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ .sbss          0x01000158        0xc ../app_bsp//libhal_bsp.a(alt_main.o)
+                0x01000158                alt_argc
+                0x0100015c                alt_argv
+                0x01000160                alt_envp
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+ *(.scommon)
+                0x01000164                PROVIDE (__sbss_end, ABSOLUTE (.))
+                0x01000164                PROVIDE (___sbss_end, ABSOLUTE (.))
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x01000164        0x0 ../app_bsp//obj/HAL/src/crt0.o
+ .bss           0x01000164        0x0 obj/default/src/abstraction/data_handler.o
+ .bss           0x01000164        0x0 obj/default/src/abstraction/pattern_manager.o
+ .bss           0x01000164        0x0 obj/default/src/app/app_manager.o
+ .bss           0x01000164        0x0 obj/default/src/mediator/fft_mediator.o
+ .bss           0x01000164        0x0 ../app_bsp//libhal_bsp.a(alt_load.o)
+ .bss           0x01000164        0x0 ../app_bsp//libhal_bsp.a(alt_main.o)
+ .bss           0x01000164        0x0 ../app_bsp//libhal_bsp.a(alt_sys_init.o)
+ .bss           0x01000164        0x0 ../app_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .bss           0x01000164        0x0 ../app_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .bss           0x01000164        0x0 ../app_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
+ *(COMMON)
+                0x01000164                . = ALIGN (0x4)
+                0x01000164                __bss_end = ABSOLUTE (.)
+
+.onchip_memory2_0
+                0x00000000        0x0 load address 0x01000164
+                0x00000000                PROVIDE (_alt_partition_onchip_memory2_0_start, ABSOLUTE (.))
+ *(.onchip_memory2_0. onchip_memory2_0.*)
+                0x00000000                . = ALIGN (0x4)
+                0x00000000                PROVIDE (_alt_partition_onchip_memory2_0_end, ABSOLUTE (.))
+                0x01000164                PROVIDE (_alt_partition_onchip_memory2_0_load_addr, LOADADDR (.onchip_memory2_0))
+
+.sdram          0x01000164        0x0
+                0x01000164                PROVIDE (_alt_partition_sdram_start, ABSOLUTE (.))
+ *(.sdram. sdram.*)
+                0x01000164                . = ALIGN (0x4)
+                0x01000164                PROVIDE (_alt_partition_sdram_end, ABSOLUTE (.))
+                0x01000164                _end = ABSOLUTE (.)
+                0x01000164                end = ABSOLUTE (.)
+                0x01000164                __alt_stack_base = ABSOLUTE (.)
+                0x01000164                PROVIDE (_alt_partition_sdram_load_addr, LOADADDR (.sdram))
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x26
+ *(.comment)
+ .comment       0x00000000       0x26 obj/default/src/abstraction/data_handler.o
+                                 0x27 (size before relaxing)
+ .comment       0x00000000       0x27 obj/default/src/abstraction/pattern_manager.o
+ .comment       0x00000000       0x27 obj/default/src/app/app_manager.o
+ .comment       0x00000000       0x27 obj/default/src/mediator/fft_mediator.o
+ .comment       0x00000000       0x27 ../app_bsp//libhal_bsp.a(alt_load.o)
+ .comment       0x00000000       0x27 ../app_bsp//libhal_bsp.a(alt_main.o)
+ .comment       0x00000000       0x27 ../app_bsp//libhal_bsp.a(alt_sys_init.o)
+ .comment       0x00000000       0x27 ../app_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .comment       0x00000000       0x27 ../app_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .comment       0x00000000       0x27 ../app_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0xe8
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x28 ../app_bsp//obj/HAL/src/crt0.o
+ .debug_aranges
+                0x00000028       0x20 ../app_bsp//libhal_bsp.a(alt_load.o)
+ .debug_aranges
+                0x00000048       0x20 ../app_bsp//libhal_bsp.a(alt_main.o)
+ .debug_aranges
+                0x00000068       0x20 ../app_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_aranges
+                0x00000088       0x20 ../app_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_aranges
+                0x000000a8       0x20 ../app_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_aranges
+                0x000000c8       0x20 ../app_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
+
+.debug_pubnames
+                0x00000000      0x13c
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x1f ../app_bsp//libhal_bsp.a(alt_load.o)
+ .debug_pubnames
+                0x0000001f       0x46 ../app_bsp//libhal_bsp.a(alt_main.o)
+ .debug_pubnames
+                0x00000065       0x50 ../app_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_pubnames
+                0x000000b5       0x2b ../app_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_pubnames
+                0x000000e0       0x2b ../app_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_pubnames
+                0x0000010b       0x31 ../app_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
+
+.debug_info     0x00000000      0x644
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000       0x79 ../app_bsp//obj/HAL/src/crt0.o
+ .debug_info    0x00000079        0x0 obj/default/src/abstraction/data_handler.o
+ .debug_info    0x00000079        0x0 obj/default/src/abstraction/pattern_manager.o
+ .debug_info    0x00000079        0x0 obj/default/src/app/app_manager.o
+ .debug_info    0x00000079        0x0 obj/default/src/mediator/fft_mediator.o
+ .debug_info    0x00000079      0x12e ../app_bsp//libhal_bsp.a(alt_load.o)
+ .debug_info    0x000001a7      0x125 ../app_bsp//libhal_bsp.a(alt_main.o)
+ .debug_info    0x000002cc      0x1d1 ../app_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_info    0x0000049d       0x8d ../app_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_info    0x0000052a       0x8d ../app_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_info    0x000005b7       0x8d ../app_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
+
+.debug_abbrev   0x00000000      0x2fa
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000       0x12 ../app_bsp//obj/HAL/src/crt0.o
+ .debug_abbrev  0x00000012        0x1 obj/default/src/abstraction/data_handler.o
+ .debug_abbrev  0x00000013        0x1 obj/default/src/abstraction/pattern_manager.o
+ .debug_abbrev  0x00000014        0x1 obj/default/src/app/app_manager.o
+ .debug_abbrev  0x00000015        0x1 obj/default/src/mediator/fft_mediator.o
+ .debug_abbrev  0x00000016       0x97 ../app_bsp//libhal_bsp.a(alt_load.o)
+ .debug_abbrev  0x000000ad       0xa6 ../app_bsp//libhal_bsp.a(alt_main.o)
+ .debug_abbrev  0x00000153       0xea ../app_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_abbrev  0x0000023d       0x3f ../app_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_abbrev  0x0000027c       0x3f ../app_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_abbrev  0x000002bb       0x3f ../app_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
+
+.debug_line     0x00000000      0xea6
+ *(.debug_line)
+ .debug_line    0x00000000       0x66 ../app_bsp//obj/HAL/src/crt0.o
+ .debug_line    0x00000066       0x24 obj/default/src/abstraction/data_handler.o
+ .debug_line    0x0000008a       0x24 obj/default/src/abstraction/pattern_manager.o
+ .debug_line    0x000000ae       0x24 obj/default/src/app/app_manager.o
+ .debug_line    0x000000d2       0x24 obj/default/src/mediator/fft_mediator.o
+ .debug_line    0x000000f6      0x237 ../app_bsp//libhal_bsp.a(alt_load.o)
+ .debug_line    0x0000032d      0x2e2 ../app_bsp//libhal_bsp.a(alt_main.o)
+ .debug_line    0x0000060f      0x2ff ../app_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_line    0x0000090e      0x1d5 ../app_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_line    0x00000ae3      0x1d5 ../app_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_line    0x00000cb8      0x1ee ../app_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
+
+.debug_frame    0x00000000       0xf8
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x38 ../app_bsp//libhal_bsp.a(alt_load.o)
+ .debug_frame   0x00000038       0x28 ../app_bsp//libhal_bsp.a(alt_main.o)
+ .debug_frame   0x00000060       0x38 ../app_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_frame   0x00000098       0x20 ../app_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_frame   0x000000b8       0x20 ../app_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_frame   0x000000d8       0x20 ../app_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
+
+.debug_str      0x00000000      0x3cd
+ *(.debug_str)
+ .debug_str     0x00000000      0x195 ../app_bsp//libhal_bsp.a(alt_load.o)
+                                0x1ce (size before relaxing)
+ .debug_str     0x00000195       0x75 ../app_bsp//libhal_bsp.a(alt_main.o)
+                                0x152 (size before relaxing)
+ .debug_str     0x0000020a      0x120 ../app_bsp//libhal_bsp.a(alt_sys_init.o)
+                                0x23b (size before relaxing)
+ .debug_str     0x0000032a       0x34 ../app_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+                                0x111 (size before relaxing)
+ .debug_str     0x0000035e       0x34 ../app_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+                                0x111 (size before relaxing)
+ .debug_str     0x00000392       0x3b ../app_bsp//libhal_bsp.a(altera_nios2_qsys_irq.o)
+                                0x118 (size before relaxing)
+
+.debug_loc      0x00000000       0x70
+ *(.debug_loc)
+ .debug_loc     0x00000000       0x1f ../app_bsp//libhal_bsp.a(alt_load.o)
+ .debug_loc     0x0000001f       0x1f ../app_bsp//libhal_bsp.a(alt_main.o)
+ .debug_loc     0x0000003e       0x32 ../app_bsp//libhal_bsp.a(alt_sys_init.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_alt_sim_info
+                0x00000000       0x10
+ *(.debug_alt_sim_info)
+ .debug_alt_sim_info
+                0x00000000       0x10 ../app_bsp//obj/HAL/src/crt0.o
+                0x01800000                __alt_data_end = 0x1800000
+                0x01800000                PROVIDE (__alt_stack_pointer, __alt_data_end)
+                0x01000164                PROVIDE (__alt_stack_limit, __alt_stack_base)
+                0x01000164                PROVIDE (__alt_heap_start, end)
+                0x01800000                PROVIDE (__alt_heap_limit, 0x1800000)
+OUTPUT(app.elf elf32-littlenios2)
+
+.debug_ranges   0x00000000       0x20
+ .debug_ranges  0x00000000       0x20 ../app_bsp//obj/HAL/src/crt0.o

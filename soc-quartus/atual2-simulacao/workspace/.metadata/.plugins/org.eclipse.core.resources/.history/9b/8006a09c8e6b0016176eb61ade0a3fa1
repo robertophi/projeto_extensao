@@ -1,0 +1,120 @@
+#include "wifi.h"
+
+/* static */
+WiFi *WiFi::wifi = NULL;
+
+/* public */
+WiFi::~WiFi() {
+	fclose(file);
+}
+
+WiFi *WiFi::getSingleton() {
+	if (wifi == NULL)
+		wifi = new WiFi();
+	return wifi;
+}
+
+void WiFi::config(char* name, char* password) {
+	printf("Configuring AP, wait......\n");
+	//char rst[] = "AT+RST";
+	//sendInstruction(rst);
+
+	char modeConfig[] = "AT+CWMODE=2";
+	sendInstruction(modeConfig);
+
+	char *apConfig;
+	int apSize = 18 + strlen(name) + strlen(password);
+	apConfig = new char[apSize];
+	strcpy(apConfig, "AT+CWSAP=\"");
+	strcat(apConfig, name);
+	strcat(apConfig, "\",\"");
+	strcat(apConfig, password);
+	strcat(apConfig, "\",5,3");
+	sendInstruction(apConfig);
+
+	char mux[] = "AT+CIPMUX=1";
+	sendInstruction(mux);
+
+	char ip[] = "AT+CIPAP=\"192.168.4.1\"";
+	sendInstruction(ip);
+
+	printf("Done!\n");
+}
+
+void WiFi::startServer() {
+	printf("Starting Server...\n");
+
+	char server[] = "AT+CIPSERVER=1,80";
+	sendInstruction(server);
+
+	printf("Done!\n");
+}
+
+void WiFi::stopServer() {
+	char stop[] = "AT+CIPSERVER=0";
+	char rst[] = "AT+RST";
+	sendInstruction(stop);
+	sendInstruction(rst);
+}
+
+void WiFi::receive(unsigned char* data, unsigned int *size) {
+	char c;
+	do {
+		c = getc(file);
+	} while (c != '+');
+
+	do {
+		c = getc(file);
+		printf("%c \n",c);
+	} while (c != ',');
+
+	do {
+		c = getc(file);
+	} while (c != ',');
+
+	*size = 0;
+
+	c = getc(file);
+
+	while (c != ':') {
+		*size = *size * 10 + c - '0';
+		printf("Size: %d\n",*size);
+		c = getc(file);
+	}
+	printf("found : \n");
+	static unsigned int j;
+	j = 0;
+	max = *size;
+	while(j < max){
+		printf("Size: %d\n",*size);
+		data[j] = getc(file);
+		printf("j= %d\n",j);
+		j+=1;
+	}
+
+
+	data[j] = '\0';
+}
+
+/* private */
+WiFi::WiFi() {
+	file = fopen("/dev/esp8266", "r+");
+	if (!file) {
+		printf("Error opening UART.\n");
+	}
+}
+
+void WiFi::sendInstruction(char * instruction) {
+	write(instruction, strlen(instruction));
+	write("\r\n", 2);
+
+	char k;
+	do {
+		k = getc(file);
+		printf("%c",k);
+	} while (k != 'K');
+}
+
+void WiFi::write(char * msg, int size = -1) {
+	fwrite(msg, 1, size, file);
+}

@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Sep 28 13:10:14 2016
+Quartus II 32-bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : SystemExample
+Top-level Entity Name : matriz_interface
+Family : Cyclone II
+Device : EP2C50F672C6
+Timing Models : Final
+Total logic elements : 2,673 / 50,528 ( 5 % )
+    Total combinational functions : 2,629 / 50,528 ( 5 % )
+    Dedicated logic registers : 758 / 50,528 ( 2 % )
+Total registers : 758
+Total pins : 85 / 450 ( 19 % )
+Total virtual pins : 0
+Total memory bits : 0 / 594,432 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 172 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
