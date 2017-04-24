@@ -65,12 +65,12 @@ public class MainActivity extends AppCompatActivity {
 
         final Compass compass = new Compass((SensorManager) getSystemService(SENSOR_SERVICE));
         compass.setOnToggleListener(
-                new SensorObserver() {
-                    @Override
-                    public void onToggle() {
-                        updateClient(compass.getStatus());
-                    }
+            new SensorObserver() {
+                @Override
+                public void onToggle() {
+                    updateClient(compass.getStatus());
                 }
+            }
         );
 
         final Microphone microphone = new Microphone(this);
@@ -371,15 +371,26 @@ public class MainActivity extends AppCompatActivity {
         protected Boolean doInBackground(Void ...voids) {
             byte[] data = TCPClient.send("m?".getBytes(), true);
 
+            /*
+            //Método antigo, que tenta verficiar a conexão aguardando resposta do módulo
+            //bypassed
+
             if(data != null && data.length >= 3 && data[0] == 'm'){
+
                 motorsMaxLine = data[1];
                 motorsMaxColumn = data[2];
                 isMotorsConfigured = true;
                 motors = new boolean[motorsMaxLine][motorsMaxColumn];
                 return true;
             }
-
             return false;
+            */
+            motorsMaxLine = 4;
+            motorsMaxColumn = 8;
+            isMotorsConfigured = true;
+            motors = new boolean[motorsMaxLine][motorsMaxColumn];
+            return true;
+
         }
 
         protected void onProgressUpdate(Void... voids) {

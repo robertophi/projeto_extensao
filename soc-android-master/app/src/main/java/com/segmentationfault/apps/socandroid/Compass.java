@@ -10,22 +10,25 @@ public class Compass extends Sensor implements SensorEventListener {
     private float[] gravity = new float[3];
     private float[] geomagnetic = new float[3];
     private  byte[] data;
+    float[] rotation = new float[9];
+    float[] orientation = new float[3];
+    int heading;
 
     Compass(SensorManager sensorManager) {
         super(R.string.compass, R.mipmap.ic_compass, (byte) 'c');
         sensorManager.registerListener(this, sensorManager.getDefaultSensor(android.hardware.Sensor.TYPE_MAGNETIC_FIELD), SensorManager.SENSOR_DELAY_GAME);
         sensorManager.registerListener(this, sensorManager.getDefaultSensor(android.hardware.Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_GAME);
 
-        data = new byte[2];
+        data = new byte[3];
         data[0] = identifier;
+        data[2] = identifier;
     }
 
     @Override
     public void onSensorChanged(SensorEvent event) {
+
         float[] smoothed;
-        double heading;
-        float[] rotation = new float[9];
-        float[] orientation = new float[3];
+
 
         // get accelerometer data
         if (event.sensor.getType() == android.hardware.Sensor.TYPE_ACCELEROMETER) {
@@ -46,35 +49,57 @@ public class Compass extends Sensor implements SensorEventListener {
         // get bearing to target
         SensorManager.getOrientation(rotation, orientation);
         // east degrees of true North
-        heading = orientation[0];
         // convert from radians to degrees
-        heading = Math.toDegrees(heading);
 
+
+        // A orientação será transformada de radianos para graus, e de ângulos negativos para positivos
+        //Há um fator de escala 125/360, para que todos os valores estajam no intervalo [0;125]
+        //Valores maiores que 128 resultam em erro na transmissão. A perda de precisão nos valores não é muito grande.
+        heading = (int)Math.toDegrees(orientation[0]);
         if (heading < 0)
             heading += 360;
-
-        data[1] = (byte) ((255.0/360.0)*heading);
+        data[1] = (byte) (125*heading/360);
     }
+
+
+
+    @Override
+    public byte[] getData() {
+        int anguloTemp1;
+        //Para fazer o log dos valores, está-se calculando de volta os valores originais
+
+
+
+
+        
+        anguloTemp1 = (360*((int)data[1]))/125;
+        anguloTemp1 = anguloTemp1 > 180 ? anguloTemp1-360 : anguloTemp1;
+
+        Log.d("Log compass", "onSensorChanged: " +
+
+                " Orientation: (" + orientation[0]+
+                ")  Data[1] : ("+ data[1]+
+                ")           Angulo em graus: (" + anguloTemp1 +
+                ")");
+        return data;
+    }
+
+
+
 
     @Override
     public void onAccuracyChanged(android.hardware.Sensor sensor, int accuracy) {
 
     }
-
-    @Override
-    public byte[] getData() {
-        Log.d("Compass", "onSensorChanged: " + (int) data[1]);
-
-        return data;
-    }
-
     @Override
     public void onToggle() {
         status = status == ON ? OFF:ON;
     }
 
+
+
     protected float[] lowPass( float[] input, float[] output ) {
-        float ALPHA = 0.25f;
+        float ALPHA = 0.75f;
 
         if ( output == null )
             return input;

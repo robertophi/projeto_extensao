@@ -1,0 +1,65 @@
+ 
+
+void App::find_x(int xAngle){
+	//Definir como a rotação lateral do smartphone deve ser represnetada
+	//
+	int maxAngle = 90;
+
+
+	int div;
+	int x;
+	div = xAngle / (maxAngle/5); //Determina a dimensão do xAngle, em proporção à 20% de maxAngle
+	div = div >= 0 ? div : (-1)*div; //Caso seja negativo
+	div = div >= 5 ? 4 : div;  //Caso seja maior que 4
+	div = 4-div;  //Neste caso o maior valor deve ficar nas extremidades
+
+	x = xAngle >= 0 ? COLUMNS-1 - div  : div; //Lidar com os angulos negativos
+	if(div < 4){
+		motors->write( 0 | 1 << 16 | x << 8 | gyroscope_vib_value); //Liga as colunas determinadas
+		motors->write( 0 | 2 << 16 | x << 8 | gyroscope_vib_value); //nas duas linhas do meio
+		if(div == 0){
+			motors->write( 0 | 0 << 16 | x << 8 | gyroscope_vib_value); //Caso o valor seja grande,
+			motors->write( 0 | 3 << 16 | x << 8 | gyroscope_vib_value); //Ligar a coluna inteira
+		}
+	}
+}
+
+
+void App::find_y(int yAngle){
+	int maxAngle = 100;
+	int div;
+	int y;
+	int big, small;
+	div = yAngle / (maxAngle/5);
+	div = div >= 0 ? div : (-1)*div;
+	div = div >= 5 ? 4 : div;
+	div = 4-div;
+
+
+	big  =  yAngle >= 0 ? 0 : LINES-1; //Determina qual é a linha de maior/menor valor (linhas 0 e 1, ou linhas 3 e 2,
+	small = yAngle >= 0 ? 1 : LINES-2; //para os casos onde o angulo é positivo ou negativo
+	if(div <= 1){
+	    motors->write( 0 | big << 16 | 3 << 8 | gyroscope_vib_value);
+	    motors->write( 0 | big << 16 | 4 << 8 | gyroscope_vib_value);
+	}
+	if(div == 0){
+		motors->write( 0 | big << 16 | 5 << 8 | gyroscope_vib_value);
+		motors->write( 0 | big << 16 | 2 << 8 | gyroscope_vib_value);
+		motors->write( 0 | small << 16 | 3 << 8 | gyroscope_vib_value/2);
+		motors->write( 0 | small << 16 | 4 << 8 | gyroscope_vib_value/2);
+	}
+	if(div == 1){
+		motors->write( 0 | small << 16 | 3 << 8 | gyroscope_vib_value/2);
+		motors->write( 0 | small << 16 | 4 << 8 | gyroscope_vib_value/2);
+	}
+	if(div == 2 || div == 3){
+		motors->write( 0 | small << 16 | 3 << 8 | gyroscope_vib_value);
+		motors->write( 0 | small << 16 | 4 << 8 | gyroscope_vib_value);
+	}
+	if(div == 2){
+		motors->write( 0 | small << 16 | 2 << 8 | gyroscope_vib_value);
+		motors->write( 0 | small << 16 | 5 << 8 | gyroscope_vib_value);
+
+	}
+
+}

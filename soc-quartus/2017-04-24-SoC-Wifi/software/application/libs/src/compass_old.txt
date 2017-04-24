@@ -1,0 +1,56 @@
+ 
+
+void App::writeCompass(int direction) {
+	motors->write((0<<24)|(255<<16)|(255<<8)|(0));
+	if(COLUMNS >= 8) {
+        return compass8(direction);
+    } else if(COLUMNS >= 4) {
+        return compass4(direction);
+    }
+}
+
+void App::compass4(int direction) {
+    if(direction < 5 || direction > 355) {
+        motors->write( 0 | (LINES-2) << 16 | ((COLUMNS-1)/2) <<8 | compass_vib_value );
+        if(direction < 5 && direction != 0)
+            motors->write( 0 | (LINES-1) <<16| 1<<8 | compass_vib_value/2 );
+        else if(direction > 355 && direction != 360)
+            motors->write( 0 | (LINES-1) <<16 | (COLUMNS-2) << 8 | compass_vib_value/2 );
+        return;
+    }
+    int motor;
+    if(direction < 180){
+    	motor = direction < 90 ? 1:0;
+    	}
+    else{
+    	motor = direction < 270 ? COLUMNS-1 : COLUMNS-2;
+    }
+    //int motor = direction < 180 ? (direction < 90 ? 1 : 0) : (direction < 270 ? COLUMNS-2 : COLUMNS-1);
+    motors->write( 0 | LINES-1 << 16 | motor << 8 | compass_vib_value );
+}
+
+void App::compass8(int direction) {
+    if(direction < 5 || direction > 355) {
+        motors->write( 0 | (LINES-2) << 16 | ((COLUMNS-1)/2)<<8 | compass_vib_value );
+        if(direction < 5 && direction != 0)
+            motors->write( 0 | (LINES-1)<<16 | 3<<8 | compass_vib_value/2 );
+        else if(direction > 355 && direction != 360)
+            motors->write( 0 | (LINES-1)<<16 | (COLUMNS-4)<<8 | compass_vib_value/2 );
+        return;
+    }
+    int motor;
+    if(direction <= 180) {
+        if(direction <= 90) {
+            motor = direction <= 45 ? 3 : 2;
+        } else {
+            motor = direction <= 135 ? 1 : 0;
+        }
+    } else {
+        if(direction < 270) {
+            motor = direction < 225 ? COLUMNS-1 : COLUMNS-2;
+        } else {
+            motor = direction < 315 ? COLUMNS-3 : COLUMNS-4;
+        }
+    }
+    motors->write( 0 | (LINES-1)<<16 | motor<<8 | compass_vib_value );
+}
