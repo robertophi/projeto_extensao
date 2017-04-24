@@ -1,7 +1,0 @@
-	component QsysSystemExample is
-		port (
-			clk_clk           : in  std_logic                     := 'X'; -- clk
-			pwm_output_export : out std_logic_vector(15 downto 0)         -- export
-		);
-	end component QsysSystemExample;
-

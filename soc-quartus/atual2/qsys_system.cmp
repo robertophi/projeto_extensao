@@ -1,9 +1,0 @@
-	component qsys_system is
-		port (
-			clk_clk     : in  std_logic                     := 'X'; -- clk
-			esp8266_rxd : in  std_logic                     := 'X'; -- rxd
-			esp8266_txd : out std_logic;                            -- txd
-			pwms_export : out std_logic_vector(15 downto 0)         -- export
-		);
-	end component qsys_system;
-
